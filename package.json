@@ -1,0 +1,11 @@
+{
+  "name": "vrmedia-pug",
+  "version": "1.0.0",
+  "description": "vrmedia-pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
