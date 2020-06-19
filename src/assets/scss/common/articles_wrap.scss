@@ -1,0 +1,51 @@
+@import '../utils/vars';
+@import '../utils/mixins';
+@import 'article';
+
+.articles {
+  margin-top: 80px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 70px;
+  }
+  margin-bottom: 100px;
+  .articles__container {
+    max-width: 1440px;
+    .articles__wrapper {
+      position: relative;
+      .articles__title-wrap {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .articles__title {
+          @include title2-black;
+        }
+        .articles__title__link {
+          min-width: 207px;
+          @media (max-width: $screen-sm-max) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+          }
+          a {
+            @include lnk__custom-grey-arrow;
+            color: $grey-blue;
+            &:hover {
+              color: $pink;
+              &::after{
+                border-bottom: 2px solid $pink;
+                border-left: 2px solid $pink;
+              }
+            }
+          }
+        }
+      }
+      .news__inner {
+        padding-bottom: 70px
+      }
+    }
+  }
+}

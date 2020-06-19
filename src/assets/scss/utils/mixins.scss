@@ -1,0 +1,1065 @@
+@import "vars";
+/**/
+@mixin box-shadow__main {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+/*STYLE BACKGROUND*/
+@mixin bg__img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bg-dark-grey;
+}
+@mixin bg__black {
+  background-color: $bg-black;
+}
+@mixin bg__dark {
+  background-color: $bg-dark-grey;
+}
+@mixin bg__light {
+  background-color: $bg-light-grey;
+}
+@mixin bg__lightblue {
+  background-color: $bg-blue-grey;
+}
+@mixin title1-white {
+  h1 {
+    color: $white;
+  }
+}
+@mixin title1-black {
+  h1 {
+    color: $black;
+  }
+}
+@mixin title2-white {
+  h2 {
+    color: $white;
+  }
+}
+@mixin title2-black {
+  h2 {
+    color: $black;
+  }
+}
+@mixin title3-white {
+  h3 {
+    color: $white;
+  }
+}
+@mixin title3-black {
+  h3 {
+    color: $black;
+  }
+}
+@mixin title3-white-panel {
+  h3 {
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+@mixin title3-black-panel {
+  h3 {
+    font-size: 40px;
+    line-height: 55px;
+    color: $black;
+  }
+}
+@mixin title4-white {
+  h4 {
+    color: $white;
+  }
+}
+@mixin title4-black {
+  h4 {
+    color: $black;
+  }
+}
+@mixin title4-white-underline {
+  h4 {
+    color: $white;
+    border-bottom: 2px solid $pink;
+    display: inline-block;
+    @media (max-width: $screen-xs-max) {
+      border-bottom: none;
+    }
+  }
+}
+@mixin title5-white {
+  h5 {
+    color: $white;
+  }
+}
+@mixin title5-black {
+  h5 {
+    color: $black;
+  }
+}
+@mixin title5-black-underline {
+  h5 {
+    color: $black;
+    border-bottom: 2px solid $pink;
+    display: inline-block;
+    @media (max-width: $screen-xs-max) {
+      border-bottom: none;
+    }
+  }
+}
+@mixin title6-white {
+  h6 {
+    color: $white;
+  }
+}
+@mixin title6-black {
+  h6 {
+    color: $black;
+  }
+}
+@mixin text {
+  font-size: 17px;
+  line-height: 29px;
+  @media (max-width: $screen-sm-max) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@mixin text-panel { //++
+  font-size: 17px;
+  line-height: 28px;
+  @media (max-width: $screen-sm-max) {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+@mixin text-panel-mini { //++
+  font-size: 15px;
+  line-height: 24px;
+}
+@mixin text-big {
+  color: $black;
+  font-size: 20px;
+  line-height: 32px;
+  //@media (max-width: $screen-sm-max) {
+  //  font-size: 18px;
+  //  line-height: 26px;
+  //}
+}
+@mixin text-white {
+  @include text;
+  color: $white;
+}
+@mixin text-black {
+  @include text;
+  color: $dark-second;
+}
+@mixin text-grey {
+  @include text;
+  color: $light-grey;
+}
+@mixin text-white-panel {
+  @include text-panel;
+  color: $white;
+}
+@mixin text-black-panel {
+  @include text-panel;
+  color: $dark-second;
+}
+@mixin text-grey-panel {
+  @include text-panel;
+  color: $light-grey;
+}
+@mixin text-title {
+  font-size: 17px;
+  line-height: 29px;
+  color: $dark-second;
+  @media (max-width: $screen-xxs-max) {
+    line-height: 26px;
+  }
+}
+@mixin text-ital {
+  color: #1f242d;
+  font-size: 19px;
+  line-height: 32px;
+  font-style: italic;
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@mixin text-subtitle {
+  color: $grey-subtitle;
+  font-size: 14px;
+  line-height: 18px;
+}
+@mixin text-mini {
+  color: $black;
+  font-size: 14px;
+  line-height: 18px;
+  @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+/*STYLE BUTTON*/
+@mixin transition($type:linear, $target:all, $time:.2s) {
+  transition: $type $target $time;
+  //transition: ease all .5s;
+}
+@mixin arrow($color,$rotate,$top,$right) {
+  content: '';
+  height: 8px;
+  width: 8px;
+  top: $top;
+  right: $right;
+  border-bottom: 2px solid $color;
+  border-left: 2px solid $color;
+  position: absolute;
+  transform: rotate($rotate);
+  @include transition;
+}
+@mixin btn_menu() {
+  position: relative;
+  height: 45px;
+  padding: 13px 40px 13px 20px;
+  border-radius: 6px;
+  background-color: $dark-4;
+  color: $white;
+  font-size: 15px;
+  line-height: 19px;
+}
+@mixin btn__custom {
+  color: $white;
+  height: 60px;
+  background-color: $pink;
+  border-radius: 6px;
+  padding: 0 60px 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include transition;
+  &:hover {
+    background-color: $pink-hover;
+  }
+  &::after {
+    content: '';
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 26px;
+  }
+}
+@mixin btn__custom__arrow-move($color:$pink, $rotate:225deg, $top:43%, $right:20px, $right_hover:3px) {
+  color: $white;
+  font-size: 15px;
+  line-height: 19px;
+  height: 50px;
+  background-color: $color;
+  border-radius: 6px;
+  padding: 15px 35px 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include transition;
+  &:hover {
+    background-color: $pink-hover;
+    &::after{
+      //right: 17px;
+      transform: translateX($right_hover) rotate($rotate)
+    }
+  }
+  &::after {
+    content: '';
+    border-bottom: 2px solid $white;
+    border-left: 2px solid $white;
+    height: 8px;
+    width: 8px;
+    right: $right;
+    top: $top;
+    position: absolute;
+    transform: rotate($rotate);
+    @include transition;
+  }
+
+}
+/*STYLE LINK*/
+@mixin lnk__custom__arrow-move($color:$pink, $rotate:225deg, $top:32%, $right:-15px, $right_hover:3px) {
+  font-size: 15px;
+  line-height: 28px;
+  position: relative;
+  overflow: hidden;
+  color: $color;
+  margin-right: 15px;
+  @include transition;
+  &:hover {
+    &::after{
+      transform: translateX($right_hover) rotate($rotate)
+    }
+  }
+  &::after {
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-bottom: 2px solid $color;
+    border-left: 2px solid $color;
+    right: $right;
+    top: $top;
+    position: absolute;
+    transform: rotate($rotate);
+    @include transition;
+  }
+}
+@mixin lnk__custom__dashed-include {
+  @include text-panel;
+  position: relative;
+  overflow: hidden;
+  color: $pink;
+  &:hover {
+    &::after{
+      border-bottom: 1px dashed rgba($pink, 1);
+    }
+  }
+  &::after {
+    content: '';
+    border-bottom: 1px dashed rgba($pink, .2);
+    @include transition;
+    right: 0;
+    left: 0;
+    bottom: 3px;
+    position: absolute;
+  }
+
+} //++
+@mixin lnk__custom__solid-include {
+  @include text-panel;
+  position: relative;
+  overflow: hidden;
+  color: $pink;
+  &:hover {
+    &::after{
+      border-bottom: 1px solid rgba($pink, 1);
+    }
+  }
+  &::after {
+    content: '';
+    border-bottom: 1px solid rgba($pink, .2);
+    @include transition;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+} //++
+@mixin lnk__custom-grey-arrow($color:$grey-blue, $rotate:225deg, $top:41%, $right:-5px, $right_hover:3px) {
+  @include text-panel-mini;
+  color: $color;
+  margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+  @include transition;
+  padding: 10px;
+  &:hover {
+    color: $pink;
+    &::after{
+      border-bottom: 2px solid $pink;
+      border-left: 2px solid $pink;
+      transform: translateX($right_hover) rotate($rotate)
+    }
+  }
+  &::after{
+    content: '';
+    border-bottom: 2px solid $color;
+    border-left: 2px solid $color;
+    height: 8px;
+    width: 8px;
+    right: $right;
+    top: $top;
+    position: absolute;
+    transform: rotate($rotate);
+    @include transition;
+  }
+}
+@mixin lnk__custom {
+  font-size: 18px;
+  line-height: 28px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  &::after{
+    content: '';
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    font-size: 15px;
+    @include transition;
+  }
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@mixin lnk__custom-border {
+  color: $lnk-grey;
+  font-size: 18px;
+  line-height: 28px;
+  display: inline-block;
+  //border-bottom: 1px solid rgba($lnk-grey, .3);
+  @include transition;
+  &:hover{
+    //border-bottom: 1px solid rgba($lnk-grey, 1);
+  }
+  @media (max-width: $screen-sm-max) {
+    //font-size: 16px;
+    //line-height: 28px;
+  }
+}
+@mixin lnk__custom-border-pink {
+  color: $pink;
+  font-size: 18px;
+  line-height: 28px;
+  border-bottom: 1px solid rgba($pink, .3);
+  @include transition;
+  &:hover{
+    color: $pink-dark;
+    border-bottom: 1px solid rgba($pink, 1);
+  }
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@mixin lnk__custom-border-grey-pink {
+  font-size: 18px;
+  line-height: 28px;
+  color: $black;
+  border-bottom: 1px solid rgba($black, .2);
+  @include transition;
+  &:hover{
+    color: $pink;
+    border-bottom: 1px solid rgba($pink, .2);
+  }
+}
+@mixin lnk__custom-border-darkbg {
+  display: inline-block;
+  color: $lnk-grey;
+  font-size: 18px;
+  line-height: 25px;
+  position: relative;
+  @include transition;
+  &:hover {
+    color: #fff;
+  }
+  &::after {
+    content: '.............................';
+    position: absolute;
+    color: $lnk-grey;
+    letter-spacing: 1px;
+    left: 0;
+    bottom: -7px;
+  }
+}
+@mixin lnk__custom-darkbg {
+  color: $lnk-grey;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 25px;
+  border-bottom: 1px solid rgba($lnk-grey, .2);
+  @include transition;
+  &:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+}
+/*STYLE REPEAT BLOCK*/
+@mixin panel__type1 {
+  h2 {
+    margin-bottom: 50px;
+  }
+  h4,h5 {
+    margin-bottom: 30px;
+  }
+  @media (max-width: $screen-lg-max) {
+    padding: 80px 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    padding: 40px 0;
+  }
+  .row {
+    @media (max-width: $screen-sm-max) {
+      flex-direction: column;
+      .col + .col {
+        //margin-top: 40px;
+      }
+    }
+  }
+  h4,h5 {
+    @media (max-width: $screen-xs-max) {
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: $subtitle-grey;
+      margin-bottom: 15px;
+    }
+  }
+}
+@mixin panel__type2 {
+  @include title3-black;
+  h2,h3,h4,h5 {
+    margin-bottom: 40px;
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 0;
+      margin-left: 25px;
+    }
+  }
+  .text {
+    @include text-black;
+    margin-right: 40px;
+    @media (max-width: $screen-sm-max) {
+      margin-top: 20px;
+      margin-right: 0 ;
+    }
+  }
+  .block-pict_text__inner {
+    margin: 0 auto;
+    .row {
+      justify-content: center;
+      align-items: center;
+      &+ .row {
+        .block-pict_text__description_outer {
+          margin-right: 50px;
+          @media (max-width: $screen-md-max) {
+            margin-right: 0;
+          }
+          @media (max-width: $screen-sm-max) {
+            order: 1;
+          }
+        }
+      }
+      .block-pict_text__description {
+        @media (max-width: $screen-sm-max) {
+          display: flex;
+          align-items: center;
+        }
+        .block-pict_text__img-mini {
+          display: none;
+          @media (max-width: $screen-sm-max) {
+            display: block;
+            height: 120px;
+            img {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .block-pict_text__img {
+        padding: 30px;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+        @media (max-width: $screen-sm-max) {
+          display: none;
+        }
+      }
+      .block-pict_text__link {
+        @include lnk__custom-border-pink;
+      }
+    }
+  }
+}
+@mixin panel__type3 {
+  .block__twi {
+    text-align: center;
+    margin-bottom: 100px;
+    @media (max-width: $screen-md-max) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 0;
+    }
+    h4 {
+      color: $black;
+      @media (max-width: $screen-sm-max) {
+        margin-left: 20px;
+        text-align: left;
+      }
+    }
+    .block__twi__img-mini {
+      display: none;
+      @media (max-width: $screen-sm-max) {
+        display: block;
+        height: 150px;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        height: 100px;
+      }
+    }
+  }
+  .block__twi__inner {
+    display: flex;
+    max-width: 1100px;
+    justify-content: space-between;
+    margin: 0 auto;
+    .block__twi__img-max {
+      height: 320px;
+      align-self: center;
+      @media (max-width: $screen-md-max) {
+        height: 220px;
+      }
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+@mixin panel__block {
+  @include title4-white;
+  background-image: url(/assets/img/help__bg.svg);
+  background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $bg-dark-grey;
+  border-radius: 6px;
+  margin-bottom: 120px;
+  overflow: hidden;
+  box-shadow: 0 10px 37px rgba(0, 0, 0, 0.32);
+  max-width: 1100px;
+  @media (max-width: $screen-xs-max) {
+    background-image: none;
+  }
+  .block-send__step {
+    color: $subtitle-grey;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  h4 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (min-width: $screen-xl-max) {
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+  .block-send__help-link {
+    @include btn__custom__arrow-move;
+    .visible {
+      display: block;
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+    .hide {
+      display: none;
+      @media (max-width: $screen-xs-max) {
+        display: block;
+      }
+    }
+  }
+  .text {
+    @include text-white-panel;
+    margin-bottom: 40px;
+    max-width: 800px;
+  }
+}
+@mixin panel__block-send {
+  @include panel__block;
+}
+@mixin panel__block-help {
+  @include panel__block;
+  padding: 40px 40px 50px;
+  width: auto;
+  @media (max-width: $screen-xs-max) {
+    padding: 30px;
+  }
+  .text {
+    max-width: 800px;
+    &.text-displ-mobile {
+      display: none;
+      @media (max-width: $screen-xs-max) {
+        display: block;
+      }
+    }
+    &.text-hide-mobile {
+      display: block;
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+  }
+}
+@mixin panel__block-advert { //+++
+  &__container {
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+    }
+  }
+  &__inner {
+    background-image: url(/assets/img/bg_main_gradient.svg);
+    background-color: $bg-main;
+    background-position: center top;
+    background-repeat: repeat-x;
+    border-radius: 6px;
+    padding-top: 64px;
+    padding-bottom: 85px;
+    @media (max-width: $screen-lg-max) {
+      padding-bottom: 60px;
+    }
+    @media (max-width: $screen-sm-max) {
+      padding-bottom: 70px;
+    }
+    @media (max-width: $screen-xs-max) {
+      border-radius: 20px 20px 0 0;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-top: 53px;
+    }
+  }
+  &__title {
+    @include title3-white;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 50px;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 100px 80px;
+    @media (max-width: $screen-md-max) and (min-width: $screen-sm-min) {
+      padding: 50px 20px 80px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 20px 50px 70px;
+    }
+    &__item {
+      @include text-panel-mini;
+      color: $white;
+      height: 235px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 200px;
+      &__subtitle-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        width: 200px;
+      }
+      &__img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__link__wrapper {
+    text-align: center;
+    a {
+      @include btn__custom__arrow-move;
+      &.hide-mobile {
+        @media (max-width: $screen-xxs-max) {
+          display: none;
+        }
+      }
+      &.disp-mobile {
+        display: none;
+        @media (max-width: $screen-xxs-max) {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+@mixin block__header {
+  margin-top: 70px;
+  background-image: url(/assets/img/bg_main.svg);
+  background-color: $bg-main;
+  background-position: center center;
+  background-repeat: repeat-x;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  &__inner {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrap {
+      text-align: center;
+    }
+    &__title {
+      @include title1-white;
+      margin: 0 auto;
+      h1 {
+        font-size: 40px;
+        line-height: 52px;
+        @media (max-width: $screen-lg-max) {
+          font-size: 35px;
+          line-height: 50px;
+        }
+        @media (max-width: $screen-sm-max) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+    }
+    &__description {
+      font-size: 17px;
+      line-height: 29px;
+      color: $white;
+      max-width: 670px;
+      padding-top: 20px;
+      @media (max-width: $screen-xs-max) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@mixin form__block {
+  color: #BFC8D9;
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 4px;
+  border: 1px solid #e7e7e7;
+  height: 59px;
+  display: flex;
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #3C4452;
+  @media (max-width: $screen-lg-max) {
+    // width: 300px;
+  }
+  @media (max-width: $screen-xs-max) {
+    //width: 100%;
+  }
+  .form__lbl {
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    cursor: text;
+    //transition: all .25s;
+    @include transition;
+    &.active {
+      font-size: 12px;
+      top: 5px;
+    }
+  }
+  .form__fld {
+    color: $grey-blue;
+    height: 30px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: none;
+  }
+  a {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-bottom: none;
+    background-color: initial;
+    @include transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: '';
+      height: 8px;
+      width: 8px;
+      border-bottom: 2px solid #B1B4BA;
+      border-left: 2px solid #B1B4BA;
+      position: absolute;
+      transform: rotate(225deg);
+      @include transition;
+    }
+  }
+  &.valid {
+    a {
+      background-color: #606b7d;
+      //svg path {
+      //  fill: #FFFFFF;
+      //}
+      &:hover {
+        background-color: #fff;
+        &::after{
+          border-bottom: 2px solid $black;
+          border-left: 2px solid $black;
+        }
+        //svg path {
+        //  fill: $black;
+        //}
+      }
+    }
+  }
+}
+
+@mixin pnl_white {
+  @include box-shadow__main;
+  height: 100%;
+  background: $white;
+  border-radius: 6px;
+}
+
+@mixin platforms {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -20px;
+    @media (max-width: $screen-xl-max) {
+      margin: -10px;
+    }
+  }
+  &__item__wrapper {
+    padding: 20px;
+    @media (max-width: $screen-lg-max) {
+      padding: 10px;
+    }
+  }
+  &__item {
+    @include pnl_white;
+    min-height: 405px;
+    cursor: pointer;
+    padding: 50px 20px 40px 20px;
+    text-align: center;
+    position: relative;
+    @include transition;
+    &:hover {
+      box-shadow: 0 4px 20px rgba(120, 159, 194, 0.15);
+      transform: translateY(-4px);
+      .monetization__item__link a, .translation__item__link a {
+      //&__link a {
+        &::after{
+          transform: translateX(3px) rotate(225deg)
+        }
+      }
+    }
+    @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+      min-height: auto;
+      text-align: left;
+      padding: 20px 30px 30px;
+    }
+    @media (max-width: $screen-sm-max) {
+      min-height: auto;
+      text-align: left;
+      padding: 20px 20px 30px;
+    }
+    &__img-inner {
+      position: relative;
+      height: 100px;
+      @media (max-width: $screen-lg-max) {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    &__img {
+      @media (max-width: $screen-lg-max) {
+        display: flex;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__subtitle {
+      @include text-subtitle;
+      padding-top: 35px;
+      padding-bottom: 15px;
+      @media (max-width: $screen-lg-max) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 0 0 70px;
+      }
+    }
+    &__link {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+        bottom: initial;
+        left: initial;
+        right: 30px;
+        top: 30px;
+      }
+      @media (max-width: $screen-sm-max) {
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        top: initial;
+        padding-top: 13px;
+        border-top: 1px solid $bg-med-grey;
+      }
+      a {
+        @include lnk__custom__arrow-move($pink, 225deg, 32%, -15px, 3px);
+        @media (max-width: $screen-sm-max) {
+          display: block;
+          &::after {
+            right: 5px;
+            //top: 59%;
+            top: 37%;
+          }
+        }
+      }
+    }
+    &__content {
+      @include text-panel-mini;
+      padding-bottom: 35px;
+      @media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
+        padding-top: 20px;
+        padding-bottom: 0;
+      }
+      @media (max-width: $screen-sm-max) {
+        padding-top: 20px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

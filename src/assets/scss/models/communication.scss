@@ -1,0 +1,47 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.communication {
+  margin-top: 40px;
+  &__inner {
+    @include pnl_white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 75px 60px;
+    align-items: center;
+    @media (max-width: $screen-sm-max) {
+      padding: 40px 40px 75px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 40px 0 75px;
+    }
+    &__descript {
+      max-width: 630px;
+      @include text-black;
+      h2 {
+        max-width: 490px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: $screen-xs-max) {
+        padding: 0 20px;
+      }
+    }
+    &__img {
+      position: relative;
+      text-align: center;
+      @media (max-width: $screen-md-max) {
+        padding-top: 40px;
+      }
+      img {
+        width: 275px;
+        height: 275px;
+        @media (max-width: $screen-xs-max) {
+          width: 225px;
+          height: 225px;
+        }
+      }
+    }
+  }
+}
+

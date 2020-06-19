@@ -1,0 +1,4 @@
+mixin svg(svg_file, svg_id, svg_class, svg_title)
+  span.icon
+    svg(class=svg_class, aria-hidden='true', title=svg_title)
+      use(xlink:href= svg_file + '#' + svg_id)

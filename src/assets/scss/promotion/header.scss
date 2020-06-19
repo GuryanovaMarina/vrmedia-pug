@@ -1,0 +1,5 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+.promotion {
+  @include block__header;
+}

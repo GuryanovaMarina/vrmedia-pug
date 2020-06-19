@@ -1,0 +1,297 @@
+extends ../layout/main
+include ../utils/mixins
+include ../includes/promotion/traffic-block
+include ../includes/promotion/monetization-block
+include ../includes/modules/article
+block variablesHeader
+  - const isPromotion = true
+block variables
+  - const title = 'VRMEDIA promotion'
+  - const description = 'Description promotion'
+  - const pageClass = 'promotion-page'
+  -
+    const traffics = [{
+      title: 'Instagram',
+      description: 'Самая популярная социальная сеть в мире, к сожалению очень категоричная к теме любого Adult-бизнеса.Рекомендуем использовать ее для размещение коротких видео из реальной жизни и выкладывать максимально приличные фотографии ',
+      img: 'assets/img/icon_insta.svg',
+      },
+      {
+        title: 'Snapchat',
+        description: 'Сервис обмена сообщениями, с прикреплением видео и фото контента. Широко распространен в Европе и Соединенных Штатах Америки. Аккаунты там банят так же, как и в instagram. Но есть весьма колоссальное отличите: создавая приватный аккаунт и выкладывая истории только для друзей, блокировку получить даже при отправке жалоб, практически невозможно.',
+        img: 'assets/img/icon_snapchat.svg'
+      },
+      {
+        title: 'Twitter',
+        description: 'Социальная сеть, с возможностью автоматического размещения твитов со всех необходимых для Нас сервисов. Так же в нем можно выкладывать контент 18+, постить анонсы своих видео и онлайн-стримов. Размещать акции и специальные предложения. Подбирая правильные теги, можно собрать большую аудиторию пользователей',
+        img: 'assets/img/icon_twitter.svg'
+      },
+      {
+        title: 'Pornhub',
+        description: 'Агрегатор всего контента для взрослых в сети интернет.',
+        img: 'assets/img/icon_pornhub.svg',
+        textlink: 'Создав там аккаунт',
+        description2: ' и выкладывая видео со своих трансляций, вы гарантированно получите трафик целевой аудитории'
+      },
+      {
+        title: 'Online трансляции',
+        description: 'Стримы будут одним из основных источников трафика на все Ваши социальные сети. Каким образом максимально упростить доступ к ним пользователям ',
+        img: 'assets/img/icon_online-translation.svg',
+        textlink: 'читайте тут'
+      },
+      {
+        title: 'SFS',
+        description: 'Термин пришел к нам из instagram и для простого обывателя звучит как - репостнуть друг друга. При упоминаниях другими моделями Вас, генерируется высококонверсионые пользователи, готовые платить за схожий по содержанию контент',
+        img: 'assets/img/icon_sfs.svg'
+      }]
+  -
+    const monetizations = [{
+        title: 'OnlyFans',
+        description: 'Платформа с оплатой доступа к фото/видео материалу в новостной ленте и возможностью отправки личных сообщений',
+        img: 'assets/img/icon_onlyfans.svg',
+      },
+      {
+        title: 'Fancentro',
+        description: 'Сервис с удобным интерфейсом, по средствам которого можно продавать подписку на свой приватный Snapchat',
+        img: 'assets/img/icon_fancentro.svg',
+      },
+      {
+        title: 'Manyvids',
+        description: 'Онлайн магазин любого контента интимного характера, с возможностью сьемки видео по заказу подписчиков',
+        img: 'assets/img/icon_manyvids.svg',
+      },
+      {
+        title: 'Telegram',
+        description: 'Продажа доступов к телеграм каналу, с регулярным пополнение публикаций от Вашего имени',
+        img: 'assets/img/icon_telegram.svg',
+      }]
+  -
+    const articles_promotion = [{
+      tags: ['Инструкции','Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg'
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_snapchat.svg',
+      }]
+block content
+  section.promotion.wrapper
+    .container.promotion__inner
+      .promotion__inner__wrap
+        .promotion__inner__title
+          h1 Продвижение
+        .promotion__inner__description
+          p.text
+            | Опытные веб-модели со временем понимают, что вебкам не заканчивается на онлайн-трансляции и свой контент можно продавать за ее пределами.
+  section.traffic.wrapper
+    .container.traffic-container
+      .traffic__title-wrap
+        .traffic__title
+          h2 Источники трафика
+        .traffic__description
+          p.text
+            | В разделе приведены основные источники пополнения ваших потенциальных подписчиков.
+      .traffic__content
+        each traffic in traffics
+          +traffic-item(traffic)
+
+  section.monetization.wrapper
+    .container.monetization-container
+      .monetization__title-wrap
+        .traffic__title
+          h2 Платформы для монетизации
+        .monetization__description
+          p.text Список площадок для конвертации посетителей в деньги.
+      .monetization__content
+        each monetization in monetizations
+          +monetization-item(monetization)
+  section.marketer.wrapper
+    .container.marketer__container
+      .marketer__inner
+        .marketer__title
+          h3 Требуется квалифицированная  поддержка маркетолога?
+        .marketer__content
+          .marketer__content__item.col-xs-12
+            .marketer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_marketer_1.svg', alt='Создание маркетингового  плана')
+            .marketer__content__item__subtitle-wrapper
+              p.marketer__content__item__subtitle Создание маркетингового  плана
+          .marketer__content__item.col-xs-12
+            .marketer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_marketer_2.svg', alt='Формирование ценовой  политики')
+            .marketer__content__item__subtitle-wrapper
+              p.marketer__content__item__subtitle Формирование ценовой  политики
+          .marketer__content__item.col-xs-12
+            .marketer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_marketer_3.svg', alt='Создание контент  плана')
+            .marketer__content__item__subtitle-wrapper
+              p.marketer__content__item__subtitle Составление контент<br> плана
+        .marketer__link__wrapper
+          a.hide-mobile(href='#') Заказать поддержку маркетолога
+          a.disp-mobile(href='#') Заказать
+  section.realization.wrapper
+    .container.realization__container
+      .realization__content
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari.png').swiper-slide
+                  .swiper-slide-inner
+                      img(src='assets/img/Safari.png', alt='Safari')
+                a(href='/assets/img/Safari2.png').swiper-slide
+                  .swiper-slide-inner
+                      img(src='assets/img/Safari2.png', alt='Safari2')
+                a(href='/assets/img/Safari1.png').swiper-slide
+                  .swiper-slide-inner
+                      img(src='assets/img/Safari1.png', alt='Safari1')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Пример реализации
+            .realization__content__item__desc__text
+              p.text
+                | Ваши будущие подписчики пользовались или пользуются каким-либо из сервисов приведенных выше.
+                | Кому-то удобным будет смотреть Snapchat,  кто-то пользуется Onlyfans. Чтобы охватить максимальную аудиторию и собрать
+                | все сервисы в одном месте, можно воспользоваться услугами специализированных сайтов. На примере одного из таких сайтов
+                a.realization__content__item__desc__text__link(href='#') onemylink.com
+                | ,  мы покажем как можно разместить свои ссылки
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari1.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari1.png', alt='Safari1')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Вставляем ссылку в OBS
+            .realization__content__item__desc__text
+              p.text
+                | Копируем ссылку в личном кабинете onemylink.com  и вставляем в настройки трансляции OBS.
+                | Благодаря этому, мы получаем графическое отображение ссылки на все наши сервисы, которую можно не
+                | только ввести  в браузер, но и отсканировать при помощи QR кода.
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari3.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari3.png', alt='Safari1')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Вставляем ссылку в чат
+            .realization__content__item__desc__text
+              p.text
+                | Копируем текстовую ссылку с личного кабинета
+                a.realization__content__item__desc__text__link(href='#') onemylink.com
+                |                                 и интегрируем ее в чат-боты сайтов. Так же, при наличии возможности отправки GIF сообщений, организовываем систематическое появление их в чате.
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari4.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari4.png', alt='Safari1')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Оформление биографии
+            .realization__content__item__desc__text
+              p.text
+                | Создавая свою биографию, не забудьте  про её визуальное оформление. Добавляйте  в оформление ваши ссылки и прайс лист.
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+  section.designer.wrapper
+    .container.designer__container
+      .designer__inner
+        .designer__title
+          h3 Появилась потребность в помощи  дизайнера?
+        .designer__content
+          .designer__content__item
+            .designer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_1.svg', alt='Создание маркетингового  плана')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Разработка фирменного  стиля аккаунтов
+          .designer__content__item
+            .marketer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_2.svg', alt='Формирование ценовой  политики')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Создания персонального  сайта
+          .designer__content__item
+            .designer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_3.svg', alt='Создание маркетингового  плана')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Монтаж вашего  видео
+        .designer__link__wrapper
+          a.hide-mobile(href='#') Заказать поддержку дизайнера
+          a.disp-mobile(href='#') Заказать
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .articles__title-wrap
+          .articles__title
+            h2 Полезные статьи на тему «Продвижение»
+          .articles__title__link
+            a(href='#') Показать больше статей
+        .news__inner
+          each article in articles_promotion
+            +article(article)

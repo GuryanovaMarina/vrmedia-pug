@@ -1,0 +1,123 @@
+extends ../layout/main
+include ../utils/mixins
+include ../includes/modules/article
+
+block variablesHeader
+  - const isBlog = true
+block variables
+  - const title = 'VRMEDIA blog'
+  - const description = 'Description blog'
+
+  -
+    const articles_blog = [{
+      tags: ['Инструкции','Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg',
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'news',
+        title: 'Вышел трейлер комедийного сериала про вебкам',
+        title_mobile: 'Вышел трейлер про вебкам',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '08 мая 2020',
+        type: 'digest',
+        title: 'Дайджест № 4',
+        title_mobile: '',
+        description: '',
+        img: 'assets/img/icon_news_digest.svg',
+      }]
+block content
+  section.blog.wrapper
+    .container.blog__inner
+      .blog__inner__wrap
+        .blog__inner__title
+          h1 Блог
+        .blog__inner__description
+          p.text
+            | Мы собираем всю полезную и актуальную информацию, рассказываем  о тенденциях развития бизнеса, новинках в программном обеспечении,  а так же помогаем Вам создать собственный бренд.
+  section.news.wrapper
+    .container.news__container
+      .news__top
+        .swiper-container.news__tag#news__tag
+          .swiper-wrapper
+            .swiper-slide
+              div.news__tag__item Показать все
+            .swiper-slide
+              div.news__tag__item Для моделей
+            .swiper-slide
+              div.news__tag__item.active Для студий
+            .swiper-slide
+              div.news__tag__item Анонимность
+            .swiper-slide
+              div.news__tag__item.active Деньги
+            .swiper-slide
+              div.news__tag__item.active Инструкции
+            .swiper-slide
+              div.news__tag__item.active Платежные системы
+            .swiper-slide
+              div.news__tag__item Социальные сети
+            .swiper-slide
+              div.news__tag__item Закон
+            .swiper-slide
+              div.news__tag__item Скандалы
+            .swiper-slide
+              div.news__tag__item Фильмы и сериалы
+        .news__top__filter
+          .select__wrapper
+            .form__block.select__field#news_filter_wrap
+              label.form__lbl(for='news_filter') Тип публикации
+              input#news_filter.form__fld(type='text', readonly, value='Смотреть всё')
+            .select__result#news_filter_result
+              ul.select_ul
+                li.select_li.disable(data-value='Смотреть всё') Смотреть всё
+                li.select_li(data-value='Статьи') Статьи
+                li.select_li(data-value='Новости') Новости
+                li.select_li(data-value='Дайджест') Дайджест
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .news__inner
+          each article in articles_blog
+            +article(article)
+        .news__link__more
+          a(href='#') Показать ещё 8 публикаций
+
+

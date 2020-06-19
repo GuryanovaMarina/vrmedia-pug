@@ -1,0 +1,14 @@
+mixin traffic-item(traffic)
+  .col-6.col-xs-12.traffic__item__wrapper
+    .traffic__item(data-url='http://localhost:3000/index1.html')
+        .traffic__item__title
+          .traffic__item__img
+            img(src=traffic.img, alt=traffic.title)
+            p.traffic__item__subtitle=traffic.title
+          .traffic__item__link
+            a(href='#') Подробнее
+        .traffic__item__content
+            .text=traffic.description
+              a.traffic__item__content__link(href='#')=traffic.textlink
+              =traffic.description2
+

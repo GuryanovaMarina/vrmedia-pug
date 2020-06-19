@@ -1,0 +1,23 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+@import '.././common/article.scss';
+
+.articles {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  .articles__container {
+    max-width: 1440px;
+    .articles__wrapper {
+      position: relative;
+      .news__inner {
+        padding-bottom: 70px
+      }
+      .news__link__more {
+          text-align: center;
+        a {
+          @include lnk__custom-grey-arrow($grey-blue, 315deg, 35%, -10px, 0,);
+        }
+      }
+    }
+  }
+}

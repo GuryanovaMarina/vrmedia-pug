@@ -1,0 +1,113 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.traffic {
+  margin-top: 70px;
+  .traffic-container {
+    .traffic__title-wrap {
+      .traffic__title {
+        @include title2-black;
+      }
+      .traffic__description {
+        @include text-title;
+        max-width: 670px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+    }
+    .traffic__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: -20px;
+      @media (max-width: $screen-lg-max) {
+        margin: -10px;
+      }
+      .traffic__item__wrapper {
+        padding: 20px;
+        @media (max-width: $screen-lg-max) {
+          padding: 10px;
+        }
+      }
+      .traffic__item {
+        @include pnl_white;
+        //height: 100%;
+        //background: $white;
+        //@include box-shadow__main;
+        //border-radius: 6px;
+        min-height: 250px;
+        cursor: pointer;
+        position: relative;
+        @include transition;
+        &:hover {
+          box-shadow: 0 4px 20px rgba(120, 159, 194, 0.15);
+          transform: translateY(-4px);
+          .traffic__item__link a {
+            &::after {
+              transform: translateX(3px) rotate(225deg)
+            }
+          }
+        }
+
+        &__title {
+          height: 90px;
+          border-bottom: 1px solid $bg-med-grey;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+          @media (max-width: $screen-sm-max) {
+            border-bottom: none;
+          }
+        }
+
+        &__img {
+          position: relative;
+        }
+
+        &__subtitle {
+          @include text-subtitle;
+          position: absolute;
+          min-width: 210px;
+          padding-left: 70px;
+          top: 50%;
+          transform: translate(0, -50%)
+        }
+
+        &__link {
+          @media (max-width: $screen-sm-max) {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            padding-left: 20px;
+            padding-top: 13px;
+            border-top: 1px solid $bg-med-grey;
+          }
+          a {
+            @include lnk__custom__arrow-move;
+            @media (max-width: $screen-sm-max) {
+                display: block;
+                &::after {
+                  right: 5px;
+                  //top: 59%;
+                  top: 37%;
+                }
+            }
+          }
+        }
+        &__content {
+          @include text-black;
+          padding: 20px 60px 25px 30px;
+          @media (max-width: $screen-sm-max) {
+            padding: 0 30px 80px 20px;
+          }
+        }
+        &__content__link {
+          @include lnk__custom__dashed-include;
+          display: inline-flex;
+        }
+      }
+    }
+  }
+}

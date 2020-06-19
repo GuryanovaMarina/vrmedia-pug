@@ -1,0 +1,261 @@
+extends ../layout/main
+include ../includes/promotion/translation-block
+include ../includes/modules/article
+
+block variablesHeader
+  - const isModels = true
+block variables
+  - const title = 'VRMEDIA models'
+  - const description = 'Description models'
+  - const pageClass = 'models-page'
+  -
+    const translations = [{
+      title: '',
+      description: 'Платформа с оплатой доступа к фото/видео материалу в новостной ленте и возможностью отправки личных сообщений',
+      img: 'assets/img/icon_translation_chaturbate.svg',
+    },
+      {
+        title: '',
+        description: 'Сервис с удобным интерфейсом, по средствам которого можно продавать подписку на свой приватный Snapchat',
+        img: 'assets/img/icon_translation_mfc.svg',
+      },
+      {
+        title: '',
+        description: 'Онлайн магазин любого контента интимного характера, с возможностью сьемки видео по заказу подписчиков',
+        img: 'assets/img/icon_translation_bongacams.svg',
+      },
+      {
+        title: '',
+        description: 'Продажа доступов к телеграм каналу, с регулярным пополнение публикаций от Вашего имени',
+        img: 'assets/img/icon_translation_cam4.svg',
+      },
+      {
+        title: '',
+        description: 'Платформа с оплатой доступа к фото/видео материалу в новостной ленте и возможностью отправки личных сообщений',
+        img: 'assets/img/icon_translation_oopsvr.svg',
+      },
+      {
+        title: '',
+        description: 'Сервис с удобным интерфейсом, по средствам которого можно продавать подписку на свой приватный Snapchat',
+        img: 'assets/img/icon_translation_camsoda.svg',
+      },
+      {
+        title: '',
+        description: 'Онлайн магазин любого контента интимного характера, с возможностью сьемки видео по заказу подписчиков',
+        img: 'assets/img/icon_translation_livejasmin.svg',
+      },
+      {
+        title: '',
+        description: 'Продажа доступов к телеграм каналу, с регулярным пополнение публикаций от Вашего имени',
+        img: 'assets/img/icon_translation_streamate.svg',
+      }]
+  -
+    const articles_models = [{
+      tags: ['Инструкции', 'Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg'
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_snapchat.svg',
+      }]
+block content
+  section.models.wrapper
+    .container.models__inner
+      .models__inner__wrap
+        .models__inner__title
+          h1 Моделям
+        .models__inner__description
+          p.text
+            | Раздел будет полезен начинающим моделям, в нем тезисно представлена информация об основах начала работы, площадках для вещания  трансляций и вывода денежных средств.
+  section.webcam.wrapper
+    .container
+      .webcam__inner
+        .webcam__inner__descript.col-8.col-md-12.col-sm-12.col-xs-12
+          .webcam__inner__descript__title
+            h2 Трансляция начинается  с вебкамеры ...
+          .webcam__inner__descript__text
+            p.text
+              | Если у Вас есть ноутбук, на первое время встроенной камеры будет достаточно для вещания. Но со временем рекомендуем приобрести камеру, способную выдать картинку в FullHD разрешении.
+              | «Золотым стандартном»  на текущий момент, является вебкамера Logitech C920.
+        .webcam__inner__img.col-4.col-md-12.col-sm-12.col-xs-12
+          img(src='assets/img/webcam_logitech.png', alt='Webcam Logitech')
+          .webcam__inner__img__link
+            a(href='#') Смотрите наш обзор на камеру
+  section.communication.wrapper
+    .container
+      .communication__inner
+        .communication__inner__descript.col-8.col-md-12.col-sm-12.col-xs-12
+          .communication__inner__descript__title
+            h2 Общение
+          .communication__inner__descript__text
+            p.text
+              | Общение происходит на английском языке, за редким исключением.  Знание английского языка является преимуществом, но не обязательным.
+              | Большинство веб- моделей используют онлайн переводчики  и не испытывают неудобств.
+        .communication__inner__img.col-4.col-md-12.col-sm-12.col-xs-12
+          img(src='assets/img/webcam_logitech.png', alt='Webcam Logitech')
+  section.translation.wrapper
+    .container.translation-container
+      .translation__title-wrap
+        .translation__title
+          h2 Платформы для трансляций
+        .translation__description
+          p.text Список площадок для конвертации посетителей в деньги.
+      .translation__content
+        each translation in translations
+          +translation-item(translation)
+  section.realization.wrapper
+    .container.realization__container
+      .realization__content
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari.png', alt='Safari')
+                a(href='/assets/img/Safari2.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari2.png', alt='Safari2')
+                a(href='/assets/img/Safari1.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari1.png', alt='Safari1')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Сервис для одновременной  трансляции на все платформы
+            .realization__content__item__desc__text
+              p.text
+                | Находкой для всех причастных к сфере вебкама стала платформа&nbsp;
+                a.realization__content__item__desc__text__link(href='#') relivecams.com
+                | . Сервис объединил в себе весь набор инструментов, необходимых для трансляции на все платформы, в одном окне. Подробнее о ней&nbsp;
+                a.realization__content__item__desc__text__link(href='#') тут
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari5.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari5.png', alt='Safari5')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Программное обеспечение
+            .realization__content__item__desc__text
+              p.text
+                | Для комфортной работы, рекомендуем использовать программу OBS (Open Broadcaster Software).
+                | Она позволяет индивидуально настраивать качество вашей трансляции, звука и очень проста в &nbsp;
+                a.realization__content__item__desc__text__link(href='#') настройке
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari6.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari6.png', alt='Safari6')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+              h4 Вывод денежных средств
+            .realization__content__item__desc__text
+              p.text
+                | Средний доход начинающей веб-модели варьируется  в диапазоне $2 000 - $2 500 в месяц.  <br />
+                | Но если рассмотреть моделей с опытом, суммы существенно выше и начинаются от $7 000.<br />
+                |
+                | В основном перечисление заработанных денег, производится 2 раза в месяц. Есть платформы,  на которых при определенных критериях, денежные средства можно получить в день обращения.<br />
+                | На текущий момент, самый оптимальный способ вывода, это платежная система  Paxum.
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+  section.placejob.wrapper
+    .container
+      .placejob__inner
+        .placejob__inner__title
+          h4 Место работы
+          .placejob__inner__description
+            p.text
+              | Существует два основных места работы: на дому и в студии.  Самое очевидное отличие между ними - при работе на дому, все расходы  на оборудование
+              | и обучение, прийдется нести самостоятельно. Но у каждого из них есть свои плюсы, давайте рассмотрим их более детально:
+        .placejob__inner__content
+          .placejob__inner__content__item.left
+            .placejob__inner__content__item__title
+              h5 Работа на дому
+            .placejob__inner__content__item__text
+              ul
+                li Отсутствии комиссии студии
+                li Свободный режим работы
+                li Индивидуально продуманная  локация  продуманная  локация
+          .placejob__inner__content__item.right
+            .placejob__inner__content__item__descr
+              .placejob__inner__content__item__title
+                h5 Работа в студии
+              .placejob__inner__content__item__text
+                ul
+                  li Обучение
+                  li Современное оборудование и камеры
+                  li Техническая поддержка
+                  li Отсутствие трудностей с выводом средств
+                  li График работы
+                  li Большое количество локаций
+                  li Обмен опытом и SFS с другими моделями
+            .placejob__inner__content__item__img
+              .placejob__inner__content__item__img__inner
+                .placejob__inner__content__item__img__text
+                  p Наши студии - это большие, чистые комфортабельные квартиры, оборудованные всем необходимым для проведения высококачественных вебкам-трансляций.
+                .placejob__inner__content__item__img__link
+                  a.hide-mobile(href='#') Оформить заявку на вакансию
+                  a.disp-mobile(href='#') Заявка на вакансию
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .articles__title-wrap
+          .articles__title
+            h2 Полезные статьи на тему «Моделям»
+          .articles__title__link
+            a(href='#') Показать больше статей
+        .news__inner
+          each article in articles_models
+            +article(article)

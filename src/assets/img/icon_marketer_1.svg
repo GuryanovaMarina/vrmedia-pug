@@ -1,0 +1,28 @@
+<svg width="188" height="126" viewBox="0 0 188 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="47" y="25" width="101" height="101" rx="22.1978" fill="#343A44"/>
+<path d="M1.5 108L186.543 67.749" stroke="#3C4352" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116 26L104 14L104 26H116Z" fill="#9EAABE"/>
+<path d="M49 12C57.7579 12 65 19.2421 65 28C65 36.7579 57.7579 44 49 44C40.2421 44 33 36.7579 33 28C33 19.2421 40.2421 12 49 12Z" fill="#AFBCD0"/>
+<path d="M111.5 78C117.247 78 122 82.7526 122 88.5C122 94.2474 117.247 99 111.5 99C105.753 99 101 94.2474 101 88.5C101 82.7526 105.753 78 111.5 78Z" fill="#F03382"/>
+<path d="M99 95C100.095 95 101 95.9053 101 97C101 98.0947 100.095 99 99 99C97.9053 99 97 98.0947 97 97C97 95.9053 97.9053 95 99 95Z" fill="#F03382"/>
+<path d="M34 0C36.1895 0 38 1.81053 38 4C38 6.18947 36.1895 8 34 8C31.8105 8 30 6.18947 30 4C30 1.81053 31.8105 0 34 0Z" fill="#AFBCD0"/>
+<path d="M53 22C53 19.7909 54.7909 18 57 18H100V30H112V88.7333C112 90.9425 110.209 92.7333 108 92.7333H57C54.7909 92.7333 53 90.9425 53 88.7333V22Z" fill="#939EB0"/>
+<path d="M57 18C57 15.7909 58.7909 14 61 14H104V26H116V84.7333C116 86.9425 114.209 88.7333 112 88.7333H61C58.7909 88.7333 57 86.9425 57 84.7333V18Z" fill="#AFBCD0"/>
+<rect x="63" y="23" width="18" height="4" rx="2" fill="#9EAABE"/>
+<rect x="63" y="45" width="40" height="4" rx="2" fill="#9EAABE"/>
+<rect x="15" y="55" width="30" height="30" rx="10" fill="#3C4352"/>
+<rect x="29" y="90" width="10" height="10" rx="3" fill="#3C4352"/>
+<rect x="63" y="53" width="20" height="4" rx="2" fill="#9EAABE"/>
+<rect x="63" y="68" width="4" height="4" rx="2" fill="#9EAABE"/>
+<rect x="63" y="76" width="4" height="4" rx="2" fill="#9EAABE"/>
+<rect x="70" y="68" width="33" height="4" rx="2" fill="#9EAABE"/>
+<rect x="70" y="76" width="23" height="4" rx="2" fill="#9EAABE"/>
+<rect x="86" y="53" width="10" height="4" rx="2" fill="#9EAABE"/>
+<g opacity="0.3">
+<rect x="130.9" y="23.9" width="16.2" height="16.2" rx="1.8" stroke="#AFBCD0" stroke-width="1.8"/>
+</g>
+<path d="M135 33L137.5 36L142.909 28" stroke="#AFBCD0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g opacity="0.3">
+<rect x="130.9" y="46.9" width="16.2" height="16.2" rx="1.8" stroke="#AFBCD0" stroke-width="1.8"/>
+</g>
+</svg>

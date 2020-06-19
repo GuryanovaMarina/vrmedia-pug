@@ -1,0 +1,13 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.marketer {
+  margin-top: 80px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 70px;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 40px;
+  }
+  @include panel__block-advert;
+}

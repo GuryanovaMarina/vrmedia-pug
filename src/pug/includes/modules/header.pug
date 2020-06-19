@@ -1,0 +1,86 @@
+block variablesHeader
+header(itemscope='', itemtype='http://schema.org/WPHeader')
+  meta(itemprop='description', name='description', content='!!!описание_страницы!!!')
+  meta(itemprop='keywords', name='keywords', content='!!!ключевые_слова_для_страницы!!!')
+  section.wrapper
+    .header__top.active-static.header__other-page
+      .container
+        .row
+          .header__col-1
+            .header__logo
+              a(href='#')
+                img(src='assets/img/VRMEDIA.png', alt='logo')
+          .header__col-2
+            a.header__burger__button.burger(href='#')
+              span Меню
+              img(src='assets/img/burger.svg', alt='Меню')
+            nav.header__menu
+              ul.header__menu-list(itemscope='', itemtype='http://schema.org/SiteNavigationElement')
+                li.header__logo-mobile
+                  img(src='assets/img/logo_mobile.svg', alt='logo')
+                li.header__close
+                li.header__menu-item.angle-on(class=isModels ?'active-page':'')
+                  | Моделям
+                  .header__dropdown
+                    ul.dropdown__list
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Заработки
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Кто может работать
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Где зарегистрироваться и как
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Как раскрутиться моделью
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Работа на дому
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Работа на студии
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Франшиза
+                li.header__menu-item.angle-on(class=isStudio ?'active-page':'')
+                  | Студиям
+                  .header__dropdown
+                    ul.dropdown__list
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Заработки
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Кто может работать
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Где зарегистрироваться и как
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Как раскрутиться моделью
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Работа на дому
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Работа на студии
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Франшиза
+                li.header__menu-item.angle-on(class=isPromotion ?'active-page':'')
+                  | Продвижение
+                  .header__dropdown
+                    ul.dropdown__list
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Источники трафика
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Платформы для монетизации
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Услуги маркетолога
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Примеры реализации
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Услуги дизайнера
+                      li.dropdown__item
+                        a(itemprop='url', href='#') Полезные статьи
+                li.header__menu-item.angle-off.disable(class=isBlog ?'active-page':'')
+                  a(itemprop='url', href='#') Блог
+                li.header__menu-item.angle-off.disable(class=isDMCA ?'active-page':'')
+                  a(itemprop='url', href='#') DMCA
+                li.header__menu-item.angle-off.disable(class=isFAQ ?'active-page':'')
+                  a(itemprop='url', href='#') FAQ
+                li.header__menu-item.angle-off.disable(class=isFranshize ?'active-page':'')
+                  a(itemprop='url', href='#') Франшиза
+          .header__col-3.header__telegram
+            a.header__telegram__button(href='#')
+              span Написать в телеграм
+              img(src='assets/img/footer_telegram.svg', alt='Написать в телеграм')
+

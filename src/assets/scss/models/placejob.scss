@@ -1,0 +1,191 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.placejob {
+  margin-top: 100px;
+  @media (max-width: $screen-xs-max) {
+    margin-top: 70px;
+  }
+  &__inner {
+    &__description {
+      @include text-title;
+      max-width: 670px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $screen-lg-max) {
+        flex-wrap: wrap;
+      }
+      &__item {
+        @include pnl_white;
+        @include text-panel-mini;
+        height: auto;
+        padding: 45px 30px;
+        &.left {
+          max-width: 26%;
+          flex-basis: 26%;
+          margin-right: 40px;
+          @media (max-width: $screen-lg-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 40px;
+          }
+          @media (max-width: $screen-xs-max) {
+            padding-left: 20px;
+            margin-bottom: 10px;
+          }
+        }
+        &.right {
+          padding-left: 0;
+          max-width: 70%;
+          flex-basis: 70%;
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: $screen-lg-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+          }
+          @media (max-width: $screen-md-max) {
+            padding-right: 0;
+          }
+          @media (max-width: $screen-sm-max) {
+            flex-wrap: wrap;
+          }
+          @media (max-width: $screen-xs-max) {
+            padding-bottom: 15px;
+          }
+        }
+        &__descr {
+          padding-left: 30px;
+          max-width: 50%;
+          flex-basis: 50%;
+          @media (max-width: $screen-xs-max) {
+            padding: 0 20px;
+          }
+          @media (max-width: $screen-xs-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+          }
+        }
+        &__title {
+          padding-bottom: 30px;
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            list-style-image: url(/assets/img/icon_li.svg);
+            position: relative;
+            padding-bottom: 8px;
+          }
+        }
+        &__img {
+          max-width: 50%;
+          flex-basis: 50%;
+          position: relative;
+          width: 405px;
+          height: 323px;
+          @media (max-width: $screen-md-max) {
+            max-width: 65%;
+            flex-basis: 65%;
+          }
+          @media (max-width: $screen-sm-max) {
+            //max-width: 100%;
+            //flex-basis: 100%;
+            max-width: 50%;
+            flex-basis: 50%;
+          }
+          @media (max-width: $screen-xs-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+          }
+          &__inner {
+            background-image: url("/assets/img/icon_placejob.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            @media (max-width: $screen-sm-max) {
+              //left: 30px;
+              left: 10px;
+              right: 10px;
+            }
+            @media (max-width: $screen-xs-max) {
+              left: 5px;
+              right: 5px;
+              margin: 0 auto;
+              max-width: 320px;
+            }
+          }
+          &__text {
+            padding: 80px 40px 40px 70px;
+            position: relative;
+            z-index: 1;
+            @media (max-width: $screen-xl-max) {
+              padding: 80px 0 40px 60px;
+            }
+            @media (max-width: $screen-md-max) {
+              padding: 100px 0 40px 80px;
+            }
+            @media (max-width: $screen-sm-max) {
+              padding: 20% 10px 20px 10px;
+            }
+            @media (max-width: $screen-xs-max) {
+              padding: 65px 0 40px 0;
+            }
+            @media (max-width: $screen-xxs-max) {
+              padding-top: 55px;
+            }
+            p {
+              max-width: 350px;
+              @media (max-width: $screen-xs-max) {
+                max-width: 260px;
+                margin: 0 auto;
+              }
+            }
+          }
+          &__link {
+            position: relative;
+            z-index: 1;
+            padding-left: 70px;
+            @media (max-width: $screen-xl-max) {
+              padding-left: 60px;
+            }
+            //@media (max-width: $screen-xs-max) {
+            @media (max-width: $screen-sm-max) {
+              padding-left: 10px;
+            }
+            @media (max-width: $screen-xs-max) {
+              padding-left: 0;
+              text-align: center;
+            }
+            a {
+              @include btn__custom__arrow-move;
+              &.hide-mobile {
+                @media (max-width: $screen-xs-max) {
+                  display: none;
+                }
+              }
+              &.disp-mobile {
+                display: none;
+                @media (max-width: $screen-xs-max) {
+                  @include btn__custom__arrow-move($pink, 225deg, 43%, 45px, 3px);
+                  display: inline;
+                  padding: 15px 60px 15px 45px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//    @include pnl_white;

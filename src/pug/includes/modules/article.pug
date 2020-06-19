@@ -1,0 +1,65 @@
+mixin article(article)
+  - var itemtype = 'http://schema.org/Article'
+  article.col-3.col-lg-4.col-md-4.col-sm-6.col-xs-12.news__item__wrapper(itemscope='', itemtype=itemtype)
+    case article.type
+      when 'news'
+        .news__item.news__item-news
+          .news__item__image(style='background-image: url(' + article.img + ');')(itemprop='image', alt='Новость')
+            .news__item__image-inner
+              span Инструкции
+              span Для моделей
+          .news__item__content
+            .news__item__subtitle
+              span(itemprop='datePublished', content='2020-05-30')=article.date
+              span='Новость'
+            h6(itemprop='headline name').hide-mobile=article.title
+            h6(itemprop='alternativeHeadline').disp-mobile=article.title_mobile
+            p(itemprop='description').text=article.description
+          .news__item__footer
+            .news__item__footer__link
+              a(itemprop='mainEntityOfPage')(href='#') Подробнее
+      when 'article'
+        .news__item.news__item-article
+          if article.img_bg !== undefined||null||""
+            .news__item__image(style='background-image: url(' + article.img + '), url(' + article.img_bg + '),' + 'linear-gradient(to right, #cfd6e0 0%,#cfd6e0 71%,#2e343f 72%, #2e343f 100%);')(itemprop='image', alt='Статья')
+              .news__item__image-inner
+                span Инструкции
+                span Для моделей
+            .news__item__content
+              .news__item__subtitle
+                span(itemprop='datePublished', content='2020-05-30')=article.date
+                span='Статья'
+              h6(itemprop='headline name').hide-mobile=article.title
+              h6(itemprop='alternativeHeadline').disp-mobile=article.title_mobile
+              p(itemprop='description').text=article.description
+            .news__item__footer
+              .news__item__footer__link
+                a(itemprop='mainEntityOfPage')(href='#') Подробнее
+          else
+            .news__item__image(style='background-image: url(' + article.img + ')')(itemprop='image', alt='Статья')
+              .news__item__image-inner
+                span Инструкции
+                span Для моделей
+            .news__item__content
+              .news__item__subtitle
+                span(itemprop='datePublished', content='2020-05-30')=article.date
+                span='Статья'
+              h6(itemprop='headline name').hide-mobile=article.title
+              h6(itemprop='alternativeHeadline').disp-mobile=article.title_mobile
+              p(itemprop='description').text=article.description
+            .news__item__footer
+              .news__item__footer__link
+                a(itemprop='mainEntityOfPage')(href='#') Подробнее
+      when 'digest'
+        .news__item.news__item-digest
+          .news__item__image(style='background-image: url(' + article.img + ');')(itemprop='image', alt='Дайджест')
+            .news__item__image-inner
+              span Инструкции
+              span Для моделей
+          .news__item__content
+            .news__item__subtitle
+              h6(itemprop='headline name')=article.title
+              span(itemprop='datePublished', content='2020-05-30')=article.date
+          .news__item__footer
+            .news__item__footer__link
+              a(itemprop='mainEntityOfPage')(href='#') Подробнее
