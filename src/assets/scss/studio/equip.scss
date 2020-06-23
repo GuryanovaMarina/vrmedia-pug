@@ -1,0 +1,116 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.equip {
+  margin-top: 100px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 70px;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 40px;
+  }
+  @include panel__block-advert;
+  &__inner {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  &__link__wrapper {
+    padding-left: 20px;
+  }
+  &__content {
+    @media (max-width: $screen-lg-max) and (min-width: $screen-sm-min){
+      padding: 50px 0 60px;
+    }
+    @media (max-width: $screen-xs-max){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__item {
+      max-width: 50%;
+      flex-basis: 50%;
+      align-items: start;
+      height: auto;
+      padding: 0 20px;
+      @media (max-width: $screen-md-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+      @media (max-width: $screen-xxs-max) {
+        padding: 0 10px;
+      }
+      &.right {
+        padding: 0;
+        @media (max-width: $screen-md-max) and (min-width: $screen-sm-min) {
+         // align-items: center;
+        }
+      }
+      &__title {
+        @include title2-white;
+        text-align: left;
+      }
+      &__description {
+        @include text-title;
+        color: $white;
+        max-width: 503px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        @media (max-width: $screen-md-max) {
+          max-width: 100%;
+        }
+      }
+      &__list {
+        @include text-panel-mini;
+        color: $white;
+        @include list;
+        @media (max-width: $screen-xxs-max) {
+          padding-left: 10px;
+        }
+      }
+      &__img {
+        margin-top: 50px;
+        margin-left: 20px;
+        position: relative;
+        height: 224px;
+        width: 224px;
+        @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+          height: 257px;
+          width: 257px;
+        }
+        @media (max-width: $screen-md-max) {
+          height: 207px;
+          width: 207px;
+        }
+        @media (max-width: $screen-xxs-max) {
+          margin-left: 10px;
+        }
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &__subtitle {
+        padding: 20px 20px 30px;
+        max-width: 473px;
+        @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+          h5 {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+        @media (max-width: $screen-md-max) {
+          max-width: 436px;
+          //text-align: center;
+        }
+        @media (max-width: $screen-xs-max) {
+          //text-align: left;
+        }
+        @media (max-width: $screen-xxs-max) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

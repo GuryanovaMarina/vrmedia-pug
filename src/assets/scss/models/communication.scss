@@ -10,11 +10,11 @@
     justify-content: space-between;
     padding: 40px 75px 60px;
     align-items: center;
-    @media (max-width: $screen-sm-max) {
-      padding: 40px 40px 75px;
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+      padding: 40px 40px 0;
     }
     @media (max-width: $screen-xs-max) {
-      padding: 40px 0 75px;
+      padding: 40px 0 0;
     }
     &__descript {
       max-width: 630px;
@@ -30,9 +30,6 @@
     &__img {
       position: relative;
       text-align: center;
-      @media (max-width: $screen-md-max) {
-        padding-top: 40px;
-      }
       img {
         width: 275px;
         height: 275px;

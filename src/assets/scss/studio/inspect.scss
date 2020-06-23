@@ -1,0 +1,24 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.inspect {
+  margin-top: 100px;
+  @media (max-width: $screen-xs-max) {
+    margin-top: 70px;
+  }
+  .inspect__title-wrap {
+    max-width: 780px;
+  }
+  .inspect__title {
+    @include title2-black;
+  }
+  .inspect__description {
+    @include text-title;
+    max-width: 670px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .realization__content__item__desc__text {
+    max-width: 475px;
+  }
+}

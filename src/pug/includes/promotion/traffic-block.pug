@@ -4,7 +4,8 @@ mixin traffic-item(traffic)
         .traffic__item__title
           .traffic__item__img
             img(src=traffic.img, alt=traffic.title)
-            p.traffic__item__subtitle=traffic.title
+            div
+              p.traffic__item__subtitle=traffic.title
           .traffic__item__link
             a(href='#') Подробнее
         .traffic__item__content

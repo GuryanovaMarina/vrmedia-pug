@@ -9,89 +9,95 @@
   @media (max-width: $screen-xs-max) {
     margin-top: 40px;
   }
-  &__content {
-    &__item {
-      min-height: 555px;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 10px 80px;
-      background: $white;
-      @include box-shadow__main;
-      border-radius: 6px;
-      margin-bottom: 50px;
-      align-items: center;
-      @media (max-width: $screen-lg-max)  and (min-width: $screen-lg-min) {
-        padding: 0 50px;
-        margin-bottom: 20px;
+}
+
+.realization__content {
+  &__item {
+    min-height: 555px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 80px;
+    background: $white;
+    @include box-shadow__main;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    align-items: center;
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-lg-min) {
+      padding: 0 50px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $screen-md-max) {
+      height: auto;
+      position: relative;
+      padding: 60px 50px 120px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 60px 20px 120px;
+      margin-bottom: 10px;
+    }
+    &__swip {
+      flex: 0 0 55%;
+      max-width: 55%;
+      position: relative;
+      @media (max-width: $screen-md-max) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        order: 1;
+      }
+    }
+    &__desc {
+      flex: 0 0 45%;
+      max-width: 45%;
+      padding-left: 80px;
+      @media (max-width: $screen-lg-max) and (min-width: $screen-lg-min) {
+        padding-left: 50px;
       }
       @media (max-width: $screen-md-max) {
-        height: auto;
-        position: relative;
-        padding: 60px 50px 120px;
-        margin-bottom: 20px;
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding-left: 0;
       }
       @media (max-width: $screen-xs-max) {
-        padding: 60px 20px 120px;
-        margin-bottom: 10px;
+        padding-left: 10px;
       }
-      &__swip {
-        flex: 0 0 55%;
-        max-width: 55%;
-        position: relative;
-        @media (max-width: $screen-md-max) {
-          max-width: 100%;
-          flex: 0 0 100%;
-          order: 1;
-        }
-      }
-      &__desc {
-        flex: 0 0 45%;
-        max-width: 45%;
-        padding-left: 80px;
-        @media (max-width: $screen-lg-max) and (min-width: $screen-lg-min) {
-          padding-left: 50px;
+      &__text {
+        @include text-black;
+        @include list;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        max-width: 450px;
+        @media (max-width: $screen-lg-max) {
+          font-size: 14px;
+          line-height: 24px;
+          ul {
+            font-size: 14px;
+            line-height: 24px;
+          }
         }
         @media (max-width: $screen-md-max) {
-          max-width: 100%;
-          flex: 0 0 100%;
-          padding-left: 0;
+          max-width: initial;
         }
-        @media (max-width: $screen-xs-max) {
-          padding-left: 10px;
-        }
-        &__text {
-          @include text-black;
-          padding-top: 20px;
-          padding-bottom: 40px;
-          max-width: 450px;
+        a {
+          @include lnk__custom__solid-include;
           @media (max-width: $screen-lg-max) {
             font-size: 14px;
             line-height: 24px;
           }
-          @media (max-width: $screen-md-max) {
-            max-width: initial;
-          }
-          a {
-            @include lnk__custom__solid-include;
-            @media (max-width: $screen-lg-max) {
-              font-size: 14px;
-              line-height: 24px;
-            }
-          }
         }
-        &__link {
-          @media (max-width: $screen-md-max) {
-            position: absolute;
-            bottom: 50px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            text-align: center;
-          }
-          a {
-            @include lnk__custom-grey-arrow;
-            padding-left: 0;
-          }
+      }
+      &__link {
+        @media (max-width: $screen-md-max) {
+          position: absolute;
+          bottom: 50px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          text-align: center;
+        }
+        a {
+          @include lnk__custom-grey-arrow;
+          padding-left: 0;
         }
       }
     }
@@ -198,7 +204,6 @@
       }
     }
   }
-
   .swiper-button-disabled {
     display: none;
   }
@@ -254,6 +259,7 @@
     }
   }
 }
+
 
 
 

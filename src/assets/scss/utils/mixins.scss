@@ -174,7 +174,7 @@
   line-height: 29px;
   color: $dark-second;
   @media (max-width: $screen-xxs-max) {
-    line-height: 26px;
+    font-size: 16px;
   }
 }
 @mixin text-ital {
@@ -190,7 +190,7 @@
 @mixin text-subtitle {
   color: $grey-subtitle;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
 }
 @mixin text-mini {
   color: $black;
@@ -255,14 +255,15 @@
     right: 26px;
   }
 }
-@mixin btn__custom__arrow-move($color:$pink, $rotate:225deg, $top:43%, $right:20px, $right_hover:3px) {
+
+@mixin btn__custom__arrow-extend($color:$pink, $rotate:225deg, $top:2px, $right:-3px, $right_hover:3px) {
   color: $white;
   font-size: 15px;
   line-height: 19px;
   height: 50px;
   background-color: $color;
   border-radius: 6px;
-  padding: 15px 35px 15px 20px;
+  padding: 15px 25px 15px 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -270,24 +271,21 @@
   @include transition;
   &:hover {
     background-color: $pink-hover;
-    &::after{
-      //right: 17px;
+    .arrow{
       transform: translateX($right_hover) rotate($rotate)
     }
   }
-  &::after {
-    content: '';
+  .arrow {
     border-bottom: 2px solid $white;
     border-left: 2px solid $white;
     height: 8px;
     width: 8px;
     right: $right;
     top: $top;
-    position: absolute;
+    position: relative;
     transform: rotate($rotate);
     @include transition;
   }
-
 }
 /*STYLE LINK*/
 @mixin lnk__custom__arrow-move($color:$pink, $rotate:225deg, $top:32%, $right:-15px, $right_hover:3px) {
@@ -316,23 +314,24 @@
     @include transition;
   }
 }
-@mixin lnk__custom__dashed-include {
+@mixin lnk__custom__dashed-include($color:$pink, $bottom:1px) {
   @include text-panel;
   position: relative;
   overflow: hidden;
-  color: $pink;
+  color: $color;
   &:hover {
     &::after{
-      border-bottom: 1px dashed rgba($pink, 1);
+      border-bottom: 1px dashed rgba($color, 1);
     }
   }
   &::after {
     content: '';
-    border-bottom: 1px dashed rgba($pink, .2);
+    border-bottom: 1px dashed rgba($color, .2);
     @include transition;
     right: 0;
     left: 0;
-    bottom: 3px;
+    bottom: $bottom;
+    top: 0;
     position: absolute;
   }
 
@@ -721,7 +720,7 @@
     background-repeat: repeat-x;
     border-radius: 6px;
     padding-top: 64px;
-    padding-bottom: 85px;
+    padding-bottom: 80px;
     @media (max-width: $screen-lg-max) {
       padding-bottom: 60px;
     }
@@ -737,7 +736,7 @@
   }
   &__title {
     @include title3-white;
-    max-width: 700px;
+    max-width: 730px;
     text-align: center;
     margin: 0 auto;
     padding: 0 50px;
@@ -777,15 +776,26 @@
         width: 200px;
       }
       &__img {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
     }
   }
   &__link__wrapper {
     text-align: center;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding: 0 10px;
+    }
     a {
-      @include btn__custom__arrow-move;
+      //@include btn__custom__arrow-move;
+      @include btn__custom__arrow-extend();
       &.hide-mobile {
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
         @media (max-width: $screen-xxs-max) {
           display: none;
         }
@@ -793,14 +803,16 @@
       &.disp-mobile {
         display: none;
         @media (max-width: $screen-xxs-max) {
-          display: inline;
+          //@include btn__custom__arrow-move($pink, 225deg, 43%, 35%, 34%);
+          display: inline-flex;
+          width: 100%;
         }
       }
     }
   }
 }
 @mixin block__header {
-  margin-top: 70px;
+  padding-top: 80px;
   background-image: url(/assets/img/bg_main.svg);
   background-color: $bg-main;
   background-position: center center;
@@ -1014,7 +1026,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0 0 0 70px;
+        padding: 0 0 0 20px;
       }
     }
     &__link {
@@ -1051,7 +1063,7 @@
     }
     &__content {
       @include text-panel-mini;
-      padding-bottom: 35px;
+      padding-bottom: 30px;
       @media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
         padding-top: 20px;
         padding-bottom: 0;
@@ -1063,3 +1075,51 @@
     }
   }
 }
+
+@mixin list {
+  ul {
+    padding-left: 20px;
+      font-size: 15px;
+      line-height: 24px;
+    li {
+      list-style-image: url(/assets/img/icon_li.svg);
+      position: relative;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+
+//@mixin btn__custom__arrow-move($color:$pink, $rotate:225deg, $top:43%, $right:20px, $right_hover:3px) {
+//  color: $white;
+//  font-size: 15px;
+//  line-height: 19px;
+//  height: 50px;
+//  background-color: $color;
+//  border-radius: 6px;
+//  padding: 15px 35px 15px 20px;
+//  display: inline-flex;
+//  align-items: center;
+//  justify-content: center;
+//  position: relative;
+//  @include transition;
+//  &:hover {
+//    background-color: $pink-hover;
+//    &::after{
+//      //right: 17px;
+//      transform: translateX($right_hover) rotate($rotate)
+//    }
+//  }
+//  &::after {
+//    content: '';
+//    border-bottom: 2px solid $white;
+//    border-left: 2px solid $white;
+//    height: 8px;
+//    width: 8px;
+//    right: $right;
+//    top: $top;
+//    position: absolute;
+//    transform: rotate($rotate);
+//    @include transition;
+//  }
+//}

@@ -34,6 +34,29 @@ $( document ).ready(function() {
   $('#form__email__footer').keyup(function () {
     validate($(this));
   });
+  // header
+  $('.header__telegram__button').on('click', function(){
+    let $this = $(this);
+    $this.toggleClass('visible');
+    let comp = $this.parent('.header__telegram');
+    $(comp).find('.dropdown__list').toggleClass('visible');
+  });
+  // $('.header__telegram__button').click(function () {
+  //   let $this = $(this);
+  //   $this.toggleClass('visible');
+  //   let comp = $this.parent('.header__telegram');
+  //   $(comp).find('.dropdown__list').toggleClass('visible');
+  // });
+
+  $('.header__telegram__button .dropdown__list').on('click', function(event){
+    event.stopPropagation();
+  });
+
+  $('.header__telegram .dropdown__list').on('mouseleave', function () {
+    let $this = $(this);
+    $this.removeClass('visible');
+    $this.parent('.header__telegram__button').removeClass('visible');
+  });
 });
 //???????
 $(window).on('scroll', function () {

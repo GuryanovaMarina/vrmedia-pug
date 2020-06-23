@@ -80,7 +80,14 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
                 li.header__menu-item.angle-off.disable(class=isFranshize ?'active-page':'')
                   a(itemprop='url', href='#') Франшиза
           .header__col-3.header__telegram
-            a.header__telegram__button(href='#')
-              span Написать в телеграм
+            .header__telegram__button
+              span.header__telegram__button__name Написать в телеграм
               img(src='assets/img/footer_telegram.svg', alt='Написать в телеграм')
+              ul.dropdown__list
+                li.dropdown__item
+                  span Наш телеграм-канал про вебкам
+                  a(itemprop='url', href='#') @webcam_vrmedia
+                li.dropdown__item
+                  span Заявки по вакансиям отправляйте сюда
+                  a(itemprop='url', href='#') @vrcams
 

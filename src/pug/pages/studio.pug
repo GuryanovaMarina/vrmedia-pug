@@ -1,11 +1,73 @@
 extends ../layout/main
+include ../includes/place/place-block
+include ../includes/modules/article
 
 block variablesHeader
   - const isStudio = true
 block variables
-  - const title = 'VRMEDIA models'
-  - const description = 'Description models'
-  - const pageClass = 'models-page'
+  - const title = 'VRMEDIA studio'
+  - const description = 'Description studio'
+  - const pageClass = 'studio-page'
+  -
+    const places = [{
+      title: 'Удобная логистика',
+      description: 'Сотрудники не должны испытывать трудностей с проездом к месту работы',
+      img: 'assets/img/icon_logistics.svg',
+    },
+      {
+        title: 'Хорошая шумоизоляция',
+        description: 'Шумоизоляция избавит от ненужного внимания соседей',
+        img: 'assets/img/icon_soundinsulation.svg',
+      },
+      {
+        title: 'Современный дизайн',
+        description: 'Приятный интерьер с хорошим освещением и мебелью',
+        img: 'assets/img/icon_design.svg',
+        hasLink: 'true'
+      },
+      {
+        title: 'Несколько провайдеров',
+        description: 'Стабильный интернет даст возможность вести трансляцию без задержек',
+        img: 'assets/img/icon_provider.svg',
+      }]
+  -
+    const articles_studio = [{
+      tags: ['Инструкции', 'Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg'
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_snapchat.svg',
+      }]
 block content
   section.models.wrapper
     .container.models__inner
@@ -14,4 +76,146 @@ block content
           h1 Студиям
         .models__inner__description
           p.text
-            | Прочтение раздела поможет сформировать понимание источников пополнения кадров и контролю персонала. А также даст информацию  по стандартному оборудованию помещений и их дизайну.
+            | Открыть свою студию для вебкама - задача не из легких.
+            | <br>
+            |Мы постараемся Вам в ней помочь.
+  section.place.wrapper
+    .container
+      .place__title-wrap
+        .place__title
+          h2 Открытие студии для вебкама начинается с подбора помещения
+        .place__description
+          p.text Место работы будущих моделей должно отвечать основным критериям:
+      .place__content
+         each place in places
+           +place-item(place)
+  section.equip.wrapper
+    .container.equip__container
+      .equip__inner
+        .equip__content
+          .equip__content__item
+            .equip__content__item__title
+              h2 Оборудование
+            .equip__content__item__description
+              p.text Современный ноутбук или стационарный компьютер справится с задачей запуска трансляции. Ноутбуки мобильнее, стационарный компьютер можно апгрейдить.
+                | <br>
+                | <br>
+                | На что обратить внимание, при выборе периферии:
+            .equip__content__item__list
+              ul
+                li Мощный многоядерный процессор
+                li Оперативная память объемом от 8 гигабайт
+                li Вебкамера с FullHD разрешением
+                li Wi-fi роутер с частотой 5 гигагерц
+          .equip__content__item.right
+            .equip__content__item__img
+              img(src='assets/img/icon_equip.svg', alt='Формирование ценовой  политики')
+            .equip__content__item__subtitle
+              h5 Мы можем осуществить заказ и подбор оборудования в вашем городе
+            .equip__link__wrapper
+              a.hide-mobile(href='#')
+                span Заказать подбор оборудования
+                span.arrow
+              a.disp-mobile(href='#')
+                span Заказать
+                span.arrow
+  section.recruit.wrapper
+    .container
+      .recruit__inner
+        .recruit__inner__content
+          .recruit__inner__content__item.left
+            .recruit__inner__content__item__wrap
+              .recruit__inner__content__item__title
+                h2 Подбор персонала
+              .recruit__inner__content__item__text
+                p.text Поиск сотрудников самый важный этап в любом бизнесе, и вебкам не является исключением. То, на сколько правильно Вы соберете костяк студии, определит Ваше дальнейшее развитие
+          .recruit__inner__content__item.right
+            .recruit__inner__content__item__title
+              h5 Эффективные способы
+            .recruit__inner__content__item__text
+              ul
+                li Собственный сайт визитка
+                li Активное привлечение в социальных сетях
+                li Сайты по поиску работы
+                li Агрегаторы объявлений
+                li Рекомендации действующих сотрудников
+
+  section.designer.wrapper
+    .container.designer__container
+      .designer__inner
+        .designer__title
+          h3 Появилась потребность в помощи  дизайнера?
+        .designer__content
+          .designer__content__item
+            .designer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_1.svg', alt='Оформление социальных сетей')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Оформление социальных сетей
+          .designer__content__item
+            .designer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_2.svg', alt='Создания  сайта компании')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Создания  сайта<br>компании
+          .designer__content__item
+            .designer__content__item__img
+              a(href='#')
+                img(src='assets/img/icon_designer_3.svg', alt='Составление описания вакансий')
+            .designer__content__item__subtitle-wrapper
+              p.designer__content__item__subtitle Составление описания вакансий
+        .designer__link__wrapper
+          a.hide-mobile(href='#')
+            span Заказать услуги дизайнера
+            span.arrow
+          a.disp-mobile(href='#')
+            span Заказать
+            span.arrow
+  section.inspect.wrapper
+    .container
+      .inspect__title-wrap
+        .inspect__title
+          h2 Контроль
+        .inspect__description
+          p.text Выход сотрудников на работу требует тщательного контроля. Как руководитель, Вы обязаны анализировать успехи своих сотрудников,
+                |держать «руку на пульсе» и своевременно реагировать на изменения.
+      .realization__content
+        .realization__content__item
+          .realization__content__item__swip
+            .swiper-container
+              .swiper-wrapper.lightgallery
+                a(href='/assets/img/Safari5_big.png').swiper-slide
+                  .swiper-slide-inner
+                    img(src='assets/img/Safari5_small.png', alt='Safari5_big')
+            .swiper-button-prev-modific
+              .swiper-button-prev-modific__inner
+            .swiper-button-next-modific
+              .swiper-button-next-modific__inner
+            .swiper-pagination
+          .realization__content__item__desc
+            .realization__content__item__desc__title
+            .realization__content__item__desc__text
+              p.text
+                | Команда программистов студии VRmedia, реализовала проект под названием &nbsp;
+                a.realization__content__item__desc__text__link(href='#') «Модель Мониторинг»
+                | , который позволяет дистанционно контролировать:
+                <br>
+                <br>
+                ul
+                  li Количество часов в онлайне
+                  li Время выхода на смену
+                  li Потраченное время на перерывы и отсутствие перед камерой
+                  li Количество заработанных токенов и их конвертация
+            .realization__content__item__desc__link
+              a(href='#') Читать статью в блоге
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .articles__title-wrap
+          .articles__title
+            h2 Полезные статьи на тему «Студиям»
+          .articles__title__link
+            a(href='#') Показать больше статей
+        .news__inner
+          each article in articles_studio
+            +article(article)

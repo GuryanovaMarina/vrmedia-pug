@@ -4,7 +4,8 @@ mixin monetization-item(monetization)
       .monetization__item__img
         .monetization__item__img-inner
           img(src=monetization.img, alt=monetization.title)
-        p.monetization__item__subtitle=monetization.title
+        div
+          p.monetization__item__subtitle=monetization.title
       .monetization__item__content
         p.text=monetization.description
       .monetization__item__link

@@ -1,0 +1,74 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.recruit {
+  margin-top: 100px;
+  @media (max-width: $screen-lg-max) {
+    margin-top: 70px;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 50px;
+  }
+  @media (max-width: $screen-xxs-max) {
+    margin-top: 40px;
+  }
+  &__inner {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $screen-md-max) {
+        flex-wrap: wrap;
+      }
+      &__item {
+        @include pnl_white;
+        height: auto;
+        padding: 45px 50px;
+        @media (max-width: $screen-xs-max) {
+          padding-left: 20px;
+        }
+        &.left {
+          @include text-panel;
+          max-width: 50%;
+          flex-basis: 50%;
+          margin-right: 40px;
+          @media (max-width: $screen-lg-max) {
+            margin-right: 20px;
+          }
+          @media (max-width: $screen-md-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+        &.right {
+          @include text-panel-mini;
+          max-width: 50%;
+          flex-basis: 50%;
+          @media (max-width: $screen-md-max) {
+            max-width: 100%;
+            flex-basis: 100%;
+          }
+          @media (max-width: $screen-md-max) {
+            padding-right: 0;
+          }
+          @media (max-width: $screen-sm-max) {
+            flex-wrap: wrap;
+          }
+        }
+        &__title {
+          padding-bottom: 30px;
+          @media (max-width: $screen-xs-max) {
+            padding-bottom: 20px;
+          }
+        }
+        &__wrap {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        @include list;
+      }
+    }
+  }
+}
