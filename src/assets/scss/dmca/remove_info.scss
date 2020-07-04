@@ -1,0 +1,109 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.remove_info {
+  margin-top: 100px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 60px;
+  }
+  &__title {
+    @include title2-black;
+    padding-bottom: 40px;
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-bottom: 20px;
+    }
+  }
+  @include instruction;
+}
+.copy_dmca {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &__inner {
+    position: absolute;
+    top: 54%;
+    display: inline-flex;
+    align-items: center;
+    @media (max-width: 991px) and (min-width: 836px) {
+      top: 53%;
+      transform: scale(.9);
+    }
+    @media (max-width: 835px) and (min-width: 769px) {
+      top: 52%;
+      transform: scale(.9);
+    }
+    @media (max-width: 768px) and (min-width: 701px) {
+      top: 52%;
+      left: 47%;
+      transform: scale(.7);
+    }
+    @media (max-width: 700px) and (min-width: 576px) {
+      top: 51%;
+      left: 45%;
+      transform: scale(.6);
+    }
+    @media (max-width: 575px) and (min-width: 481px) {
+      top: 50%;
+      left: 42%;
+      transform: scale(.5);
+    }
+    @media (max-width: 480px) and (min-width: 441px) {
+      top: 50%;
+      left: 40%;
+      transform: scale(.5);
+    }
+    @media (max-width: 440px) and (min-width: 421px) {
+      top: 49.5%;
+      left: 39.5%;
+      transform: scale(.45);
+    }
+    @media (max-width: 420px) and (min-width: 401px) {
+      top: 49.5%;
+      left: 38.5%;
+      transform: scale(.4);
+    }
+    @media (max-width: 400px) and (min-width: 341px) {
+      top: 49%;
+      left: 36%;
+      transform: scale(.4);
+    }
+    @media (max-width: 340px) {
+      top: 49%;
+      left: 34%;
+      transform: scale(.4);
+    }
+  }
+  button {
+    cursor: pointer;
+    @include btn__custom__arrow-extend($pink, 0, -1px, 0, 0, 25px, 20px);
+  }
+  &__span {
+    position: absolute;
+    right: -150px;
+    background: $dark-second;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 28px;
+    color: $grey-3;
+    padding: 5px 13px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: -16px;
+      bottom: 9px;
+      border: 10px solid rgba(0,0,0,0);
+      border-right-color: $dark-second;
+    }
+  }
+}
+
+//display: none;
+//& .visible {
+//  display: initial;
+//}

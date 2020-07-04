@@ -29,6 +29,7 @@ module.exports = {
         models: `${PATHS.src}/models.js`,
         blog: `${PATHS.src}/blog.js`,
         studio: `${PATHS.src}/studio.js`,
+        dmca: `${PATHS.src}/dmca.js`,
     },
     output: {
         filename: `${PATHS.assets}js/[name].[contenthash].js`,
@@ -68,16 +69,18 @@ module.exports = {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]"
-                }
+                    name: "[name].[ext]",
+                    outputPath: '/assets/fonts/'
+                },
             },
             {
                 // images / icons
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: "file-loader",
                 options: {
-                    name: "[name].[ext]"
-                }
+                    name: "[name].[ext]",
+                    outputPath: '/assets/img/'
+                },
             },
             {
                 // scss
@@ -123,17 +126,11 @@ module.exports = {
           },
           {
             test: /\.svg$/,
-            include: path.resolve(__dirname, 'src/assets/img'), // new line
+            //include: path.resolve(__dirname, 'src/assets/img'), // new line
             use: [
               {
-                loader: 'svg-sprite-loader',
-                options: {
-                  extract: true,
-                  publicPath: ''
-                }
+                loader: 'svg-sprite-loader'
               },
-              'svg-transform-loader',
-              'svgo-loader',
             ]
           }
         ]
@@ -170,8 +167,11 @@ module.exports = {
       new CleanWebpackPlugin()
     ]
 };
-/*
-
+/*              'svgo-loader',
+                options: {
+                  extract: true,
+                  publicPath: ''
+                }
 loader: 'svg-sprite-loader',
                 options: {
                   extract: true,

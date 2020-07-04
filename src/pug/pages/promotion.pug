@@ -3,6 +3,7 @@ include ../utils/mixins
 include ../includes/promotion/traffic-block
 include ../includes/promotion/monetization-block
 include ../includes/modules/article
+
 block variablesHeader
   - const isPromotion = true
 block variables
@@ -103,12 +104,12 @@ block variables
         img: 'assets/img/icon_news_snapchat.svg',
       }]
 block content
-  section.promotion.wrapper
-    .container.promotion__inner
-      .promotion__inner__wrap
-        .promotion__inner__title
+  section.hero.wrapper
+    .container.hero__inner
+      .hero__inner__wrap
+        .hero__inner__title
           h1 Продвижение
-        .promotion__inner__description
+        .hero__inner__description
           p.text
             | Опытные веб-модели со временем понимают, что вебкам не заканчивается на онлайн-трансляции и свой контент можно продавать за ее пределами.
   section.traffic.wrapper

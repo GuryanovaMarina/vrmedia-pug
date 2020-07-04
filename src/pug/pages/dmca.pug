@@ -1,0 +1,301 @@
+extends ../layout/main
+include ../includes/dmca/step-block
+include ../includes/dmca/instruction-block
+include ../includes/modules/article
+
+block variablesHeader
+  - const isDMCA = true
+block variables
+  - const title = 'VRMEDIA dmca'
+  - const description = 'Description dmca'
+  - const pageClass = 'dmca-page'
+  -
+    const steps = [{
+      title: 'Шаг 1',
+      description: 'Завести анонимный почтовый ящик',
+      img: 'assets/img/icon_dmca_step1.svg',
+    },
+      {
+        title: 'Шаг 2',
+        description: 'Обзавестись сертификатом DMCA',
+        img: 'assets/img/icon_dmca_step2.svg',
+      },
+      {
+        title: 'Шаг 3',
+        description: 'Отправить специальную форму',
+        img: 'assets/img/icon_dmca_step3.svg',
+      }]
+  -
+    const articles_dmca = [{
+      tags: ['Инструкции', 'Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg'
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_snapchat.svg',
+      }]
+  -
+    const instructions_mailbox = [{
+      title: 'Войти',
+      img_big: '/assets/img/img_dmca_mailbox_1.png',
+      img_small: '/assets/img/img_dmca_mailbox_1.png'
+    },
+      {
+        title: 'Создать аккаунт',
+        img_big: '/assets/img/img_dmca_mailbox_2.png',
+        img_small: '/assets/img/img_dmca_mailbox_2.png'
+      },
+      {
+        title: 'Выбираем пункт для себя',
+        img_big: '/assets/img/img_dmca_mailbox_3.png',
+        img_small: '/assets/img/img_dmca_mailbox_3.png'
+      },
+      {
+        title: 'Вводим вымышленные ФИО',
+        img_big: '/assets/img/img_dmca_mailbox_4.png',
+        img_small: '/assets/img/img_dmca_mailbox_4.png'
+      },
+      {
+        title: 'Вводим остальные данные',
+        img_big: '/assets/img/img_dmca_mailbox_5.png',
+        img_small: '/assets/img/img_dmca_mailbox_5.png'
+      },
+      {
+        title: 'Принимаем',
+        img_big: '/assets/img/img_dmca_mailbox_6.png',
+        img_small: '/assets/img/img_dmca_mailbox_6.png'
+      }]
+  -
+    const instructions_cert = [{
+      title: '',
+      img_big: '/assets/img/img_dmca_cert_1.png',
+      img_small: '/assets/img/img_dmca_cert_1.png'
+    },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_2.png',
+        img_small: '/assets/img/img_dmca_cert_2.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_3.png',
+        img_small: '/assets/img/img_dmca_cert_3.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_4.png',
+        img_small: '/assets/img/img_dmca_cert_4.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_5.png',
+        img_small: '/assets/img/img_dmca_cert_5.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_6.png',
+        img_small: '/assets/img/img_dmca_cert_6.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_7.png',
+        img_small: '/assets/img/img_dmca_cert_7.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_8.png',
+        img_small: '/assets/img/img_dmca_cert_8.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_9.png',
+        img_small: '/assets/img/img_dmca_cert_9.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_10.png',
+        img_small: '/assets/img/img_dmca_cert_10.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_11.png',
+        img_small: '/assets/img/img_dmca_cert_11.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_cert_12.png',
+        img_small: '/assets/img/img_dmca_cert_12.png'
+      },]
+  -
+    const instructions_remove = [{
+      title: '',
+      img_big: '/assets/img/img_dmca_remove_1.png',
+      img_small: '/assets/img/img_dmca_remove_1.png',
+    },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_remove_2.png',
+        img_small: '/assets/img/img_dmca_remove_2.png',
+        hasBtn: "true"
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_remove_3.png',
+        img_small: '/assets/img/img_dmca_remove_3.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_remove_4.png',
+        img_small: '/assets/img/img_dmca_remove_4.png'
+      },
+      {
+        title: '',
+        img_big: '/assets/img/img_dmca_remove_5.png',
+        img_small: '/assets/img/img_dmca_remove_5.png'
+      }]
+block content
+  section.hero.wrapper
+    .container.hero__inner
+      .hero__inner__wrap
+        .hero__inner__title
+          h1 DMCA
+        .hero__inner__description
+          p.text
+            | Каждая веб модель, рано или поздно сталкивается с вопросом удаления своих видео и фото из сети интернет.
+  section.steps.wrapper
+    .container
+      .steps__title-wrap
+        .steps__title
+          h2 Как удалить фото и видео контент из интернета, при помощи DMCA?
+        .steps__description
+          p.text Для этого нам потребуется:
+      .steps__content
+         each step in steps
+           +step-item(step)
+  section.request.wrapper
+    .container.request__container
+      .request__inner
+        .request__title
+          h3 Если вы не хотите разбираться с удалением контента самостоятельно, отправьте запрос в службу технической поддержки VRmedia.
+        .request__content
+          .request__content__item__req
+            .request__content__item__req-wrapper
+              p.request__content__item__req__title Единовременное обращение
+              p.request__content__item__req__subtitle (от 5.000 ₽ в зависимости от объема материала)
+          .request__content__item__req
+            .request__content__item__req-wrapper
+              p.request__content__item__req__title Постоянное обслуживание
+              p.request__content__item__req__subtitle (15.000 ₽ в месяц. Без ограничений)
+        .request__link__wrapper
+          a.hide-mobile(href='#')
+            span Отправить запрос
+            span.arrow
+          a.disp-mobile(href='#')
+            span Отправить запрос
+            span.arrow
+  section.mailbox.wrapper
+    .container
+      .mailbox__title-wrap
+        .mailbox__title
+          h2 Создание анонимного почтового ящика
+        .mailbox__description
+          p.text Мы будем использовать сервисы Google, потому что они не требует номер телефона при регистрации и нам потребуется Google-аккаунт для отправки запросов.
+      .instruction__content
+        .instruction__content__title
+          p.text Переходим по ссылке&nbsp;
+            a(href='#') google.com
+          p.text Далее следуем инструкции на картинках
+        #lightgallery_mailbox.instruction__content__item__wrapper
+          each instruction in instructions_mailbox
+            +instruction-item(instruction)
+  section.certification.wrapper
+    .container
+      .certification__title-wrap
+        .certification__title
+          h2 Регистрация сертификата  DMCA
+      .instruction__content
+        .instruction__content__title
+          p.text Переходим по ссылке&nbsp;
+            a(href='#') dmca.com
+          p.text Далее следуем инструкции на картинках
+        #lightgallery_cert.instruction__content__item__wrapper
+          each instruction in instructions_cert
+            +instruction-item(instruction)
+  section.remove_info.wrapper
+    .container
+      .remove_info__title-wrap
+        .remove_info__title
+          h2 Отправка запроса на удаление в Google
+      .instruction__content
+        .instruction__content__title
+          p.text Отправляем запрос в поисковую систему<br>
+            a(href='#') google.com/webmasters/tools/legal-removal-request?complaint_type=dmca
+          p.text Далее следуем инструкции на картинках:
+        #lightgallery_remove.instruction__content__item__wrapper
+          each instruction in instructions_remove
+            +instruction-item(instruction)
+        .instruction__content__title.bottom
+          p.text Проследить за удалением материалов можно по ссылке&nbsp;
+          p.text
+            a(href='#') google.com/webmasters/tools/legal-removal-dashboard?hl=ru&pid=0&complaint_type=1
+  section.request.wrapper
+    .container.request__container
+      .request__inner
+        .request__title
+          h3 Если вы не хотите разбираться с удалением контента самостоятельно, отправьте запрос в службу технической поддержки VRmedia.
+        .request__content
+          .request__content__item__req
+            .request__content__item__req-wrapper
+              p.request__content__item__req__title Единовременное обращение
+              p.request__content__item__req__subtitle (от 5.000 ₽ в зависимости от объема материала)
+          .request__content__item__req
+            .request__content__item__req-wrapper
+              p.request__content__item__req__title Постоянное обслуживание
+              p.request__content__item__req__subtitle (15.000 ₽ в месяц. Без ограничений)
+        .request__link__wrapper
+          a.hide-mobile(href='#')
+            span Отправить запрос
+            span.arrow
+          a.disp-mobile(href='#')
+            span Отправить запрос
+            span.arrow
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .articles__title-wrap
+          .articles__title
+            h2 Полезные статьи на тему «DMCA»
+          .articles__title__link
+            a(href='#') Показать больше статей
+        .news__inner
+          each article in articles_dmca
+            +article(article)

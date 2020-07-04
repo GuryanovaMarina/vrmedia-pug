@@ -35,14 +35,16 @@
     @include pnl_white;
     min-height: 385px;
     cursor: pointer;
-    padding: 50px 20px 40px 20px;
+    padding: 40px 20px 40px 20px;
     text-align: center;
     position: relative;
     @include transition;
     @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
       display: flex;
     }
-
+    @media (max-width: $screen-xs-max) {
+      min-height: initial;
+    }
     &:hover {
       box-shadow: 0 4px 20px rgba(120, 159, 194, 0.15);
       transform: translateY(-4px);
@@ -59,7 +61,10 @@
       padding: 20px 30px 30px;
     }
     @media (max-width: $screen-sm-max) {
-      padding: 20px 20px 30px;
+      padding: 40px 20px 60px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-bottom: 50px;
     }
     &__img {
       position: relative;
@@ -81,7 +86,7 @@
       }
     }
     &__content {
-      padding-bottom: 35px;
+      //padding-bottom: 35px;
       @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
         padding-top: 10px;
         padding-bottom: 0;
@@ -89,16 +94,15 @@
       }
       @media (max-width: $screen-sm-max) {
         padding-top: 20px;
-        padding-bottom: 50px;
+        //padding-bottom: 20px;
       }
       &__subtitle {
         @include text-panel-mini;
         color: $grey-subtitle;
-        padding-top: 35px;
-        padding-bottom: 15px;
+        padding-top: 25px;
+        padding-bottom: 10px;
         @media (max-width: $screen-lg-max) {
           padding-top: 0;
-          padding-bottom: 10px;
         }
       }
       &__description {

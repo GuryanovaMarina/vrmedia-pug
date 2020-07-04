@@ -1,0 +1,20 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.certification {
+  margin-top: 100px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 60px;
+  }
+  &__title {
+    @include title2-black;
+    padding-bottom: 40px;
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-bottom: 20px;
+    }
+  }
+  @include instruction;
+}

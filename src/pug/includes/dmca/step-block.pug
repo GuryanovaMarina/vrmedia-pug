@@ -1,0 +1,12 @@
+mixin step-item(step)
+  .col-4.col-sm-12.col-xs-12.steps__item__wrapper
+    .steps__item
+      .steps__item__img__wrap
+        .steps__item__img
+          img(src=step.img, alt=step.title)
+      .steps__item__content
+        .steps__item__content__subtitle
+          p.text=step.title
+        .steps__item__content__description
+          p.text=step.description
+

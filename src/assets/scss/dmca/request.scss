@@ -1,0 +1,101 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.request {
+  margin-top: 80px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 70px;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 40px;
+  }
+  @include panel__block-advert;
+  &__inner {
+    padding-left: 145px;
+    padding-bottom: 90px;
+    @media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
+      padding-left: 50px;
+      padding-right: 20px;
+    }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
+      padding-left: 35px;
+      padding-right: 20px;
+      padding-bottom: 70px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding-left: 0;
+      padding-bottom: 60px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-left: 0;
+      padding-bottom: 50px;
+    }
+  }
+  &__title {
+    @include title3-white;
+    max-width: 905px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    @media (max-width: $screen-xs-max) {
+      padding: 0 20px;
+    }
+  }
+  &__content {
+    padding: 10px 0 80px;
+    justify-content: start;
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 55px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding-bottom: 45px;
+    }
+    &__item__req {
+      max-width: 50%;
+      flex-basis: 50%;
+      min-width: 380px;
+      margin-top: 50px;
+      @media (max-width: $screen-xs-max) {
+        min-width: 100%;
+      }
+      &-wrapper {
+        border-left: 3px solid $pink;
+        height: 60px;
+        @media (max-width: $screen-xs-max) {
+          margin-left: 20px;
+        }
+        @media (max-width: $screen-xxs-max) {
+          margin-left: 10px;
+        }
+      }
+      &__title {
+        margin-left: 8px;
+        color: $white;
+        font-size: 27px;
+        line-height: 32px;
+        @media (max-width: $screen-xs-max) {
+          font-size: 20px;
+        }
+        @media (max-width: $screen-xxs-max) {
+          font-size: 18px;
+        }
+      }
+      &__subtitle {
+        margin-left: 8px;
+        color: $grey-6;
+        font-size: 15px;
+        line-height: 24px;
+        @media (max-width: $screen-xxs-max) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__link__wrapper {
+    text-align: left;
+    a {
+      @include btn__custom__arrow-extend($pink, 225deg, 1px, -3px, 3px, 55px, 50px)
+    }
+  }
+}

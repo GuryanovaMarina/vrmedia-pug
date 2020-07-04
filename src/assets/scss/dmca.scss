@@ -4,13 +4,11 @@
 @import "utils/global";
 @import "utils/mixins";
 
-
-@import "models/webcam";
-@import "models/translation";
-@import "models/placejob";
-@import "models/communication";
-
-@import "promotion/realization";
+@import "dmca/steps";
+@import "dmca/request";
+@import "dmca/mailbox";
+@import "dmca/certification";
+@import "dmca/remove_info";
 
 @import "common/hero";
 @import "common/articles_wrap";
