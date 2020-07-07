@@ -1,0 +1,106 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.dmca {
+  margin-top: 180px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 40px;
+  }
+  .container {
+    background-image: url("/assets/img/icon_text_dmca.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 100% 10%;
+    @media (max-width: $screen-md-max) {
+      background-size: 80%;
+    }
+    @media (max-width: $screen-xs-max) {
+      background-image: none;
+    }
+  }
+  &__inner {
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-md-min) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    &__items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+    &__item {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 20px;
+      @media (max-width: $screen-xs-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+        &:first-child {
+          order: 1;
+        }
+        text-align: center;
+      }
+      &__title {
+        h2 {
+          font-family: 'SF Pro Display', sans-serif;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 76px;
+          text-transform: uppercase;
+          color: $dark-main;
+          @media (max-width: $screen-sm-max) {
+            font-size: 46px;
+            line-height: 55px;
+          }
+        }
+      }
+      &__description {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: bold;
+        color: $dark-second;
+        padding: 40px 0;
+        @media (max-width: $screen-lg-max) {
+          font-size: 17px;
+          line-height: 28px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 16px;
+        }
+      }
+      &__img {
+        height: 681px;
+        text-align: center;
+        @media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+          height: 540px;
+        }
+        @media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
+          height: 384px;
+        }
+        @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
+          height: 304px;
+        }
+        @media (max-width: $screen-xs-max){
+          height: 145px;
+        }
+        img {
+          height: 100%;
+        }
+      }
+      &__link {
+        padding-top: 40px;
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+        a {
+          @include btn__custom__arrow-extend();
+          @media (max-width: $screen-xs-max) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

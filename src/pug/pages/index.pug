@@ -1,11 +1,208 @@
 extends ../layout/main
+include ../includes/modules/article
 
+block variablesHeader
+  - const isStart = true
 block variables
   - var title = 'VRMEDIA index'
   - var description = 'Description index'
   - var pageClass = 'index-page'
-
+  -
+    const articles_main = [{
+      tags: ['Инструкции', 'Для моделей'],
+      date: '12 декабря 2019',
+      type: 'article',
+      title: 'Как заработать на Fancentro — инструкция для вебкам моделей',
+      title_mobile: 'Как заработать на Fancentro',
+      description: 'Fancentro - еще один достойный adult сайт, который позволяет вебкам моделям и студиям получать пассивный доход.',
+      img: 'assets/img/icon_news_star.svg',
+      img_bg: 'assets/img/icon_news_bg.svg'
+    },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как заработать на Onlyfans — инструкция для вебкам моделей',
+        title_mobile: 'Как заработать на Onlyfans',
+        description: 'Onlyfans - отличный вариант для получения дополнительного дохода как для вебкам моделей, так и для вебкам студий.',
+        img: 'assets/img/icon_news_lock.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как оформить своё Bio на Chaturbate',
+        title_mobile: 'Как оформить Chaturbate',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_chaturbate.svg',
+      },
+      {
+        tags: ['Инструкции', 'Для моделей'],
+        date: '06 мая 2020',
+        type: 'article',
+        title: 'Как правильно продвать свой Snapchat',
+        title_mobile: 'Как свой Snapchat',
+        description: 'Способы оформления и варианты использования вкладки «Bio» на вебкам сайте Chaturbate',
+        img: 'assets/img/icon_news_snapchat.svg',
+      }]
 block content
-  section#traffic__item(style='text-align:center;')
+  section.hero.wrapper
     .container
-      h1 VRMEDIA index
+      .hero__inner__wrap
+        .hero__inner
+          .hero__title
+            .hero__title__inner
+              h1 Webcam
+              h1.subtitle wikipedia
+            .hero__title__link__wrap
+              a(href='').hero__title__link
+                img(src='assets/img/icon_arrow_main.svg', alt='Arrow')
+          .hero__description
+            .hero__description__col.col-6
+              .hero__description__col__title
+                p.text Моделям
+              .hero__description__col__content
+                p.text Представлена информация об основах, площадках и вывода денежных средств
+            .hero__description__col.col-6
+              .hero__description__col__title
+                p.text Студиям
+              .hero__description__col__content
+                p.text Своя студия для вебкама - задача не из легких. Мы поможем
+          .hero__bottom
+            .hero__bottom__col
+              a(href='')
+                img(src='assets/img/icon_arrow_main.svg', alt='Arrow')
+            .hero__bottom__col
+              a(href='')
+                img(src='assets/img/icon_wiki_main.svg', alt='Wiki')
+      video.video(loop='loop', autoplay='', muted='')
+        source(src='/assets/img/bg-video.mp4', type='video/mp4')
+  section.description.wrapper
+    .container
+      .row
+        .description__col
+          .description__col__title
+            p.text Моделям
+          .description__col__content
+            p.text Представлена информация об основах, площадках и вывода денежных средств
+        .description__col
+          .description__col__title
+            p.text Студиям
+          .description__col__content
+            p.text Своя студия для вебкама - задача не из легких. Мы поможем
+  section.models.wrapper
+    .container
+      .models__inner
+        .models__inner__img
+          img(src='assets/img/img_models.png', alt='Models')
+        .models__inner__content
+          .models__inner__content__title
+            h2 Моделям
+          .models__inner__content__description
+            p.text
+              | Раздел будет полезен начинающим моделям, в нем тезисно представлена информация об основах начала работы, площадках для вещания трансляций и вывода денежных средств.
+          .models__inner__content__items
+            .models__inner__content__item
+              .models__inner__content__item__title
+                h4 Как начать трансляцию
+              .models__inner__content__item__description
+                p.text С чего начать, выбор вебкамеры и компьютера
+            .models__inner__content__item
+              .models__inner__content__item__title
+                h4 Платформы для трансляций
+              .models__inner__content__item__description
+                 p.text Список площадок для конвертации посетителей в деньги.
+            .models__inner__content__item
+              .models__inner__content__item__title
+                h4 Как общаться
+              .models__inner__content__item__description
+                p.text Как общаться на чужом языке
+          .models__inner__content__link
+            a(href='#')
+              span Получить больше информации
+              span.arrow
+  section.studio.wrapper
+    .container
+      .studio__inner
+        .studio__inner__title
+          .studio__inner__title__inner
+            h2 Студиям
+          .studio__inner__title__description
+            p.text
+              | Открыть свою студию для вебкама - задача не из легких. Мы постараемся Вам в ней помочь.
+        .studio__inner__items
+          .studio__inner__item
+            .studio__inner__item__title
+              h4 Подбор персонала
+            .studio__inner__item__description
+              p.text
+                | Поиск сотрудников самый важный этап в любом бизнесе, и вебкам не является исключением. То, на сколько правильно вы соберете костяк студии, определит
+                | ваше дальнейшее развитие
+            .studio__inner__item__link
+              a(href='#') Подробнее
+          .studio__inner__item
+            .studio__inner__item__title
+              h4 Контроль
+            .studio__inner__item__description
+              p.text
+                | Выход сотрудников на работу требует тщательного контроля. Как руководитель, Вы обязаны анализировать успехи своих сотрудников,
+                | держать «руку на пульсе» и своевременно реагировать на изменения.
+            .studio__inner__item__link
+              a(href='#') Перейти на сайт «Модель мониторинг»
+          .studio__inner__item
+            .studio__inner__item__title
+              h4 Франшиза
+            .studio__inner__item__description
+              p.text
+                | VRMEDIA — одна из наиболее успешных вебкам компаний в стране. На сегодняшний день мы имеем студии в городах: Москва, Красноярск, Новосибирск, Сочи.
+            .studio__inner__item__link
+              a(href='#') Перейти на сайт франшизы
+        .studio__inner__link
+          a(href='#')
+            span Получить больше информации
+            span.arrow
+  section.promotion.wrapper
+    .container
+      .promotion__inner
+        .promotion__inner__items
+          .promotion__inner__item
+            .promotion__inner__item__title
+              h2 Продвижение
+            .promotion__inner__item__description
+              p.text
+                | Опытные веб-модели со временем понимают,что вебкам не заканчивается на онлайн-трансляции и свой контент можно продавать за ее пределами.
+            .promotion__inner__item__link
+              a(href='#')
+                span Получить больше информации
+                span.arrow
+          .promotion__inner__item
+            .promotion__inner__item__img
+              //img(src='assets/img/img_promotion.svg', alt='Promotion')
+  section.dmca.wrapper
+    .container
+      .dmca__inner
+        .dmca__inner__items
+          .dmca__inner__item
+            .dmca__inner__item__title
+              h2 DMCA
+            .dmca__inner__item__description
+              p.text
+                | Каждая веб модель, рано или поздно сталкивается с вопросом удаления своих видео и фото из сети интернет.
+            .dmca__inner__item__link
+              a(href='#')
+                span Получить больше информации
+                span.arrow
+          .dmca__inner__item
+            .dmca__inner__item__img
+              img(src='assets/img/icon_dmca.svg', alt='DMCA')
+  section.articles.wrapper
+    .container.articles__container
+      .articles__wrapper
+        .articles__title-wrap
+          .articles__title
+            h2 Полезные статьи и новости в нашем блоге
+          .articles__title__link
+            a(href='#') Показать больше статей
+        .news__inner
+          each article in articles_main
+            +article(article)

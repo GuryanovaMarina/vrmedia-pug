@@ -3,7 +3,7 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
   meta(itemprop='description', name='description', content='!!!описание_страницы!!!')
   meta(itemprop='keywords', name='keywords', content='!!!ключевые_слова_для_страницы!!!')
   section.wrapper
-    .header__top.active-static.header__other-page
+    .header__top(class=isStart ?'':'active-static')
       .container
         .row
           .header__col-1

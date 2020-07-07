@@ -176,22 +176,6 @@
                 }
               }
             }
-            //a {
-            //  @include btn__custom__arrow-move;
-            //  &.hide-mobile {
-            //    @media (max-width: $screen-xs-max) {
-            //      display: none;
-            //    }
-            //  }
-            //  &.disp-mobile {
-            //    display: none;
-            //    @media (max-width: $screen-xs-max) {
-            //      @include btn__custom__arrow-move($pink, 225deg, 43%, 45px, 3px);
-            //      display: inline;
-            //      padding: 15px 60px 15px 45px;
-            //    }
-            //  }
-            //}
           }
         }
       }

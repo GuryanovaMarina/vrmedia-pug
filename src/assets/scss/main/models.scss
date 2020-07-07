@@ -1,0 +1,150 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.models {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  @media (max-width: $screen-sm-max) {
+    margin-top: 0;
+    margin-bottom: -50px;
+    z-index: -1;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 30px;
+  }
+  .container {
+    background-image: url("/assets/img/icon_text_models.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: $screen-sm-max) {
+      background-image: url("/assets/img/img_models_bg.png");
+      background-size: cover;
+    }
+  }
+  &__inner {
+    display: flex;
+    padding-top: 10vw;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $screen-sm-max) {
+      padding: 265px 20px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 140px 0;
+    }
+    &__img {
+      width: 700px;
+      height: 813px;
+      @media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+        width: 650px;
+        height: 755px;
+      }
+      @media (max-width: $screen-lg-max) and (min-width: $screen-lg-min){
+        width: 432px;
+        height: 502px;
+      }
+      @media (max-width: $screen-md-max) and (min-width: $screen-md-min){
+        width: 345px;
+        height: 400px;
+      }
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
+      img {
+        height: 100%;
+       // width: 100%;
+      }
+    }
+    &__content {
+      max-width: 50%;
+      flex-basis: 50%;
+      padding-left: 100px;
+      @media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+        padding-left: 90px;
+      }
+      @media (max-width: $screen-lg-max) and (min-width: $screen-lg-min){
+        padding-left: 40px;
+      }
+      @media (max-width: $screen-md-max) and (min-width: $screen-md-min){
+        padding-left: 20px;
+      }
+      @media (max-width: $screen-sm-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+        padding-left: 0;
+      }
+      &__title {
+        h2 {
+          font-family: 'SF Pro Display', sans-serif;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 76px;
+          text-transform: uppercase;
+          color: $dark-main;
+          @media (max-width: $screen-sm-max) {
+            color: $white;
+            font-size: 46px;
+            line-height: 55px;
+          }
+        }
+      }
+      &__description {
+        @include text-title;
+        font-weight: bold;
+        padding-top: 40px;
+        @media (max-width: $screen-sm-max) {
+          color: $white;
+          font-size: 16px;
+          line-height: 29px;
+        }
+        @media (max-width: $screen-xxs-max) {
+          font-size: 15px;
+          line-height: 23px;
+        }
+      }
+      &__items {
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        @media (max-width: $screen-lg-max){
+          display: none;
+        }
+      }
+      &__item {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding: 10px;
+        @media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+        &__title {
+          h4 {
+            font-size: 20px;
+            color: $grey-blue;
+          }
+        }
+        &__description {
+          font-size: 15px;
+          line-height: 24px;
+          color: $dark-second;
+        }
+      }
+      &__link {
+        padding-top: 40px;
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+        a {
+          @include btn__custom__arrow-extend();
+          @media (max-width: $screen-xs-max) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

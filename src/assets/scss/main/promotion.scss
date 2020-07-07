@@ -1,0 +1,100 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.promotion {
+  height: 800px;
+  background: url("/assets/img/icon_promotion_bg1.svg") 0 0 no-repeat,
+  url("/assets/img/icon_promotion_bg2.svg") 0 0 no-repeat,
+  url("/assets/img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
+  background-size: 5.5%, auto, 58%;
+  .container {
+    //background-image: url("/assets/img/icon_promotion_bg1.svg");
+    //background-repeat: no-repeat;
+    //background-size: contain;
+  }
+  &__inner {
+    padding: 270px 50px 0 120px;
+    &__items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+    &__item {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 20px;
+      @media (max-width: $screen-xs-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+        &:first-child {
+          order: 1;
+        }
+        text-align: center;
+      }
+      &__title {
+        h2 {
+          font-family: 'SF Pro Display', sans-serif;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 76px;
+          text-transform: uppercase;
+          color: $white;
+          @media (max-width: $screen-sm-max) {
+            font-size: 46px;
+            line-height: 55px;
+          }
+        }
+      }
+      &__description {
+        font-size: 17px;
+        line-height: 28px;
+        color: $white;
+        max-width: 510px;
+        padding: 40px 0;
+        @media (max-width: $screen-lg-max) {
+          font-size: 17px;
+          line-height: 28px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 16px;
+        }
+      }
+      &__img {
+        height: 527px;
+        position: relative;
+        bottom: -3px;
+        //text-align: center;
+        //@media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+        //  height: 540px;
+        //}
+        //@media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
+        //  height: 384px;
+        //}
+        //@media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
+        //  height: 304px;
+        //}
+        //@media (max-width: $screen-xs-max){
+        //  height: 145px;
+        //}
+        img {
+          height: 100%;
+          border-radius: 20px 20px 0 0;
+        }
+      }
+      &__link {
+        padding-top: 40px;
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+        a {
+          @include btn__custom__arrow-extend();
+          @media (max-width: $screen-xs-max) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

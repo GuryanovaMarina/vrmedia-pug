@@ -1,0 +1,147 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.studio {
+  .container {
+    background-image: url("/assets/img/icon_text_studio.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: $screen-xs-max) {
+      background-image: none;
+    }
+  }
+  &__inner {
+    padding-top: 10vw;
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-md-min) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding-top: 30px;
+    }
+    &__title {
+      display: flex;
+      flex-wrap: wrap;
+      &__inner {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+        h2 {
+          font-family: 'SF Pro Display', sans-serif;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 76px;
+          text-transform: uppercase;
+          color: $dark-main;
+          @media (max-width: 400px) {
+            font-size: 46px;
+            line-height: 55px;
+          }
+        }
+        @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        @media (max-width: $screen-sm-max) {
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+      }
+      &__description {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: $dark-main;
+        flex-basis: 66.666%;
+        max-width: 66.666%;
+        @media (max-width: $screen-lg-max) {
+          font-size: 20px;
+          line-height: 32px;
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        @media (max-width: $screen-sm-max) {
+          flex-basis: 100%;
+          max-width: 100%;
+          padding-top: 30px;
+        }
+        @media (max-width: $screen-xxs-max) {
+          font-size: 16px;
+          line-height: 24px;
+          padding-top: 20px;
+        }
+      }
+    }
+    &__items {
+      padding-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      position: relative;
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+      padding: 20px;
+      @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      @media (max-width: $screen-sm-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        background: $grey-3;
+        border-radius: 100px;
+        width: 3px;
+        height: 35px;
+        top: 6px;
+        left: -1px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        background: $grey-3;
+        border-radius: 10px;
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 40px;
+      }
+      &__title {
+        h4 {
+          font-size: 20px;
+          color: $dark-main;
+        }
+      }
+      &__description {
+        font-size: 16px;
+        line-height: 25px;
+        color: $dark-second;
+        padding: 25px 0;
+      }
+      &__link {
+        position: absolute;
+        bottom: 0;
+        a {
+          @include lnk__custom__arrow-move();
+          margin-right: 0;
+        }
+      }
+    }
+    &__link {
+      padding-top: 40px;
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+      a {
+        @include btn__custom__arrow-extend();
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

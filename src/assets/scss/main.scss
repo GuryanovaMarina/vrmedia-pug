@@ -4,5 +4,12 @@
 @import "utils/global";
 @import "utils/mixins";
 
+@import "main/hero";
+@import "main/models";
+@import "main/studio";
+@import "main/dmca";
+@import "main/promotion";
+
+@import "common/articles_wrap";
 @import "common/header";
 @import "common/footer";
