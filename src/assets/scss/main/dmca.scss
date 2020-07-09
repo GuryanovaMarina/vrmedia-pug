@@ -3,7 +3,11 @@
 
 .dmca {
   margin-top: 180px;
-  @media (max-width: $screen-sm-max) {
+  padding-bottom: 30px;
+  @media (max-width: $screen-sm-max)   and (min-width: $screen-sm-min) {
+    margin-top: 10px;
+  }
+  @media (max-width: $screen-xs-max) {
     margin-top: 40px;
   }
   .container {
@@ -28,6 +32,12 @@
       align-items: center;
       flex-wrap: wrap;
       margin: -20px;
+      @media (max-width: $screen-sm-max)  and (min-width: $screen-sm-min) {
+        padding-top: 100px;
+      }
+      @media (max-width: $screen-xxs-max) {
+        margin: 0;
+      }
     }
     &__item {
       flex-basis: 50%;
@@ -40,6 +50,9 @@
           order: 1;
         }
         text-align: center;
+      }
+      @media (max-width: $screen-xxs-max) {
+        padding: 20px 10px;
       }
       &__title {
         h2 {

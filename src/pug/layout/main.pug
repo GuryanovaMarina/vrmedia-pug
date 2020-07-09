@@ -13,9 +13,10 @@ html(lang='en')
 
   body(class=pageClass)
     .wrapper
-        include ../includes/modules/header
-        .content-wrapper
-          block content
-        include ../includes/modules/footer
+      include ../includes/modules/header
+      .content-wrapper
+        block content
+      include ../includes/modules/modals
+      include ../includes/modules/footer
 
     block script

@@ -1,0 +1,23 @@
+.remodal(data-remodal-id='modal_question')
+  .remodal__inner
+    p.remodal__subtitle
+      | Введите удобный для вас способ связи
+
+    .remodal__button__wrap
+      button.remodal-confirm(data-remodal-action='confirm') Отправить
+    p.remodal__bottom
+      | Нажав на кнопку, соглашаюсь на обработку<br>
+      a.remodal__bottom__link(href='#') персональных данных
+.remodal(data-remodal-id='modal_send')
+  p
+    | modal_send
+  br
+  button.remodal-cancel(data-remodal-action='cancel') Отмена
+  button.remodal-confirm(data-remodal-action='confirm') Сохранить
+.remodal(data-remodal-id='modal_success')
+  h1 Запрос отправлен!
+  //button.remodal-close(data-remodal-action='close')
+  p.remodal__subtitle
+    | После обработки, мы свяжемся с вами
+  .remodal__button__wrap
+    button.remodal-confirm(data-remodal-action='confirm') Ок! Жду

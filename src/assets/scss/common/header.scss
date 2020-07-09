@@ -6,14 +6,14 @@
   @include text-white;
   align-items: center;
   z-index: 15;
-  padding: 5px 10px;
+  padding: 5px 0;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   .container {
-    @media (max-width: $screen-xs-max) {
-      padding: 0;
+    @media (max-width: $screen-xxs-max) {
+      padding: 5px 10px;
     }
   }
   .row {
@@ -28,8 +28,8 @@
       }
     }
     .header__col-2 {
-      max-width: 75%;
-      flex-basis: 75%;
+      max-width: 85%;
+      flex-basis: 85%;
       @media (max-width: $screen-md-max) {
         text-align: right;
         max-width: 85%;
@@ -50,35 +50,29 @@
   }
   &.active {
     opacity: 1;
-    //padding-top: 0;
     background-color: $dark-main;
     box-shadow: 0 1px 14px rgba(0, 0, 0, 0.17);
-    -webkit-animation: header .4s;
     animation: header .4s;
   }
   &.active-static {
     background-color: $dark-main;
     box-shadow: 0 1px 14px rgba(0, 0, 0, 0.17);
   }
-  .header__logo {
-    img {
-      //transform: scale(0.9);
-    }
-  }
   .header__logo-mobile {
     width: 150px;
     height: 13px;
     position: absolute;
-    top: 36px;
+    top: 22px;
     left: 20px;
     display: none;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       display: block;
     }
   }
   .header__menu-list {
+    position: relative;
     text-align: right;
-    padding: 0;
+    padding: 0 255px 0 0;
     margin: 0;
     display: flex;
     align-items: center;
@@ -88,18 +82,25 @@
     &.active{
       left: 0;
     }
+    @media (max-width: $screen-lg-max) {
+      padding: 0 95px 0 0;
+    }
     @media (max-width: $screen-md-max) {
-      overflow-y: scroll;
+      display: block;
+      overflow-y: auto;
       overflow-x: hidden;
       left: -100%;
       position: fixed;
       width: 100%;
       height: 100vh;
       top: 0;
-      background-color: #24262b;
+      background-color: $dark-4;
       z-index: 10;
-      padding: 13rem 20px 0 30px;
+      padding: 9rem 20px 0 40px;
       @include transition;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 9rem 20px 0 20px;
     }
   }
   .header__menu-item {
@@ -111,8 +112,26 @@
     @include transition;
     &.angle-on {
       margin-right: 12px;
+      @media (max-width: $screen-md-max) {
+        margin-right: 22px;
+      }
+      @media (max-width: $screen-xs-max) {
+        margin-right: 0;
+      }
       &::after {
         @include arrow($white,315deg,44%,5px);
+      }
+    }
+    &__link {
+      @media (max-width: $screen-md-max) {
+        display: block;
+      }
+    }
+    &.active-page {
+      color: $pink;
+      &::after {
+        border-bottom: 2px solid $pink;
+        border-left: 2px solid $pink;
       }
     }
     @media (min-width: $screen-lg-min) {
@@ -150,60 +169,81 @@
         }
       }
     }
-    &.active-page {
-      color: $pink;
-      &::after {
-        border-bottom: 2px solid $pink;
-        border-left: 2px solid $pink;
+    @media (max-width: $screen-md-max) {
+      display: block;
+      padding: 23px 0;
+      font-size: 36px;
+      line-height: 43px;
+      margin-right: 22px;
+      &::after{
+        @include arrow($grey-8,225deg,44%,5px,0.2);
       }
-    }
-    @media (max-width: $screen-lg-max) {
-      padding: 27px 13px;
       &.angle-on {
         &::after {
-          right: -3px;
+          @include arrow($grey-8,225deg,44%,5px,0.2);
         }
       }
-    }
-    @media (max-width: $screen-md-max) {
-      &::after{
-        display: none;
-      }
-      display: block;
       & + .header__menu-item {
         margin-left: 0;
         border-top: 1px solid rgba(#3a3c41, .4);
       }
-      &.active {
-        .header__arrow {
-          top: 25px;
-          &::before {
-            transform: rotate(180deg);
-            background-color: #f03382;
-          }
+      &:last-child {
+        border-top: none;
+        &::after {
+          display: none;
         }
-        .dropdown__list {
-          display: block;
-          position: static;
-          visibility: visible;
-          opacity: 1;
-          padding: 26px 0 26px 20px;
-          border-top: 1px solid rgba(#3a3c41, .4);
-          width: 105.5%;
-          border-radius: 0;
-          margin-top: 10px;
-          margin-bottom: -15px;
-          height: auto;
-        }
-        .dropdown__item {
-          padding: 0;
-          line-height: 38px;
-          color: #fefefe;
-          a {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
+      }
+      //&.active {
+      //  .header__arrow {
+      //    top: 25px;
+      //    &::before {
+      //      transform: rotate(180deg);
+      //      background-color: #f03382;
+      //    }
+      //  }
+      //  .dropdown__list {
+      //    display: block;
+      //    position: static;
+      //    visibility: visible;
+      //    opacity: 1;
+      //    padding: 26px 0 26px 20px;
+      //    border-top: 1px solid rgba(#3a3c41, .4);
+      //    width: 105.5%;
+      //    border-radius: 0;
+      //    margin-top: 10px;
+      //    margin-bottom: -15px;
+      //    height: auto;
+      //  }
+      //  .dropdown__item {
+      //    padding: 0;
+      //    line-height: 38px;
+      //    color: #fefefe;
+      //    a {
+      //      visibility: visible;
+      //      opacity: 1;
+      //    }
+      //  }
+      //}
+    }
+    @media (max-width: $screen-xs-max) and (min-width: $screen-xs-min) {
+      padding: 15px 0;
+      font-size: 26px;
+      line-height: 31px;
+      margin-right: 0;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding: 10px 0;
+      font-size: 18px;
+      line-height: 21px;
+      margin-right: 0;
+    }
+    &.header__telegram {
+      position: absolute;
+      right: 0;
+      padding-right: 0;
+      @media (max-width: $screen-md-max) {
+        position: relative;
+        right: initial;
       }
     }
 
@@ -221,20 +261,39 @@
     }
   }
   .header__close {
+    padding: 13px 20px;
+    display: none;
     cursor: pointer;
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 34px;
-    right: 31px;
-    background-image: url(/assets/img/close.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: none;
+    top: 11px;
+    right: 110px;
     @media (max-width: $screen-md-max) {
-      display: block;
+      display: flex;
     }
+    @media (max-width: $screen-xs-max) {
+      right: 90px;
+    }
+    span {
+      position: relative;
+      &::after {
+        content: url('/assets/img/burger.svg');
+        margin-left: 10px;
+        vertical-align: initial;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 1px;
+      }
+    }
+    //img {
+    //  margin-left: 10px;
+    //  vertical-align: initial;
+    //  transform: rotate(45deg);
+    //  position: absolute;
+    //  left: 80px;
+    //  top: 17px;
+    //}
   }
   .dropdown__list {
     @include transition;
@@ -282,9 +341,29 @@
     }
   }
 }
+@-webkit-keyframes header{
+  0%{
+    opacity: 0;
+    top: -85px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes header{
+  0%{
+    opacity: 0;
+    top: -85px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
 /*ПАНЕЛЬ ТЕЛЕГРАМ*/
 .header__telegram {
-  min-width: 210px;
+  min-width: 215px;
   text-align: end;
   @media (max-width: $screen-lg-max) {
     min-width: 70px;
@@ -292,7 +371,8 @@
   &__button {
     @include btn_menu;
     cursor: pointer;
-    width: 210px;
+    width: 215px;
+    text-align: left;
     &::after {
      @include arrow($grey-1,315deg,40%,20px);
     }
@@ -309,6 +389,20 @@
     }
     &__name {
       display: inline-block;
+    }
+    &__feedback {
+      padding-top: 20px;
+      width: 100%;
+      padding-left: 0;
+      @media (max-width: $screen-md-max) and (min-width: $screen-sm-min) {
+        padding-left: 50px;
+      }
+      &__link {
+        width: 100%;
+        @media (max-width: $screen-xs-max) and (min-width: $screen-xs-min){
+          width: 80%;
+        }
+      }
     }
     @media (max-width: $screen-lg-max) {
       padding: 13px 45px 13px 15px;
@@ -335,44 +429,86 @@
       transform: rotate(135deg);
     }
   }
-  .dropdown__list {
+  .dropdown__list__telegram {
     text-align: start;
-    left: 0;
-    top: 58px;
-    width: 210px;
+    //left: 0;
+    top: 85px;
+    width: 215px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    background-color: #171e29;
     @media (max-width: $screen-lg-max) {
       left: initial;
       right: 0;
     }
-    .dropdown__item {
-      span {
+    @media (max-width: $screen-md-max) {
+      right: initial;
+      top: 20px;
+      background-color: initial;
+    }
+    .dropdown__item__telegram {
+      &__span {
         @include transition;
         font-size: 0;
         line-height: 0;
         color: $lnk-grey;
         display: inline-block;
+        @media (max-width: $screen-md-max) {
+          display: block;
+        }
       }
-      a {
+      &__link {
         @include transition;
         font-size: 0;
         line-height: 0;
+        @media (max-width: $screen-md-max) {
+         // display: block;
+        }
       }
     }
   }
-  .dropdown__list.visible {
+  .dropdown__list__telegram.visible {
     @include transition;
     opacity: 1;
     padding: 10px 25px;
     height: auto;
     visibility: visible;
     border-radius: 6px;
-    .dropdown__item {
+    @media (max-width: $screen-md-max) {
+      padding: 50px 0 120px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 40px 0 45px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding: 30px 0 20px;
+    }
+    .dropdown__item__telegram {
       margin: 10px 0;
-      &:first-child{
-        border-bottom: 1px solid $grey-5;
-        padding-bottom: 15px;
+      @media (max-width: $screen-md-max) {
+        flex-basis: 50%;
+        max-width: 50%;
       }
-      span {
+      @media (max-width: $screen-xs-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      &__inner {
+        line-height: 10px;
+        &:first-child {
+          border-bottom: 1px solid $grey-5;
+          padding-bottom: 15px;
+        }
+        &:last-child {
+          padding-top: 15px;
+        }
+      }
+      &__span {
         font-size: 13px;
         line-height: 17px;
         padding-bottom: 5px;
@@ -380,14 +516,21 @@
       &:hover{
         color: $white;
       }
-    }
-    a {
-      @include lnk__custom__arrow-move;
-      font-size: 14px;
-      line-height: 18px;
-      color: $pink;
-      opacity: 1;
-      visibility: visible;
+      &__link {
+        @include lnk__custom__arrow-move;
+        font-size: 14px;
+        line-height: 18px;
+        color: $pink;
+        opacity: 1;
+        visibility: visible;
+      }
+      .header__telegram__button__feedback {
+        &__link {
+          opacity: 1;
+          visibility: visible;
+          @include btn__custom__arrow-extend($pink, 225deg, 1px, -3px, 3px, 20px, 15px);
+        }
+      }
     }
   }
 }

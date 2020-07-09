@@ -215,7 +215,7 @@
   transition: $type $target $time;
   //transition: ease all .5s;
 }
-@mixin arrow($color,$rotate,$top,$right) {
+@mixin arrow($color,$rotate,$top,$right,$opacity:1) {
   content: '';
   height: 8px;
   width: 8px;
@@ -226,6 +226,7 @@
   position: absolute;
   transform: rotate($rotate);
   @include transition;
+  opacity: $opacity;
 }
 @mixin btn_menu() {
   position: relative;

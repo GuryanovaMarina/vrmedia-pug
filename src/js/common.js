@@ -1,3 +1,5 @@
+import 'remodal';
+
 function validate (target) {
   try {
     //email in footer
@@ -21,6 +23,21 @@ function  validateEmail (email) {
   }
 }
 $( document ).ready(function() {
+  // window.REMODAL_GLOBALS = {
+  //   NAMESPACE: 'modal',
+  //   DEFAULTS: {
+  //   }
+  // };
+  //let options = {...};
+  let modal_send = $('[data-remodal-id=modal_send]').remodal();
+  let modal_question = $('[data-remodal-id=modal_question]').remodal();
+  let modal_success = $('[data-remodal-id=modal_success]').remodal();
+
+  //let inst = $('[data-remodal-id=modal]').remodal();
+  $('.openmodal').on('click', function (e) {
+    e.preventDefault();
+    modal_question.open();
+  });
   $('.form__fld').focus(function () {
     $(this).prev().addClass('active');
   });
@@ -38,25 +55,28 @@ $( document ).ready(function() {
   $('.header__telegram__button').on('click', function(){
     let $this = $(this);
     $this.toggleClass('visible');
-    let comp = $this.parent('.header__telegram');
-    $(comp).find('.dropdown__list').toggleClass('visible');
+    let comp = $this.parent('.header__telegram__wrap');
+    $(comp).find('.dropdown__list__telegram').toggleClass('visible');
   });
-  // $('.header__telegram__button').click(function () {
-  //   let $this = $(this);
-  //   $this.toggleClass('visible');
-  //   let comp = $this.parent('.header__telegram');
-  //   $(comp).find('.dropdown__list').toggleClass('visible');
-  // });
-
-  $('.header__telegram__button .dropdown__list').on('click', function(event){
+  $('.header__telegram__button .dropdown__list__telegram').on('click', function(event){
     event.stopPropagation();
   });
 
-  $('.header__telegram .dropdown__list').on('mouseleave', function () {
-    let $this = $(this);
-    $this.removeClass('visible');
-    $this.parent('.header__telegram__button').removeClass('visible');
+  $('.header__telegram .dropdown__list__telegram').on('mouseleave', function () {
+    // let $this = $(this);
+    // $this.removeClass('visible');
+    // $this.parent('.header__telegram__button').removeClass('visible');
   });
+
+  $('.burger').on('click', function () {
+    $('.header__menu-list').addClass('active');
+    $('.dropdown__list__telegram').addClass('visible');
+  })
+  $('.header__close').on('click', function () {
+    $('.header__menu-list').removeClass('active');
+    $('.dropdown__list__telegram').removeClass('visible');
+  })
+
 });
 //???????
 $(window).on('scroll', function () {
@@ -77,4 +97,7 @@ $(window).on('scroll', function () {
       $('.header__top').removeClass('active');
     }
   }
+
+
+
 });

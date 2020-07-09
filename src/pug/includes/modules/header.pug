@@ -17,10 +17,12 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
             nav.header__menu
               ul.header__menu-list(itemscope='', itemtype='http://schema.org/SiteNavigationElement')
                 li.header__logo-mobile
-                  img(src='assets/img/logo_mobile.svg', alt='logo')
+                  img(src='assets/img/VRMEDIA.png', alt='logo')
                 li.header__close
-                li.header__menu-item.angle-on(class=isModels ?'active-page':'')
-                  | Моделям
+                  span Закрыть
+                  //img(src='assets/img/burger.svg', alt='Закрыть')
+                li.header__menu-item.angle-on(class=isModels ?'active-page':'')(data-href='https://davinci.fit/schedule')
+                  a(itemprop='url', href='https://vrcams.ru/webcam_model/').header__menu-item__link Моделям
                   .header__dropdown
                     ul.dropdown__list
                       li.dropdown__item
@@ -38,7 +40,7 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
                       li.dropdown__item
                         a(itemprop='url', href='#') Франшиза
                 li.header__menu-item.angle-on(class=isStudio ?'active-page':'')
-                  | Студиям
+                  a(itemprop='url', href='https://vrcams.ru/webcam_model/').header__menu-item__link Студиям
                   .header__dropdown
                     ul.dropdown__list
                       li.dropdown__item
@@ -56,7 +58,7 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
                       li.dropdown__item
                         a(itemprop='url', href='#') Франшиза
                 li.header__menu-item.angle-on(class=isPromotion ?'active-page':'')
-                  | Продвижение
+                  a(itemprop='url', href='https://vrcams.ru/webcam_model/').header__menu-item__link Продвижение
                   .header__dropdown
                     ul.dropdown__list
                       li.dropdown__item
@@ -72,22 +74,26 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
                       li.dropdown__item
                         a(itemprop='url', href='#') Полезные статьи
                 li.header__menu-item.angle-off.disable(class=isBlog ?'active-page':'')
-                  a(itemprop='url', href='#') Блог
+                  a(itemprop='url', href='#').header__menu-item__link Блог
                 li.header__menu-item.angle-off.disable(class=isDMCA ?'active-page':'')
-                  a(itemprop='url', href='#') DMCA
-                li.header__menu-item.angle-off.disable(class=isFAQ ?'active-page':'')
-                  a(itemprop='url', href='#') FAQ
+                  a(itemprop='url', href='#').header__menu-item__link DMCA
                 li.header__menu-item.angle-off.disable(class=isFranshize ?'active-page':'')
-                  a(itemprop='url', href='#') Франшиза
-          .header__col-3.header__telegram
-            .header__telegram__button
-              span.header__telegram__button__name Написать в телеграм
-              img(src='assets/img/footer_telegram.svg', alt='Написать в телеграм')
-              ul.dropdown__list
-                li.dropdown__item
-                  span Наш телеграм-канал про вебкам
-                  a(itemprop='url', href='#') @webcam_vrmedia
-                li.dropdown__item
-                  span Заявки по вакансиям отправляйте сюда
-                  a(itemprop='url', href='#') @vrcams
-
+                  a(itemprop='url', href='#').header__menu-item__link Франшиза
+                li.header__menu-item.header__telegram
+                  .header__telegram__wrap
+                    .header__telegram__button
+                      span.header__telegram__button__name Обратная связь
+                      img(src='assets/img/footer_telegram.svg', alt='Написать в телеграм')
+                    .dropdown__list__telegram
+                      .dropdown__item__telegram
+                        .dropdown__item__telegram__inner
+                          span.dropdown__item__telegram__span Наш телеграм-канал про вебкам
+                          a(itemprop='url', href='#').dropdown__item__telegram__link  @webcam_vrmedia
+                        .dropdown__item__telegram__inner
+                          span.dropdown__item__telegram__span Заявки по вакансиям отправляйте сюда
+                          a(itemprop='url', href='#').dropdown__item__telegram__link @vrcams
+                      .dropdown__item__telegram
+                        .header__telegram__button__feedback
+                          a(itemprop='url', href='#').header__telegram__button__feedback__link.openmodal
+                            span Обратная связь
+                            span.arrow

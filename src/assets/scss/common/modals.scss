@@ -1,0 +1,65 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.remodal-overlay {
+  @media (max-width: $screen-xs-max) {
+    background: none;
+  }
+}
+
+.remodal-wrapper {
+  @media (max-width: $screen-xs-max) {
+    padding: 0;
+    top: 70px;
+    overflow: hidden;
+  }
+}
+.remodal {
+  background-color: $dark-4;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  max-width: 500px;
+  padding: 55px 65px;
+  text-align: left;
+
+  font-size: 13px;
+  line-height: 20px;
+  color: $white;
+  @media (max-width: $screen-xs-max) {
+    max-width: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__inner {
+    width: 100%;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 20px;
+    color: $white;
+  }
+  &__subtitle {
+    padding-top: 25px;
+  }
+  .remodal__button__wrap {
+    padding-top: 40px;
+  }
+  .remodal-confirm,
+  .remodal-cancel {
+    @include btn__custom__arrow-extend();
+    width: 100%;
+  }
+  &__bottom {
+    padding-top: 15px;
+    &__link {
+      @include lnk__custom__solid-include();
+      font-size: 13px;
+      line-height: 20px;
+      @media (max-width: $screen-sm-max) {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -5,28 +5,36 @@
   position: relative;
   margin-bottom: 30px;
   margin-top: 50px;
+  background-image: url("/assets/img/icon_text_models.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   @media (max-width: $screen-sm-max) {
     margin-top: 0;
     margin-bottom: -50px;
-    z-index: -1;
+    background-image: url("/assets/img/img_models_bg.png");
+    background-size: cover;
   }
   @media (max-width: $screen-xs-max) {
     margin-bottom: 30px;
   }
   .container {
-    background-image: url("/assets/img/icon_text_models.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    @media (max-width: $screen-sm-max) {
-      background-image: url("/assets/img/img_models_bg.png");
-      background-size: cover;
-    }
+    //background-image: url("/assets/img/icon_text_models.svg");
+    //background-repeat: no-repeat;
+    //background-size: contain;
+    //@media (max-width: $screen-sm-max) {
+    //  background-image: url("/assets/img/img_models_bg.png");
+    //  background-size: cover;
+    //}
   }
   &__inner {
     display: flex;
     padding-top: 10vw;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-lg-min) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
     @media (max-width: $screen-sm-max) {
       padding: 265px 20px;
     }

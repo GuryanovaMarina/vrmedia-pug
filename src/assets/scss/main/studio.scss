@@ -2,19 +2,24 @@
 @import '.././utils/mixins.scss';
 
 .studio {
+  margin-bottom: 100px;
+  position: relative;
+  background-image: url("/assets/img/icon_text_studio.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 70px;
+  }
   .container {
-    background-image: url("/assets/img/icon_text_studio.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
     @media (max-width: $screen-xs-max) {
       background-image: none;
     }
   }
   &__inner {
     padding-top: 10vw;
-    @media (max-width: $screen-lg-max)  and (min-width: $screen-md-min) {
-      padding-right: 50px;
-      padding-left: 50px;
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-lg-min) {
+      padding-right: 30px;
+      padding-left: 30px;
     }
     @media (max-width: $screen-xs-max) {
       padding-top: 30px;
@@ -80,14 +85,16 @@
       position: relative;
       flex-basis: 33.333%;
       max-width: 33.333%;
-      padding: 20px;
+      padding: 0 20px 20px;
       @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
         flex-basis: 50%;
         max-width: 50%;
+        margin-bottom: 70px;
       }
       @media (max-width: $screen-sm-max) {
         flex-basis: 100%;
         max-width: 100%;
+        margin-bottom: 70px;
       }
       &::before {
         content: '';
@@ -124,14 +131,42 @@
       &__link {
         position: absolute;
         bottom: 0;
+        @media (max-width: $screen-xs-max) {
+          position: initial;
+          bottom: initial;
+        }
         a {
-          @include lnk__custom__arrow-move();
-          margin-right: 0;
+          font-size: 15px;
+          line-height: 28px;
+          position: relative;
+          overflow: hidden;
+          color: $pink;
+          padding-right: 25px;
+          @include transition;
+          &:hover {
+            .arrow{
+              transform: translateX(3px) rotate(225deg)
+            }
+          }
+          .arrow {
+            border-bottom: 2px solid $pink;
+            border-left: 2px solid $pink;
+            height: 8px;
+            width: 8px;
+            right: 9px;
+            bottom: 4px;
+            position: absolute;
+            transform: rotate(225deg);
+            @include transition;
+          }
         }
       }
     }
     &__link {
-      padding-top: 40px;
+      padding-top: 70px;
+      @media (max-width: $screen-lg-max) {
+        padding-top: 0;
+      }
       @media (max-width: $screen-xs-max) {
         width: 100%;
       }
