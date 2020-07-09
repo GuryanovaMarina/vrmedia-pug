@@ -1,23 +1,41 @@
 .remodal(data-remodal-id='modal_question')
-  .remodal__inner
-    p.remodal__subtitle
-      | Введите удобный для вас способ связи
-
-    .remodal__button__wrap
-      button.remodal-confirm(data-remodal-action='confirm') Отправить
-    p.remodal__bottom
-      | Нажав на кнопку, соглашаюсь на обработку<br>
-      a.remodal__bottom__link(href='#') персональных данных
+    .remodal__inner
+      form#modal_question(action='')
+        p.remodal__subtitle
+          | Введите удобный для вас способ связи
+        .form__block__wrap
+          .form__block
+            label.form__lbl(for='form__email__modal') Телефон или эл. почту
+            input#form__email__modal.form__fld.form__fld__js(type='text', required='')
+        .form__block__wrap
+          .form__block.textarea
+            label.form__lbl(for='form__question__modal') Ваш вопрос
+            textarea#form__question__modal.form__fld
+        .remodal__button__wrap
+          button.remodal-confirm(data-remodal-action='confirm', type='submit') Отправить
+        p.remodal__bottom
+          | Нажав на кнопку, соглашаюсь на обработку<br>
+          a.remodal__bottom__link(href='#') персональных данных
 .remodal(data-remodal-id='modal_send')
-  p
-    | modal_send
-  br
-  button.remodal-cancel(data-remodal-action='cancel') Отмена
-  button.remodal-confirm(data-remodal-action='confirm') Сохранить
+    .remodal__inner
+      form#modal_send(action='')
+        p.remodal__subtitle
+          | Введите удобный для вас способ связи
+        .form__block__wrap
+          .form__block
+            label.form__lbl(for='form__email__modal') Телефон или эл. почту
+            input#form__email__modal.form__fld.form__fld__js(type='text', required='')
+        .remodal__button__wrap
+          button.remodal-confirm(data-remodal-action='confirm', type='submit') Отправить
+        p.remodal__bottom
+          | Нажав на кнопку, соглашаюсь на обработку<br>
+          a.remodal__bottom__link(href='#') персональных данных
 .remodal(data-remodal-id='modal_success')
-  h1 Запрос отправлен!
-  //button.remodal-close(data-remodal-action='close')
-  p.remodal__subtitle
-    | После обработки, мы свяжемся с вами
-  .remodal__button__wrap
-    button.remodal-confirm(data-remodal-action='confirm') Ок! Жду
+    .remodal__inner
+      h1 Запрос отправлен!
+      p.remodal__subtitle
+        | После обработки, мы свяжемся с вами
+      .remodal__button__wrap
+        button.remodal-confirm(data-remodal-action='confirm', type='submit') Ок! Жду
+////button.remodal-close(data-remodal-action='close')
+//form#modal_question(action='')

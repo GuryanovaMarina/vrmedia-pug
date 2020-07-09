@@ -30,6 +30,7 @@ module.exports = {
         blog: `${PATHS.src}/blog.js`,
         studio: `${PATHS.src}/studio.js`,
         dmca: `${PATHS.src}/dmca.js`,
+        franchise: `${PATHS.src}/franchise.js`,
     },
     output: {
         filename: `${PATHS.assets}js/[name].[contenthash].js`,
