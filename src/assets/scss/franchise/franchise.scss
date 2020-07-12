@@ -1,3 +1,5 @@
+@import '.././utils/vars.scss';
+
 .franchise-container{
   width: 100%;
   padding: 0 200px 0 150px;
@@ -5,6 +7,22 @@
 .franchise__form{
   margin: 0 auto;
   width: 405px;
+  .form__block {
+    position: relative;
+  }
+  .form__name-person,
+  .form__email-person,
+  .form__text-person {
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    cursor: text;
+    transition: all .25s;
+    &.active {
+      top: 5px;
+      font-size: 12px;
+    }
+  }
   .form__name,
   .form__number,
   .form__email,
@@ -98,6 +116,11 @@
   .form__number{
     padding-top: 25px;
   }
+  .form__name-text, .form__email-text, .form__text-text {
+    font-size: 12px;
+    position: absolute;
+    bottom: -15px;
+  }
 }
 .franchise__form{
   .form__block.name.active{
@@ -112,6 +135,7 @@
 
 .franchise__wrapper{
   position: relative;
+  color: $white;
   &.style-1{
     .slick-next{
       &::before{
@@ -1285,7 +1309,7 @@
     font-size: 85px;
     margin-bottom: 20px;
   }
-  .franchise__form{
+  .franchise__form {
     input{
       background: transparent;
       color: #bfccdf;
@@ -1310,14 +1334,14 @@
     label:not(.form__name-text){
       font-size: 24px;
     }
-    label.form__email-text, label.form__text-text{
+    label.form__name-text, label.form__email-text, label.form__text-text{
       font-size: 12px;
     }
     label.form__text-text{
       bottom: -22px;
     }
   }
-  .form__send{
+  .form__send {
     background: transparent;
     display: inline-block;
     position: relative;
@@ -1325,11 +1349,24 @@
     width: auto;
     font-size: 24px;
     color: #bfccdf;
+
+    outline: none;
+    height: 42px;
+    border-radius: 21px;
+    border: none;
+    text-align: left;
+    transition: all .3s;
+
     &::after{
+      content: '';
+      position: absolute;
       right: -22px;
       top: 20px;
       width: 15px;
+      height: 12px;
+      transform: translateY(-40%);
       background-image: url(/assets/img/franchise_join.svg);
+      background-repeat: no-repeat;
     }
   }
   .form__text-person{
@@ -1378,7 +1415,12 @@
     -webkit-box-pack: center;
     justify-content: center;
   }
-  .franchise__thirteenth-title{
+  .franchise__thirteenth-title,
+  .franchise__thirteenth-text{
+    max-width: 445px;
+    width: 100%;
+  }
+  .franchise__thirteenth-title {
     color: #bfc9da;
     font-size: 85px;
     font-weight: 700;
@@ -1395,6 +1437,7 @@
       bottom: -30px;
     }
     &::after{
+      content: '';
       left: 60%;
       width: 214px;
       height: 214px;
@@ -1402,6 +1445,7 @@
       z-index: -2;
     }
     &::before{
+      content: '';
       left: 30%;
       width: 369px;
       height: 271px;
@@ -1409,11 +1453,11 @@
       z-index: -1;
     }
   }
-  .franchise__thirteenth-title,
-  .franchise__thirteenth-text{
-    max-width: 445px;
-    width: 100%;
-  }
+  //.franchise__thirteenth-title,
+  //.franchise__thirteenth-text{
+  //  max-width: 445px;
+  //  width: 100%;
+  //}
   .franchise__thirteenth-text{
     color: #bfccdf;
     font-size: 24px;
@@ -3146,7 +3190,6 @@
       }
     }
   }
-
   .franchise__fifth{
     .franchise__forth-suptitle{
       top: -40px;
@@ -3615,7 +3658,7 @@
   .franchise__twelfth .franchise__form label:not(.form__name-text){
     font-size: 14px;
   }
-  .franchise__twelfth .form__send{
+  .franchise__twelfth .form__send {
     font-size: 18px;
   }
   .franchise__form{
@@ -4017,7 +4060,7 @@
 
 
 @media (max-height: 1000px){
-  .franchise__forth .franchise__fir{
+  .franchise__forth.franchise__fir{
     display: none;
   }
 }

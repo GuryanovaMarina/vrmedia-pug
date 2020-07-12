@@ -669,6 +669,18 @@
   margin-bottom: 10px;
   padding: 20px;
   background-color: $background-color;
+  &.error {
+    border: 1px solid $red-error;
+    color: $red-error;
+    .form__fld {
+      color: $red-error;
+    }
+    .form__lbl {
+      &.active {
+        color: $red-error;
+      }
+    }
+  }
   .form__lbl {
     position: absolute;
     left: 19px;

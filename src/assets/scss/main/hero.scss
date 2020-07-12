@@ -137,13 +137,25 @@
     padding-top: 120px;
     padding-bottom: 85px;
     padding-right: 10px;
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+      display: flex;
+      background-color: #2e343f;
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      right: -20px;
+      padding: 50px 20px;
+    }
+    @media (max-width: $screen-xs-max) {
       display: none;
     }
     @media ( max-height: 750px) {
       display: none;
     }
     &__col {
+      & + .hero__description__col {
+        padding-left: 10px;
+      }
       &__title {
         font-size: 14px;
         line-height: 28px;

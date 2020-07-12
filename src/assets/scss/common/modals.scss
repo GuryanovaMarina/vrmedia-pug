@@ -9,8 +9,8 @@
 
 .remodal-wrapper {
   @media (max-width: $screen-xs-max) {
-    padding: 0;
-    top: 70px;
+    padding: 70px 0 0;
+    top: 0;
     overflow: hidden;
   }
 }
@@ -68,11 +68,21 @@
   }
   .form__block__wrap {
     padding-top: 15px;
-  }
-  .form__block {
-    @include form__block($dark-second, $grey-3, $white, $white, $dark-second, 50px, 16px, 20px, 15px);
-    @media (max-width: $screen-xs-max) {
-      max-width: none;
+    .form__block {
+      @include form__block($dark-second, $grey-3, $white, $white, $dark-second, 50px, 16px, 20px, 15px);
+      margin-bottom: 0;
+      @media (max-width: $screen-xs-max) {
+        max-width: none;
+      }
+    }
+    .form__error {
+      font-size: 11px;
+      line-height: 14px;
+      color: $red-error;
+      display: none;
+      &.visible {
+       display: initial;
+      }
     }
   }
 }

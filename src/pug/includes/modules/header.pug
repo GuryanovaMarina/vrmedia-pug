@@ -11,16 +11,13 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
               a(href='#')
                 img(src='assets/img/VRMEDIA.png', alt='logo')
           .header__col-2
-            a.header__burger__button.burger(href='#')
+            a.header__burger__button.burger.visible(href='#')
               span Меню
               img(src='assets/img/burger.svg', alt='Меню')
+            .header__close
+              span Закрыть
             nav.header__menu
               ul.header__menu-list(itemscope='', itemtype='http://schema.org/SiteNavigationElement')
-                li.header__logo-mobile
-                  img(src='assets/img/VRMEDIA.png', alt='logo')
-                li.header__close
-                  span Закрыть
-                  //img(src='assets/img/burger.svg', alt='Закрыть')
                 li.header__menu-item.angle-on(class=isModels ?'active-page':'')(data-href='https://davinci.fit/schedule')
                   a(itemprop='url', href='https://vrcams.ru/webcam_model/').header__menu-item__link Моделям
                   .header__dropdown
@@ -94,6 +91,6 @@ header(itemscope='', itemtype='http://schema.org/WPHeader')
                           a(itemprop='url', href='#').dropdown__item__telegram__link @vrcams
                       .dropdown__item__telegram
                         .header__telegram__button__feedback
-                          a(itemprop='url', href='#modal_send').header__telegram__button__feedback__link
+                          a(itemprop='url', href='#modal', data-model-type='1').header__telegram__button__feedback__link.lnk__open-modal-js
                             span Обратная связь
                             span.arrow

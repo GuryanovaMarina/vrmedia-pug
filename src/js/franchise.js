@@ -107,11 +107,9 @@ $(function () {
         else {
           $('.cursor').css({ left: e.clientX, top: e.clientY, display: 'block' });
         }
-        // console.log($('.franchise__dots li').find('button'))
+
         $('.franchise__dots li').each(function () {
-          // console.log($(this).find($('button'))[0])
           if (e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0] || e.target === $('.franchise__twelfth .form__send')[0]) {
-            console.log("!!!!!!!")
             $('.cursor').removeClass('remove-hover');
             $('.cursor').addClass('hover');
           }
@@ -119,7 +117,7 @@ $(function () {
             $('.cursor').removeClass('hover')
             $('.cursor').addClass('remove-hover')
           }
-        })
+        });
         for (let j = 0; j <= $('.franchise__dots li').last().index(); j++) {
           if (e.target === $('.franchise__dots li').eq(j).find('button')[0]) {
             $('.cursor').removeClass('remove-hover');
@@ -259,15 +257,6 @@ $(function () {
 
 
   $('.franchise__dots li').on('mouseover', function () {
-    // if($(this).hasClass('active')){
-    //    $(this).addClass('show-label slick-active');
-    // }
-    // else if($('.franchise__dots li').hasClass('show-label')){
-    //    $('.franchise__dots li').not('.active.slick-active').removeClass('show-label slick-active')
-    // } else {
-
-    // }
-
     if ($(this).index() == 4 || $(this).index() == 5 || $(this).index() == 3 || $(this).index() == 7) {
       $(this).addClass('active-label');
     } else {
@@ -584,8 +573,6 @@ $(function () {
         let tmp = document.location.href.match(/(slide)\d{1,2}/)[0];
 
         let result = getSlideIndex(tmp) - 1;
-
-        console.log(result)
 
         let top = $('#slide' + result).offset().top;
         $('body,html').animate({ scrollTop: top }, 500);

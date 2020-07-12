@@ -6,17 +6,11 @@
   @include text-white;
   align-items: center;
   z-index: 15;
-  //z-index: 10000;
   padding: 5px 0;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  .container {
-    @media (max-width: $screen-xxs-max) {
-      padding: 5px 10px;
-    }
-  }
   .row {
     height: 60px;
     align-items: center;
@@ -70,6 +64,35 @@
       display: block;
     }
   }
+  .header__close {
+    display: none;
+    padding: 13px 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 11px;
+    right: 110px;
+    @media (max-width: $screen-md-max) {
+      &.visible {
+        display: flex;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      right: 90px;
+    }
+    span {
+      position: relative;
+      &::after {
+        content: url('/assets/img/burger.svg');
+        margin-left: 10px;
+        vertical-align: initial;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 1px;
+      }
+    }
+  }
   .header__menu-list {
     position: relative;
     text-align: right;
@@ -94,14 +117,17 @@
       position: fixed;
       width: 100%;
       height: 100vh;
-      top: 0;
+      top: 70px;
       background-color: $dark-4;
       z-index: 10;
       padding: 9rem 20px 0 40px;
       @include transition;
     }
     @media (max-width: $screen-xs-max) {
-      padding: 9rem 20px 0 20px;
+      padding: 5rem 20px 0 20px;
+    }
+    @media (max-width: $screen-xxs-max) {
+      padding: 5rem 10px 0 10px;
     }
   }
   .header__menu-item {
@@ -194,37 +220,6 @@
           display: none;
         }
       }
-      //&.active {
-      //  .header__arrow {
-      //    top: 25px;
-      //    &::before {
-      //      transform: rotate(180deg);
-      //      background-color: #f03382;
-      //    }
-      //  }
-      //  .dropdown__list {
-      //    display: block;
-      //    position: static;
-      //    visibility: visible;
-      //    opacity: 1;
-      //    padding: 26px 0 26px 20px;
-      //    border-top: 1px solid rgba(#3a3c41, .4);
-      //    width: 105.5%;
-      //    border-radius: 0;
-      //    margin-top: 10px;
-      //    margin-bottom: -15px;
-      //    height: auto;
-      //  }
-      //  .dropdown__item {
-      //    padding: 0;
-      //    line-height: 38px;
-      //    color: #fefefe;
-      //    a {
-      //      visibility: visible;
-      //      opacity: 1;
-      //    }
-      //  }
-      //}
     }
     @media (max-width: $screen-xs-max) and (min-width: $screen-xs-min) {
       padding: 15px 0;
@@ -246,8 +241,15 @@
         position: relative;
         right: initial;
       }
+      @media (max-width: $screen-md-max) {
+        height: 385px;
+      }
     }
-
+    .header__dropdown {
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+    }
   }
   .header__burger__button {
     @include btn_menu;
@@ -257,44 +259,11 @@
       margin-left: 10px;
       vertical-align: initial;
     }
-    @media (max-width: $screen-md-max) {
-      display: inline-block;
-    }
-  }
-  .header__close {
-    padding: 13px 20px;
-    display: none;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 11px;
-    right: 110px;
-    @media (max-width: $screen-md-max) {
-      display: flex;
-    }
-    @media (max-width: $screen-xs-max) {
-      right: 90px;
-    }
-    span {
-      position: relative;
-      &::after {
-        content: url('/assets/img/burger.svg');
-        margin-left: 10px;
-        vertical-align: initial;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 1px;
+    &.visible {
+      @media (max-width: $screen-md-max) {
+        display: inline-block;
       }
     }
-    //img {
-    //  margin-left: 10px;
-    //  vertical-align: initial;
-    //  transform: rotate(45deg);
-    //  position: absolute;
-    //  left: 80px;
-    //  top: 17px;
-    //}
   }
   .dropdown__list {
     @include transition;
@@ -432,7 +401,6 @@
   }
   .dropdown__list__telegram {
     text-align: start;
-    //left: 0;
     top: 85px;
     width: 215px;
     position: absolute;
@@ -464,9 +432,6 @@
         @include transition;
         font-size: 0;
         line-height: 0;
-        @media (max-width: $screen-md-max) {
-         // display: block;
-        }
       }
     }
   }
@@ -484,10 +449,10 @@
       width: 100%;
     }
     @media (max-width: $screen-xs-max) {
-      padding: 40px 0 45px;
+      padding: 40px 0 85px;
     }
     @media (max-width: $screen-xxs-max) {
-      padding: 30px 0 20px;
+      padding: 30px 0 60px;
     }
     .dropdown__item__telegram {
       margin: 10px 0;
