@@ -1,6 +1,6 @@
 @import '.././utils/mixins.scss';
 
-.hero {
+.hero-main {
   background-color: $bg-main;
   height: 100vh;
   .video {
@@ -186,43 +186,6 @@
   .title_link_js {
     @media (min-width: $screen-sm-min){
       cursor: pointer;
-    }
-  }
-}
-.description {
-  display: none;
-  @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
-    display: flex;
-    background-color: $dark-second;
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    right: -20px;
-    padding: 50px 20px;
-  }
-  .row {
-    justify-content: space-between;
-  }
-  &__col {
-    flex-basis: 50%;
-    max-width: 50%;
-    & + .description__col {
-      padding-left: 10px;
-    }
-    &__title {
-      font-size: 14px;
-      line-height: 28px;
-      color: $grey-3;
-      padding-bottom: 10px;
-    }
-    &__content {
-      font-size: 18px;
-      line-height: 28px;
-      color: $white;
-      @media (max-width: $screen-sm-max) {
-        font-size: 16px;
-        line-height: 24px;
-      }
     }
   }
 }

@@ -1,11 +1,11 @@
-import 'lightgallery';
-import 'lg-autoplay';
-import 'lg-fullscreen';
-import 'lg-hash';
-import 'lg-pager';
-import 'lg-thumbnail';
-import 'lg-video';
-import 'lg-zoom';
+// import 'lightgallery';
+// import 'lg-autoplay';
+// import 'lg-fullscreen';
+// import 'lg-hash';
+// import 'lg-pager';
+// import 'lg-thumbnail';
+// import 'lg-video';
+// import 'lg-zoom';
 import Swiper from 'swiper';
 
 $( document ).ready(function() {
@@ -30,8 +30,6 @@ $( document ).ready(function() {
         keyboard: true,
         cssMode: true,
       };
-      // $this.find(".swiper-button-next-modific").addClass("disable");
-      // $this.find(".swiper-button-prev-modific").addClass("disable");
     } else {
       var options = {
         direction: 'horizontal',

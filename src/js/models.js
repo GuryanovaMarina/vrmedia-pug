@@ -1,13 +1,12 @@
-import 'lightgallery';
-import 'lg-autoplay';
-import 'lg-fullscreen';
-import 'lg-hash';
-import 'lg-pager';
-import 'lg-thumbnail';
-import 'lg-video';
-import 'lg-zoom';
+// import 'lightgallery';
+// import 'lg-autoplay';
+// import 'lg-fullscreen';
+// import 'lg-hash';
+// import 'lg-pager';
+// import 'lg-thumbnail';
+// import 'lg-video';
+// import 'lg-zoom';
 import Swiper from 'swiper';
-
 
 $( document ).ready(function() {
   //swiper

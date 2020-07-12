@@ -13,7 +13,6 @@ const PATHS = {
     assets: "assets/"
 };
 
-//const PAGES_DIR = PATHS.src;
 const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 const PAGES = fs
     .readdirSync(PAGES_DIR)
@@ -23,17 +22,11 @@ module.exports = {
     externals: {
         paths: PATHS
     },
-    entry: {
-        index: `${PATHS.src}/index.js`,
-        promotion: `${PATHS.src}/promotion.js`,
-        models: `${PATHS.src}/models.js`,
-        blog: `${PATHS.src}/blog.js`,
-        studio: `${PATHS.src}/studio.js`,
-        dmca: `${PATHS.src}/dmca.js`,
-        franchise: `${PATHS.src}/franchise.js`,
-    },
+  entry: {
+    index: `${PATHS.src}/index.js`,
+  },
     output: {
-        filename: `${PATHS.assets}js/[name].[contenthash].js`,
+        filename: `${PATHS.assets}js/index.[contenthash].js`,
         path: PATHS.dist,
         publicPath: "/"
     },
@@ -71,7 +64,6 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
-                    outputPath: '/assets/fonts/'
                 },
             },
             {
@@ -80,7 +72,6 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
-                    outputPath: '/assets/img/'
                 },
             },
             {
@@ -148,7 +139,7 @@ module.exports = {
         "window.jQuery": "jquery"
       }),
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].[contenthash].css`,
+          filename: `${PATHS.assets}css/index.[contenthash].css`,
             exclude: "/node_modules/"
         }),
         new SpritePlugin(),
@@ -161,61 +152,9 @@ module.exports = {
         page =>
           new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
-            chunks: [`${page.replace(/\.pug/,'')}`, 'vendors'],
             filename: `./${page.replace(/\.pug/,'.html')}`
           })
       ),
       new CleanWebpackPlugin()
     ]
 };
-/*              'svgo-loader',
-                options: {
-                  extract: true,
-                  publicPath: ''
-                }
-loader: 'svg-sprite-loader',
-                options: {
-                  extract: true,
-                  publicPath: '/static'
-                }
-
-  'svg-sprite-loader',
-          'svgo-loader'
-
-
-  outputPath: `static/[name].[contenthash].[ext]`,
-                'svgo-loader'
-
-  chunks: [`${page.replace(/\.pug/,'')}`, 'vendors'],
-
-        new webpack.ProvidePlugin({
-          $: 'jquery',
-          jQuery: 'jquery',
-          "window.jQuery": "jquery"
-        }),
-
-
-        ...PAGES.map(
-            page =>
-                new HtmlWebpackPlugin({
-                    template: `${PAGES_DIR}/${page}`,
-                    chunks: [],
-                    filename: `./${page.replace(/\.pug/,'.html')}`
-                })
-        ),
-
-
-*                    template: `${PAGES_DIR}/${page}`,
-*     optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    name: "vendors",
-                    test: /node_modules/,
-                    chunks: "all",
-                    enforce: true
-                }
-            }
-        }
-    },
-* */
