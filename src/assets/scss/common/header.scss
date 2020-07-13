@@ -237,6 +237,8 @@
       position: absolute;
       right: 0;
       padding-right: 0;
+      top: 13px;
+      padding-top: 0;
       @media (max-width: $screen-md-max) {
         position: relative;
         right: initial;

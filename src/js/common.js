@@ -30,6 +30,7 @@ function validate (target) {
           } else {
             comp_parent.addClass('error');
             comp_lbl_error.addClass('visible');
+            $(target).focus();
             return false;
           }
         }

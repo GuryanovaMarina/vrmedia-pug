@@ -13,6 +13,9 @@
     top: 0;
     overflow: hidden;
   }
+  &::after {
+    display: none;
+  }
 }
 .remodal {
   background-color: $dark-4;
@@ -24,6 +27,7 @@
   font-size: 13px;
   line-height: 20px;
   color: $white;
+  margin-bottom: 0;
   @media (max-width: $screen-xs-max) {
     max-width: none;
     height: 100%;

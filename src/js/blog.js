@@ -49,7 +49,9 @@ function swiperFunc() {
     isActive = true;
   }
   if(!initNeeded && isActive) {
-    swiper.destroy(true, true);
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
     isActive = false;
   }
 }

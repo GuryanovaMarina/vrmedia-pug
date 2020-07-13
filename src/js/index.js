@@ -12,11 +12,11 @@ $( document ).ready(function() {
   });
   enquire.register("screen and (max-width:768px)", {
     match: function () {
-      $('.hero__description').appendTo('.hero__inner__wrap');
+      $('.hero-main__description').appendTo('.hero-main__inner__wrap');
     },
     unmatch: function () {
-      $('.hero__description').appendTo('.hero__inner');
-      $('.hero__bottom').appendTo('.hero__inner');
+      $('.hero-main__description').appendTo('.hero-main__inner');
+      $('.hero-main__bottom').appendTo('.hero-main__inner');
     }
   })
 });
