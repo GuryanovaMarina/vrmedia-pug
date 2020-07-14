@@ -209,7 +209,8 @@
     font-size: 0;
     width: 140px;
     height: 9px;
-    background-image: url(/assets/img/franchise_next.svg);
+    //background-image: url(/assets/img/franchise_next.svg);
+    background-image: url("../img/franchise_next.svg");
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
@@ -338,7 +339,8 @@
         background-color: #a8c0e6;
       }
       button{
-        background-image: url(/assets/img/navigation-dots-light.svg);
+        //background-image: url(/assets/img/navigation-dots-light.svg);
+        background-image: url("../img/navigation-dots-light.svg");
       }
     }
     position: relative;
@@ -346,7 +348,8 @@
     &:first-child{
       width: 5px;
       button{
-        background-image: url(/assets/img/navigation-dots-light.svg);
+        //background-image: url(/assets/img/navigation-dots-light.svg);
+        background-image: url("../img/navigation-dots-light.svg");
         background-position: center;
       }
       &::before{
@@ -405,7 +408,7 @@
   }
   button{
     margin-left: auto;
-    background: none;
+    //background: none;
     padding: 0;
     border: 10px solid transparent;
     font-size: 0;
@@ -413,7 +416,8 @@
     height: 5px;
     display: block;
     border-radius: 50%;
-    background-image: url(/assets/img/navigation-dots-dark.svg);
+    //background-image: url(/assets/img/navigation-dots-dark.svg);
+    background-image: url("../img/navigation-dots-dark.svg");
     background-position: center;
     background-size: 5px;
     background-repeat: no-repeat;
@@ -430,7 +434,8 @@
       transition: all .5s;
     }
     button{
-      background-image: url(/assets/img/navigation-dots-light.svg);
+      //background-image: url(/assets/img/navigation-dots-light.svg);
+      background-image: url("../img/navigation-dots-light.svg");
       &::before{
         content: '';
         -webkit-transition: all .5s;
@@ -552,7 +557,8 @@
     display: block;
     width: 15px;
     height: 14px;
-    background-image: url(/assets/img/franchise_join.svg);
+    //background-image: url(/assets/img/franchise_join.svg);
+    background-image: url("../img/franchise_join.svg");
     background-repeat: no-repeat;
     background-position: center;
     right: 0;
@@ -568,7 +574,8 @@
 
 .franchise__logo{
   position: absolute;
-  background-image: url(/assets/img/franchise-logo.svg);
+  //background-image: url(/assets/img/franchise-logo.svg);
+  background-image: url("../img/franchise-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 170px;
@@ -601,7 +608,8 @@
     position: absolute;
     top: 0;
     left: -80px;
-    background-image: url(/assets/img/fir-1.svg);
+    //background-image: url(/assets/img/fir-1.svg);
+    background-image: url("../img/fir-1.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -783,7 +791,8 @@
   margin-bottom: 80px;
   &::after{
     content: '';
-    background-image: url(/assets/img/franchise_third-icon.svg);
+    //background-image: url(/assets/img/franchise_third-icon.svg);
+    background-image: url("../img/franchise_third-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -829,7 +838,8 @@
 .franchise__forth{
   &::after{
     content: '';
-    background-image: url(/assets/img/franchise_forth-bg.png);
+    //background-image: url(/assets/img/franchise_forth-bg.png);
+    background-image: url("../img/franchise_forth-bg.png");
     background-repeat: no-repeat;
     background-position: 60% 50px;
     width: 100%;
@@ -917,7 +927,8 @@
 
 
 .franchise__fifth{
-  background-image: url(/assets/img/franchise-map.jpg);
+  //background-image: url(/assets/img/franchise-map.jpg);
+  background-image: url("../img/franchise-map.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1000,7 +1011,8 @@
       position: absolute;
       width: 214px;
       height: 214px;
-      background-image: url(/assets/img/fir-1.svg);
+      //background-image: url(/assets/img/fir-1.svg);
+      background-image: url("../img/fir-1.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -1056,6 +1068,7 @@
       &::after{
         content: '';
         background-image: url(/assets/img/fir-1.svg);
+        background-image: url("../img/fir-1.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -1142,7 +1155,8 @@
     height: 14px;
     left: 0;
     top: 23px;
-    background-image: url(/assets/img/franchise_seven-icon.svg);
+    //background-image: url(/assets/img/franchise_seven-icon.svg);
+    background-image: url("../img/franchise_seven-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -1151,7 +1165,8 @@
 .franchise__ninth{
   &::before{
     content: '';
-    background-image: url(/assets/img/franchise_ninth-bg.png);
+    //background-image: url(/assets/img/franchise_ninth-bg.png);
+    background-image: url("../img/franchise_ninth-bg.png");
     background-repeat: no-repeat;
     background-position: 70% 100px;
     width: 100%;
@@ -1198,7 +1213,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(/assets/img/fir-1.svg);
+    //background-image: url(/assets/img/fir-1.svg);
+    background-image: url("../img/fir-1.svg");
     left: 20px;
     top: 10px;
     z-index: -1;
@@ -1230,7 +1246,8 @@
     width: 132px;
     height: 132px;
     position: absolute;
-    background-image: url(/assets/img/fir-5.png);
+    //background-image: url(/assets/img/fir-5.png);
+    background-image: url("../img/fir-5.png");
     background-repeat: no-repeat;
     background-position: center;
     left: -27px;
@@ -1273,7 +1290,8 @@
     height: 247px;
     left: -47px;
     top: -37px;
-    background-image: url(/assets/img/franchise_eleventh-fir.svg);
+    //background-image: url(/assets/img/franchise_eleventh-fir.svg);
+    background-image: url("../img/franchise_eleventh-fir.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1365,7 +1383,8 @@
       width: 15px;
       height: 12px;
       transform: translateY(-40%);
-      background-image: url(/assets/img/franchise_join.svg);
+      //background-image: url(/assets/img/franchise_join.svg);
+      background-image: url("../img/franchise_join.svg");
       background-repeat: no-repeat;
     }
   }
@@ -1441,7 +1460,8 @@
       left: 60%;
       width: 214px;
       height: 214px;
-      background-image: url(/assets/img/fir-1.svg);
+      //background-image: url(/assets/img/fir-1.svg);
+      background-image: url("../img/fir-1.svg");
       z-index: -2;
     }
     &::before{
@@ -1449,7 +1469,8 @@
       left: 30%;
       width: 369px;
       height: 271px;
-      background-image: url(/assets/img/franchise__thirdteenth-icon.svg);
+      //background-image: url(/assets/img/franchise__thirdteenth-icon.svg);
+      background-image: url("../img/franchise__thirdteenth-icon.svg");
       z-index: -1;
     }
   }
@@ -2070,7 +2091,8 @@
     height: 20px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/assets/img/burger.svg);
+    //background-image: url(/assets/img/burger.svg);
+    background-image: url("../img/burger.svg");
   }
   .franchise__logo{
     left: 20px;
@@ -2120,7 +2142,8 @@
     content: '';
     width: 362px;
     height: 362px;
-    background-image: url(/assets/img/franchise-mobile-circle-big.svg);
+    //background-image: url(/assets/img/franchise-mobile-circle-big.svg);
+    background-image: url("../img/franchise-mobile-circle-big.svg");
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
@@ -2197,7 +2220,8 @@
     font-size: 0;
     width: 110px;
     height: 9px;
-    background-image: url(/assets/img/franchise_next.svg);
+    //background-image: url(/assets/img/franchise_next.svg);
+    background-image: url("../img/franchise_next.svg");
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
@@ -2912,7 +2936,8 @@
     display: none;
   }
   .franchise__fifth{
-    background-image: url(/assets/img/map2.jpg);
+    //background-image: url(/assets/img/map2.jpg);
+    background-image: url("../img/map2.jpg");
   }
   .franchise__twelfth{
     padding-bottom: 50px;
@@ -2938,7 +2963,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url(/assets/img/fir-1.svg);
+      //background-image: url(/assets/img/fir-1.svg);
+      background-image: url("../img/fir-1.svg");
       left: 20px;
       top: -30px;
       z-index: -1;
@@ -3161,7 +3187,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url(/assets/img/fir-1.svg);
+      //background-image: url(/assets/img/fir-1.svg);
+      background-image: url("../img/fir-1.svg");
       right: 40px;
       top: -20px;
       z-index: -1;
@@ -3183,7 +3210,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(/assets/img/fir-1.svg);
+        //background-image: url(/assets/img/fir-1.svg);
+        background-image: url("../img/fir-1.svg");
         right: 40px;
         top: -20px;
         z-index: -1;
@@ -3203,7 +3231,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(/assets/img/franchise_mark-1.png);
+        //background-image: url(/assets/img/franchise_mark-1.png);
+        background-image: url("../img/franchise_mark-1.png");
         right: 40px;
         top: -20px;
         z-index: -1;
@@ -3287,7 +3316,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      background-image: url(/assets/img/fir-1.svg);
+      //background-image: url(/assets/img/fir-1.svg);
+      background-image: url("../img/fir-1.svg");
       right: 40px;
       top: -20px;
       z-index: -1;
@@ -3561,7 +3591,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(/assets/img/fir-1.svg);
+        //background-image: url(/assets/img/fir-1.svg);
+        background-image: url("../img/fir-1.svg");
         right: 40px;
         top:0px;
         z-index: -1;
@@ -3713,7 +3744,8 @@
   .franchise__logo{
     width: 102px;
     height: 9px;
-    background-image: url(/assets/img/logo-mobile-franchise.svg);
+    //background-image: url(/assets/img/logo-mobile-franchise.svg);
+    background-image: url("../img/logo-mobile-franchise.svg");
     top: 30px;
     left: 20px;
   }

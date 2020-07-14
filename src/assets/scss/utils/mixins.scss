@@ -298,7 +298,7 @@
   .copy {
     height: 15px;
     width: 15px;
-    background-image: url("/assets/img/icon_copy.svg");
+    background-image: url("../img/icon_copy.svg");
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 10px;
@@ -507,7 +507,7 @@
     }
   }
   &__inner {
-    background-image: url(/assets/img/bg_main_gradient.svg);
+    background-image: url("../img/bg_main_gradient.svg");
     background-color: $bg-main;
     background-position: center top;
     background-repeat: repeat-x;
@@ -606,7 +606,7 @@
 }
 @mixin block__header {
   margin-top: 70px;
-  background-image: url(/assets/img/bg_main.svg);
+  background-image: url("../img/bg_main.svg");
   background-color: $bg-main;
   background-position: center center;
   background-repeat: repeat-x;
@@ -974,7 +974,7 @@
     left: 0;
     top: 0;
     background-color: rgba(#fff, 0);
-    background-image: url("/assets/img/loupe.svg");
+    background-image: url("../img/loupe.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0;
@@ -988,275 +988,9 @@
       font-size: 15px;
       line-height: 24px;
     li {
-      list-style-image: url(/assets/img/icon_li.svg);
+      list-style-image: url("../img/icon_li.svg");
       position: relative;
       padding-bottom: 8px;
     }
   }
 }
-
-
-//@mixin btn__custom__arrow-move($color:$pink, $rotate:225deg, $top:43%, $right:20px, $right_hover:3px) {
-//  color: $white;
-//  font-size: 15px;
-//  line-height: 19px;
-//  height: 50px;
-//  background-color: $color;
-//  border-radius: 6px;
-//  padding: 15px 35px 15px 20px;
-//  display: inline-flex;
-//  align-items: center;
-//  justify-content: center;
-//  position: relative;
-//  @include transition;
-//  &:hover {
-//    background-color: $pink-hover;
-//    &::after{
-//      //right: 17px;
-//      transform: translateX($right_hover) rotate($rotate)
-//    }
-//  }
-//  &::after {
-//    content: '';
-//    border-bottom: 2px solid $white;
-//    border-left: 2px solid $white;
-//    height: 8px;
-//    width: 8px;
-//    right: $right;
-//    top: $top;
-//    position: absolute;
-//    transform: rotate($rotate);
-//    @include transition;
-//  }
-//}
-
-/*
-@mixin panel__type1 {
-  h2 {
-    margin-bottom: 50px;
-  }
-  h4,h5 {
-    margin-bottom: 30px;
-  }
-  @media (max-width: $screen-lg-max) {
-    padding: 80px 0;
-  }
-  @media (max-width: $screen-xs-max) {
-    padding: 40px 0;
-  }
-  .row {
-    @media (max-width: $screen-sm-max) {
-      flex-direction: column;
-      .col + .col {
-        //margin-top: 40px;
-      }
-    }
-  }
-  h4,h5 {
-    @media (max-width: $screen-xs-max) {
-      border: none;
-      font-size: 16px;
-      font-weight: 600;
-      color: $subtitle-grey;
-      margin-bottom: 15px;
-    }
-  }
-}
-@mixin panel__type2 {
-  @include title3-black;
-  h2,h3,h4,h5 {
-    margin-bottom: 40px;
-    @media (max-width: $screen-sm-max) {
-      margin-bottom: 0;
-      margin-left: 25px;
-    }
-  }
-  .text {
-    @include text-black;
-    margin-right: 40px;
-    @media (max-width: $screen-sm-max) {
-      margin-top: 20px;
-      margin-right: 0 ;
-    }
-  }
-  .block-pict_text__inner {
-    margin: 0 auto;
-    .row {
-      justify-content: center;
-      align-items: center;
-      &+ .row {
-        .block-pict_text__description_outer {
-          margin-right: 50px;
-          @media (max-width: $screen-md-max) {
-            margin-right: 0;
-          }
-          @media (max-width: $screen-sm-max) {
-            order: 1;
-          }
-        }
-      }
-      .block-pict_text__description {
-        @media (max-width: $screen-sm-max) {
-          display: flex;
-          align-items: center;
-        }
-        .block-pict_text__img-mini {
-          display: none;
-          @media (max-width: $screen-sm-max) {
-            display: block;
-            height: 120px;
-            img {
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-        }
-      }
-      .block-pict_text__img {
-        padding: 30px;
-        img {
-          height: 100%;
-          object-fit: contain;
-        }
-        @media (max-width: $screen-sm-max) {
-          display: none;
-        }
-      }
-      .block-pict_text__link {
-        @include lnk__custom-border-pink;
-      }
-    }
-  }
-}
-@mixin panel__type3 {
-  .block__twi {
-    text-align: center;
-    margin-bottom: 100px;
-    @media (max-width: $screen-md-max) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 50px;
-    }
-    @media (max-width: $screen-xs-max) {
-      margin-bottom: 0;
-    }
-    h4 {
-      color: $black;
-      @media (max-width: $screen-sm-max) {
-        margin-left: 20px;
-        text-align: left;
-      }
-    }
-    .block__twi__img-mini {
-      display: none;
-      @media (max-width: $screen-sm-max) {
-        display: block;
-        height: 150px;
-        img {
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-      @media (max-width: $screen-xs-max) {
-        height: 100px;
-      }
-    }
-  }
-  .block__twi__inner {
-    display: flex;
-    max-width: 1100px;
-    justify-content: space-between;
-    margin: 0 auto;
-    .block__twi__img-max {
-      height: 320px;
-      align-self: center;
-      @media (max-width: $screen-md-max) {
-        height: 220px;
-      }
-      @media (max-width: $screen-sm-max) {
-        display: none;
-      }
-      img {
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-}
-@mixin panel__block {
-  @include title4-white;
-  background-image: url(/assets/img/help__bg.svg);
-  background-position: right center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: $bg-dark-grey;
-  border-radius: 6px;
-  margin-bottom: 120px;
-  overflow: hidden;
-  box-shadow: 0 10px 37px rgba(0, 0, 0, 0.32);
-  max-width: 1100px;
-  @media (max-width: $screen-xs-max) {
-    background-image: none;
-  }
-  .block-send__step {
-    color: $subtitle-grey;
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
-  h4 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    @media (min-width: $screen-xl-max) {
-      font-size: 40px;
-      line-height: 55px;
-    }
-  }
-  .block-send__help-link {
-    @include btn__custom__arrow-move;
-    .visible {
-      display: block;
-      @media (max-width: $screen-xs-max) {
-        display: none;
-      }
-    }
-    .hide {
-      display: none;
-      @media (max-width: $screen-xs-max) {
-        display: block;
-      }
-    }
-  }
-  .text {
-    @include text-white-panel;
-    margin-bottom: 40px;
-    max-width: 800px;
-  }
-}
-@mixin panel__block-send {
-  @include panel__block;
-}
-@mixin panel__block-help {
-  @include panel__block;
-  padding: 40px 40px 50px;
-  width: auto;
-  @media (max-width: $screen-xs-max) {
-    padding: 30px;
-  }
-  .text {
-    max-width: 800px;
-    &.text-displ-mobile {
-      display: none;
-      @media (max-width: $screen-xs-max) {
-        display: block;
-      }
-    }
-    &.text-hide-mobile {
-      display: block;
-      @media (max-width: $screen-xs-max) {
-        display: none;
-      }
-    }
-  }
-}
-*/

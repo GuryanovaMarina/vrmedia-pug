@@ -84,7 +84,8 @@
     span {
       position: relative;
       &::after {
-        content: url('/assets/img/burger.svg');
+        //content: url('/assets/img/burger.svg');
+        content: url('../img/burger.svg');
         margin-left: 10px;
         vertical-align: initial;
         transform: rotate(45deg);

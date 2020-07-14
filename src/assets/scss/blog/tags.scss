@@ -102,9 +102,8 @@
                 background-color: rgba(175, 188, 208, 0.4);
                 color: $grey-blue;
                 border-radius: 6px 6px 0 0;
-                //span {
-                  cursor: url(/assets/img/notallowed.svg) 0 0, auto;
-                //}
+                //cursor: url(/assets/img/notallowed.svg) 0 0, auto;
+                cursor: url("../img/notallowed.svg") 0 0, auto;
               }
             }
           }

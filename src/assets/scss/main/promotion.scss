@@ -2,25 +2,25 @@
 @import '.././utils/mixins.scss';
 
 .promotion {
-  background: url("/assets/img/icon_promotion_bg1.svg") 0 center no-repeat,
-  url("/assets/img/icon_promotion_bg2.svg") 0 0 no-repeat,
-  url("/assets/img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
+  background: url("../img/icon_promotion_bg1.svg") 0 center no-repeat,
+  url("../img/icon_promotion_bg2.svg") 0 0 no-repeat,
+  url("../img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
   background-size: auto, auto, 58%;
   @media (max-width: $screen-lg-max) and (min-width: $screen-lg-min) {
-    background: url("/assets/img/icon_promotion_bg1.svg") 0 10% no-repeat,
-    url("/assets/img/icon_promotion_bg2.svg") 0 0 no-repeat,
-    url("/assets/img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
+    background: url("../img/icon_promotion_bg1.svg") 0 10% no-repeat,
+    url("../img/icon_promotion_bg2.svg") 0 0 no-repeat,
+    url("../img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
     background-size: auto, auto, 58%;
   }
   @media (max-width: $screen-md-max) and (min-width: $screen-sm-min) {
-    background: url("/assets/img/icon_promotion_bg1.svg") 0 10% no-repeat,
-    url("/assets/img/icon_promotion_bg2.svg") 0 0 no-repeat,
-    url("/assets/img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
+    background: url("../img/icon_promotion_bg1.svg") 0 10% no-repeat,
+    url("../img/icon_promotion_bg2.svg") 0 0 no-repeat,
+    url("../img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
     background-size: 11%, auto, 58%;
   }
   @media (max-width: $screen-xs-max) {
-    background: url("/assets/img/icon_promotion_bg2.svg") 0 0 no-repeat,
-    url("/assets/img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
+    background: url("../img/icon_promotion_bg2.svg") 0 0 no-repeat,
+    url("../img/icon_promotion_bg3.svg") 100% 0 no-repeat,$dark-5;
     background-size: auto, 58%;
   }
   .container {
@@ -129,7 +129,6 @@
         height: 527px;
         position: relative;
         bottom: -3px;
-        //background: url("/assets/img/img_promotion.svg") center center no-repeat;
         @media (max-width: 1485px) {
           height: 468px;
         }

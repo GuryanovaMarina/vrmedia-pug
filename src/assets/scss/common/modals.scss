@@ -8,6 +8,12 @@
 }
 
 .remodal-wrapper {
+  @media (min-width: $screen-sm-min) {
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: initial;
+  }
+
   @media (max-width: $screen-xs-max) {
     padding: 70px 0 0;
     top: 0;

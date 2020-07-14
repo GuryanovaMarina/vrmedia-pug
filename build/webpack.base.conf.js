@@ -26,9 +26,9 @@ module.exports = {
     index: `${PATHS.src}/index.js`,
   },
     output: {
-        filename: `${PATHS.assets}js/index.[contenthash].js`,
+        filename: `${PATHS.assets}js/[name].[contenthash].js`,
         path: PATHS.dist,
-        publicPath: "/"
+        /*publicPath: "/"*/
     },
     optimization: {
       splitChunks: {
@@ -60,10 +60,11 @@ module.exports = {
             },
             {
                 // Fonts
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
+                    publicPath: "/",
                 },
             },
             {
@@ -72,6 +73,8 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
+                    /*outputPath: "/assets/img/",*/
+                    publicPath: "../img/",
                 },
             },
             {
@@ -116,15 +119,6 @@ module.exports = {
               }
             ]
           },
-          {
-            test: /\.svg$/,
-            //include: path.resolve(__dirname, 'src/assets/img'), // new line
-            use: [
-              {
-                loader: 'svg-sprite-loader'
-              },
-            ]
-          }
         ]
     },
     resolve: {
@@ -139,10 +133,9 @@ module.exports = {
         "window.jQuery": "jquery"
       }),
         new MiniCssExtractPlugin({
-          filename: `${PATHS.assets}css/index.[contenthash].css`,
+            filename: `${PATHS.assets}css/[name].[contenthash].css`,
             exclude: "/node_modules/"
         }),
-        new SpritePlugin(),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
@@ -158,3 +151,17 @@ module.exports = {
       new CleanWebpackPlugin()
     ]
 };
+
+//            chunks: [`${page.replace(/\.pug/,'')}`, 'vendors'],
+//        new SpritePlugin(),
+/*
+*           {
+            test: /\.svg$/,
+            //include: path.resolve(__dirname, 'src/assets/img'), // new line
+            use: [
+              {
+                loader: 'svg-sprite-loader'
+              },
+            ]
+          }
+* */
