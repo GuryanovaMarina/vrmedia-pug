@@ -41,7 +41,7 @@
   &__title {
     @include title1-white;
     @include title2-white;
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'SFProDisplay', sans-serif;
     display: flex;
     @media (max-width: $screen-sm-max) {
       align-items: center;

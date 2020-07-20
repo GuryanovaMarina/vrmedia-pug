@@ -28,7 +28,7 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].[contenthash].js`,
         path: PATHS.dist,
-        /*publicPath: "/"*/
+        publicPath: "/"
     },
     optimization: {
       splitChunks: {
@@ -59,13 +59,14 @@ module.exports = {
               }
             },
             {
-                // Fonts
-                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "file-loader",
-                options: {
-                    name: "[name].[ext]",
-                    publicPath: "/",
-                },
+              // images / icons
+              test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+              loader: "file-loader",
+              options: {
+                name: "[name].[ext]",
+                outputPath: "/assets/fonts/",
+                publicPath: "../fonts/",
+              },
             },
             {
                 // images / icons
@@ -73,12 +74,12 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "[name].[ext]",
-                    /*outputPath: "/assets/img/",*/
+                    outputPath: "/assets/img/",
                     publicPath: "../img/",
                 },
             },
             {
-                // scss
+              // scss
                 test: /\.scss$/,
                 use: [
                     "style-loader",
@@ -164,4 +165,41 @@ module.exports = {
               },
             ]
           }
-* */
+          *             // {
+            //   // Fonts
+            //   test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+            //   loader: "file-loader",
+            //   options: {
+            //     name: "[name].[ext]",
+            //     /*publicPath: "/",*/
+//     publicPath: (url, resourcePath, context) => {
+//       if (/fonts/.test(resourcePath)) {
+//         //return `../fonts/${url}`;
+//       }
+//       if (/node_modules/.test(resourcePath)) {
+//       //  return `/${url}`;
+//       }
+//     },
+//     // outputPath: (url, resourcePath, context) => {
+//     //   if (/fonts/.test(resourcePath)) {
+//     //     return `/assets/fonts/${url}`;
+//     //   }
+//     //   if (/node_modules/.test(resourcePath)) {
+//     //     return `/${url}`;
+//     //   }
+//     // },
+//   },
+// },
+// {
+//     // Fonts
+//     test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+//     exclude: "/node_modules/",
+//     loader: "file-loader",
+//     options: {
+//         name: "[name].[ext]",
+//         /*outputPath: "/assets/fonts/",*/
+//         /*publicPath: "../fonts/",*/
+//         /*publicPath: "/",*/
+//     },
+// },
+
