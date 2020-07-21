@@ -1,0 +1,272 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.typical-container {
+  position: relative;
+}
+.typical__block {
+  max-width: 900px;
+  padding-top: 100px;
+  margin: 0 auto;
+  &__subtitle {
+    font-size: 15px;
+    line-height: 29px;
+    color: $grey-blue;
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    span + span {
+      padding-left: 20px;
+    }
+    @media (max-width: $screen-xl-max) {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__title {
+    padding: 40px 0;
+    @media (max-width: $screen-xs-max) {
+      padding: 20px 0;
+    }
+  }
+  &__description {
+    @include text;
+    @include list;
+    ul , ol {
+      padding-bottom: 20px;
+    }
+    color: $dark-second;
+    &.bold {
+      font-weight: bold;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+    &__link {
+      @include lnk__custom__solid-include();
+    }
+  }
+  &__swiper {
+    padding: 40px 0;
+    .realization__content__item__swip {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+  &__gallery {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__inner {
+      margin: -1px;
+      display: flex;
+      flex-wrap: wrap;
+      &.four {
+        height: 436px;
+        flex-direction: column;
+      }
+    }
+    &__img {
+      padding: 1px;
+      position: relative;
+      cursor: pointer;
+      display: block;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+      }
+      &.left {
+        position: relative;
+        img {
+          height: initial;
+        }
+      }
+      &.right {
+        height: 100%;
+        img {
+          //height: 100%;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(#fff, 0);
+        background-image: url(../img/loupe-pink.svg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 0;
+        @include transition;
+      }
+      &:hover {
+        &:after {
+          background-color: rgba(240, 51, 130, 0.7);
+          background-size: 60px;
+        }
+      }
+    }
+  }
+  &__img__intro {
+   &.center {
+     padding-top: 20px;
+     padding-bottom: 40px;
+     img {
+       width: 100%;
+       height: 100%;
+     }
+   }
+    &.left {
+      float: left;
+      margin-right: 10px;
+    }
+    &.right {
+      float: right;
+      margin-left: 10px;
+    }
+    &.left, &.right {
+      max-width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: $screen-xs-max) {
+        float: initial;
+        margin-right: 0;
+        margin-left: 0;
+        padding-bottom: 20px;
+        max-width: 100%;
+      }
+    }
+  }
+  &__img__outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    @media (max-width: $screen-xs-max) {
+      flex-wrap: wrap;
+    }
+    &__col {
+      max-width: 50%;
+      flex-basis: 50%;
+      & + .typical__block__img__outer__col {
+        padding-left: 60px;
+        @media (max-width: $screen-xs-max) {
+          padding-left: 0;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: $screen-xs-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+        &.left {
+          order: 1;
+        }
+      }
+    }
+  }
+  &__banner {
+    padding: 30px 0;
+    &__inner {
+      padding: 85px 50px;
+      background-image: url("../img/bg_main.svg");
+      background-color: $bg-main;
+      background-position: center center;
+      background-repeat: repeat-x;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      font-size: 20px;
+      line-height: 32px;
+      color: $white;
+      @media (max-width: $screen-xs-max) {
+        padding: 50px 20px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+      @media (max-width: $screen-xxs-max) {
+        padding: 50px 10px;
+      }
+    }
+  }
+  &__quote {
+    padding: 30px 0;
+    &__inner {
+      padding: 85px 50px;
+      background: url("../img/icon_quotas_up.svg") 0 0 no-repeat,
+      url("../img/icon_quotas_down.svg") 100% 100% no-repeat,$white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      font-size: 20px;
+      line-height: 32px;
+      color: $dark-second;
+      @media (max-width: $screen-xs-max) {
+        background-size: 30%, 30%;
+        padding: 50px 20px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+      @media (max-width: $screen-xxs-max) {
+        padding: 50px 10px;
+      }
+    }
+    &__author {
+      padding-top: 10px;
+      color: $grey-3;
+    }
+  }
+}
+.typical__bottom-container {
+  margin-top: 30px;
+  max-width: inherit;
+  background: url("../img/bg_ellipse.svg") 0 0 no-repeat, $grey-12;
+  background-size: contain;
+}
+.typical__bottom {
+  &__inner {
+    max-width: 900px;
+    padding: 50px 0;
+    color: $white;
+    margin: 0 auto;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+  &__subtitle {
+    font-size: 15px;
+    line-height: 28px;
+    color: $grey-13;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link__left {
+    a {
+      @include lnk__custom__arrow-move($pink, 225deg, 32%, -15px, 3px);
+    }
+  }
+  &__link__right {
+    a {
+      @include lnk__custom-grey-arrow;
+      color: $grey-blue;
+      &:hover {
+        color: $pink;
+        &::after{
+          border-bottom: 2px solid $pink;
+          border-left: 2px solid $pink;
+        }
+      }
+    }
+  }
+}

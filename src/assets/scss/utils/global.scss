@@ -199,110 +199,110 @@ h6 {
       display: none;
     }
   }
-  ul {
-    list-style: none;
-    margin: 25px 0;
-    padding: 0;
-    & > li > ul{
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  }
-  ul>li {
-    font-size: 16px;
-    line-height: 24px;
-    position: relative;
-    padding-left: 25px;
-    & + li{
-      margin-top: 15px;
-      &:last-child {
-        &::before {
-          //display: none;
-        }
-      }
-    }
-    &::before{
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #f03382;
-      left: 10px;
-      top: 10px;
-    }
-  }
-  li>ul>li {
-    font-size: 16px;
-    line-height: 24px;
-    padding-left: 25px;
-    position: relative;
-    margin-top: 15px;
-    & + li {
-      margin-top: 15px;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #a8a8a8;
-      left: 0;
-      top: 10px;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #a8a8a8;
-      left: 10px;
-      top: 10px;
-    }
-    &:last-child {
-      &::before {
-        display: block;
-      }
-    }
-  }
-  ol {
-    font-size: 16px;
-    line-height: 24px;
-    list-style: none;
-    counter-reset: li;
-    padding-left: 0;
-    margin: 25px 0;
-    li {
-      & + li {
-        margin-top: 10px;
-      }
-    }
-    li::before {
-      counter-increment: li;
-      content:counter(li);
-      color: $pink;
-      margin-right: 8px;
-    }
-  }
-  ol > li > ol {
-    list-style: none;
-    counter-reset: li;
-    padding-left: 20px;
-    margin: 0;
-    li {
-      position: relative;
-      margin-top: 10px;
-    }
-    li::before {
-      counter-increment: li;
-      content: counters(li,".") ". ";
-      color: #b7b7b7;
-      margin-right: 8px;
-    }
-  }
+  //ul {
+  //  list-style: none;
+  //  margin: 25px 0;
+  //  padding: 0;
+  //  & > li > ul{
+  //    margin: 0;
+  //    padding: 0;
+  //    list-style: none;
+  //  }
+  //}
+  //ul>li {
+  //  font-size: 16px;
+  //  line-height: 24px;
+  //  position: relative;
+  //  padding-left: 25px;
+  //  & + li{
+  //    margin-top: 15px;
+  //    &:last-child {
+  //      &::before {
+  //        //display: none;
+  //      }
+  //    }
+  //  }
+  //  &::before{
+  //    content: '';
+  //    position: absolute;
+  //    width: 4px;
+  //    height: 4px;
+  //    border-radius: 50%;
+  //    background-color: #f03382;
+  //    left: 10px;
+  //    top: 10px;
+  //  }
+  //}
+  //li>ul>li {
+  //  font-size: 16px;
+  //  line-height: 24px;
+  //  padding-left: 25px;
+  //  position: relative;
+  //  margin-top: 15px;
+  //  & + li {
+  //    margin-top: 15px;
+  //  }
+  //  &::before {
+  //    content: '';
+  //    position: absolute;
+  //    width: 4px;
+  //    height: 4px;
+  //    border-radius: 50%;
+  //    background-color: #a8a8a8;
+  //    left: 0;
+  //    top: 10px;
+  //  }
+  //  &::after {
+  //    content: '';
+  //    position: absolute;
+  //    width: 4px;
+  //    height: 4px;
+  //    border-radius: 50%;
+  //    background-color: #a8a8a8;
+  //    left: 10px;
+  //    top: 10px;
+  //  }
+  //  &:last-child {
+  //    &::before {
+  //      display: block;
+  //    }
+  //  }
+  //}
+  //ol {
+  //  font-size: 16px;
+  //  line-height: 24px;
+  //  list-style: none;
+  //  counter-reset: li;
+  //  padding-left: 0;
+  //  margin: 25px 0;
+  //  li {
+  //    & + li {
+  //      margin-top: 10px;
+  //    }
+  //  }
+  //  li::before {
+  //    counter-increment: li;
+  //    content:counter(li);
+  //    color: $pink;
+  //    margin-right: 8px;
+  //  }
+  //}
+  //ol > li > ol {
+  //  list-style: none;
+  //  counter-reset: li;
+  //  padding-left: 20px;
+  //  margin: 0;
+  //  li {
+  //    position: relative;
+  //    margin-top: 10px;
+  //  }
+  //  li::before {
+  //    counter-increment: li;
+  //    content: counters(li,".") ". ";
+  //    color: #b7b7b7;
+  //    margin-right: 8px;
+  //  }
+  //}
 }
 .row {
   display: flex;

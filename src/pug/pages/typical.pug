@@ -1,0 +1,284 @@
+extends ../layout/main
+
+block variablesHeader
+  - const isStudio = true
+block variables
+  - const title = 'VRMEDIA typical'
+  - const description = 'Description typical'
+  - const pageClass = 'typical-page'
+block content
+  section.wrapper
+    .container.typical-container
+      .typical__block
+        .typical__block__subtitle
+            span 12 декабря 2019
+            span Статья
+        .typical__block__title
+          h2 Заголовок первого уровня на несколько строк, чтобы понять как выглядят большие заголовки
+        .typical__block__description.bold
+          p.text
+            | Это пример лид-текста перед основным текстом публикации. Лид используется для того, чтобы кратко ввести читателя в курс дела и побудить
+            | к более детальному изучению материала. Здесь можно тезисно раскрыть суть дальнейшего повествования, либо обозначить суть описываемой проблемы
+            | и появившиеся в результате её изучения выводы.
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами, дающими студентам навыки работы с&nbsp;
+            a.typical__block__description__link(href='#') технологическим
+            | &nbsp;инструментарием, необходимым для успешной деятельности в интернет-редакциях, а также дисциплины, связанные
+            | с этическими и правовыми аспектами работы новых медиа.
+          p.text
+            | В эту субботу стартует двухневный интесивный курс по интернет-журналистике для всех желающих. Интенсив подойдёт как учащимся и выпускникам журфака,
+            | так и действующим сотрудникам новостных агентств.
+            | Ещё будет полезным показать пример выделенного отрезка текста.
+        .typical__block__swiper
+          .realization__content
+            .realization__content__item__swip
+              .swiper-container
+                .swiper-wrapper.lightgallery
+                  a(href='/assets/img/Safari.png').swiper-slide
+                    .swiper-slide-inner
+                      img(src='assets/img/Safari.png', alt='Safari')
+                  a(href='/assets/img/Safari2.png').swiper-slide
+                    .swiper-slide-inner
+                      img(src='assets/img/Safari2.png', alt='Safari2')
+                  a(href='/assets/img/Safari1.png').swiper-slide
+                    .swiper-slide-inner
+                      img(src='assets/img/Safari1.png', alt='Safari1')
+              .swiper-button-prev-modific
+                .swiper-button-prev-modific__inner
+              .swiper-button-next-modific
+                .swiper-button-next-modific__inner
+              .swiper-pagination
+        .typical__block__title
+          h3 Заголовок второго уровня
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами, дающими студентам навыки
+            | работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях, а также дисциплины, связанные с этическими и
+            | правовыми аспектами работы новых медиа
+        .typical__block__gallery
+          .typical__block__gallery__inner.lightgallery
+              a(href='assets/img/img_typical1.png').typical__block__gallery__img.col-6.col-xs-12
+                img(src='assets/img/img_typical1.png', alt='1')
+              a(href='assets/img/img_typical2.png').typical__block__gallery__img.col-6.col-xs-12
+                img(src='assets/img/img_typical2.png', alt='2')
+        .typical__block__title
+          h4 Заголовок третьего уровня
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+            | а также дисциплины, связанные с этическими и правовыми аспектами работы новых медиа
+        .typical__block__gallery
+          .typical__block__gallery__inner.lightgallery
+            a(href='assets/img/img_typical3.png').typical__block__gallery__img.col-6.col-xs-12
+              img(src='assets/img/img_typical3.png', alt='1')
+            a(href='assets/img/img_typical1.png').typical__block__gallery__img.col-6.col-xs-12
+              img(src='assets/img/img_typical1.png', alt='2')
+            a(href='assets/img/img_typical4.png').typical__block__gallery__img.col-12
+              img(src='assets/img/img_typical4.png', alt='2')
+        .typical__block__title
+          h4 Галерея из четырёх фотографий и более
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+            | а также дисциплины, связанные с этическимии правовыми аспектами работы новых медиа
+        .typical__block__gallery
+          .typical__block__gallery__inner
+            .col-3.col-xs-12.lightgallery
+              a(href='assets/img/img_typical5.png').typical__block__gallery__img.left.col-12
+                img(src='assets/img/img_typical5.png', alt='1')
+              a(href='assets/img/img_typical6.png').typical__block__gallery__img.left.col-12
+                img(src='assets/img/img_typical6.png', alt='2')
+              a(href='assets/img/img_typical7.png').typical__block__gallery__img.left
+                img(src='assets/img/img_typical7.png', alt='2')
+            .col-9.col-xs-12.lightgallery
+              a(href='assets/img/img_typical8.png').typical__block__gallery__img.right
+                img(src='assets/img/img_typical8.png', alt='2')
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+            | а также дисциплины, связанные с этическими и правовыми аспектами работы новых медиа
+        .typical__block__gallery
+          .typical__block__gallery__inner.lightgallery
+            a(href='assets/img/img_typical9.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical9.png', alt='1')
+            a(href='assets/img/img_typical10.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical10.png', alt='2')
+            a(href='assets/img/img_typical11.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical11.png', alt='2')
+            a(href='assets/img/img_typical12.png').typical__block__gallery__img.col-6.col-xs-12
+              img(src='assets/img/img_typical12.png', alt='2')
+            a(href='assets/img/img_typical13.png').typical__block__gallery__img.col-6.col-xs-12
+              img(src='assets/img/img_typical13.png', alt='2')
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+            | а также дисциплины, связанные с этическими и правовыми аспектами работы новых медиа
+        .typical__block__gallery
+          .typical__block__gallery__inner.lightgallery
+            a(href='assets/img/img_typical14.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical14.png', alt='1')
+            a(href='assets/img/img_typical15.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical15.png', alt='2')
+            a(href='assets/img/img_typical16.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical16.png', alt='2')
+            a(href='assets/img/img_typical17.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical17.png', alt='2')
+            a(href='assets/img/img_typical18.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical18.png', alt='2')
+            a(href='assets/img/img_typical19.png').typical__block__gallery__img.col-4.col-xs-12
+              img(src='assets/img/img_typical19.png', alt='2')
+        .typical__block__title
+          h4 Изображение с выключкой по формату
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__img__intro.center
+          img(src='assets/img/img_typical20.png', alt='2')
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__title
+          h4 Изображение в тексте с выключкой влево
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях, а также
+        .typical__block__img__intro.left
+          img(src='assets/img/img_typical21.png', alt='2')
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+            | а также А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами, дающими
+            | студентам навыки работы с технологическим
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях, а также
+          .typical__block__title
+            h4 Изображение в тексте с выключкой вправо
+          .typical__block__description
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях, а такжеы
+          .typical__block__img__intro.right
+            img(src='assets/img/img_typical22.png', alt='2')
+          .typical__block__description
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях,
+              | а также А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами, дающими
+              | студентам навыки работы с технологическим
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым для успешной деятельности в интернет-редакциях, а также
+
+
+        .typical__block__img__outer
+          .typical__block__img__outer__col.left
+            img(src='assets/img/img_typical23.png', alt='2')
+          .typical__block__img__outer__col
+            .typical__block__title
+              h4 Изображение с выключкой влево
+            .typical__block__description
+              p.text
+                | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+                | дающими студентам навыки работы
+        .typical__block__img__outer
+          .typical__block__img__outer__col
+            .typical__block__title
+              h4 Изображение с выключкой вправо
+            .typical__block__description
+              p.text
+                | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+                | дающими студентам навыки работы
+          .typical__block__img__outer__col
+            img(src='assets/img/img_typical24.png', alt='2')
+        .typical__block__title
+          h4 Использование видео контента
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__video
+
+        .typical__block__title
+          h4 Текст на цветной подложке
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__banner
+          .typical__block__banner__inner
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__title
+          h4 Пример блока цитирования в тексте
+        .typical__block__description
+          p.text
+            | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+            | дающими студентам навыки работы с технологическим инструментарием, необходимым
+        .typical__block__quote
+          .typical__block__quote__inner
+            p.text
+              | У себя дома первый бокал обычно пьют за здоровье, второй - ради удовольствия, третий - ради наглости, последний - ради безумия.
+            .typical__block__quote__author
+              p.text — Омар Хайям
+          .typical__block__title
+            h4 Пример маркированного списка в тексте
+          .typical__block__description
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым
+            ul
+              li Обучение
+              li Современное оборудование и камеры
+              li Техническая поддержка
+              li Отсутствие трудностей с выводом средств
+              li График работы
+              li Большое количество локаций
+                ul
+                  li Обмен опытом и SFS с другими моделями
+                  li Обмен опытом и SFS с другими моделями
+            p.text
+              | Цвет имитирует стиль менеджмента, используя опыт предыдущих кампаний. Эстетика искажает принцип восприятия, однако Зигварт
+              | считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире.
+          .typical__block__title
+            h4 Пример нумерованного списка в тексте
+          .typical__block__description
+            p.text
+              | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
+              | дающими студентам навыки работы с технологическим инструментарием, необходимым
+            ol
+              li Обучение
+              li Современное оборудование и камеры
+              li Техническая поддержка
+              li Отсутствие трудностей с выводом средств
+              li График работы
+              li Большое количество локаций
+                ol
+                  li Обмен опытом и SFS с другими моделями
+                  li Обмен опытом и SFS с другими моделями
+            p.text
+              | Цвет имитирует стиль менеджмента, используя опыт предыдущих кампаний. Эстетика искажает принцип восприятия, однако Зигварт
+              | считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире.
+
+  section.wrapper
+    .container.typical__bottom-container
+      .typical__bottom
+        .typical__bottom__inner
+          .typical__bottom__subtitle
+            span Далее
+          h4 Как заработать на Fancentro — инструкция  для вебкам моделей
+          .typical__bottom__links
+            .typical__bottom__link__left
+              a(href='#') Подробнее
+            .typical__bottom__link__right
+              a(href='#') Показать больше статей

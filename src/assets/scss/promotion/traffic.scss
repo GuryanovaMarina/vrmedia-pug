@@ -31,10 +31,6 @@
       }
       .traffic__item {
         @include pnl_white;
-        //height: 100%;
-        //background: $white;
-        //@include box-shadow__main;
-        //border-radius: 6px;
         min-height: 250px;
         cursor: pointer;
         position: relative;
