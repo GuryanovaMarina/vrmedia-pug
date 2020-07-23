@@ -800,9 +800,12 @@
     &__img-inner {
       position: relative;
       height: 100px;
+      width: 100px;
+      margin: 0 auto;
       @media (max-width: $screen-lg-max) {
         height: 50px;
         width: 50px;
+        margin: 0;
       }
     }
     &__img {

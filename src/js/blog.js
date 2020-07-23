@@ -27,7 +27,37 @@ import Swiper from "swiper";
 //TAGS
 //CLICK TAGS
 $('.news__tag__item').on('click', function () {
-  $(this).toggleClass('active');
+  if ($(this).find('input').attr('id') == 'tag__all') {
+    let par = $(this).parents('#news__tag');
+    $(par).find('.news__tag__item').each(function( index, element ) {
+      if ($(element).find('input').attr('id') == 'tag__all') {
+        $(element).toggleClass('active');
+        let comp = $(this).find('input');
+        if ($(comp).is(':checked')) {
+          $(comp).attr('checked',false);
+        } else {
+          $(comp).attr('checked',true);
+        }
+      } else {
+        $( element ).removeClass('active');
+        let comp = $(this).find('input');
+        $(comp).attr('checked',false);
+      }
+    });
+  } else {
+    $(this).toggleClass('active');
+    let comp = $(this).find('input');
+    if ($(comp).is(':checked')) {
+      $(comp).attr('checked',false);
+    } else {
+      $(comp).attr('checked',true);
+    }
+    let par = $(this).parents('#news__tag');
+    let compAll = $(par).find('#tag__all').parent();
+    $(compAll).removeClass('active');
+    let compAllcb = $(compAll).find('input');
+    $(compAllcb).attr('checked',false);
+  }
 });
 //SWIPER TAGS
 let swiper, isActive;

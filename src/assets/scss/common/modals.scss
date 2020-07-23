@@ -59,6 +59,37 @@
   .remodal__button__wrap {
     padding-top: 40px;
   }
+  .remodal-close {
+    top: -43px;
+    left: initial;
+    right: 0;
+    width: 110px;
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+    span {
+      font-size: 15px;
+      line-height: 24px;
+      font-family: PT Sans Caption,sans-serif;
+      position: absolute;
+      right: 34px;
+      top: 8px;
+      color: $white;
+    }
+    &::before {
+      content: url('../img/burger.svg');
+      margin-left: 10px;
+      vertical-align: initial;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 1px;
+      left: initial;
+      right: 0px;
+    }
+    &:focus {
+      color: $white;
+    }
+  }
   .remodal-confirm,
   .remodal-cancel {
     @include btn__custom__arrow-extend();

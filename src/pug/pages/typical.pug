@@ -195,12 +195,7 @@ block content
             | А это пример обычного абзаца текста. По мере развития специализации число преподаваемых дисциплин пополнилось предметами,
             | дающими студентам навыки работы с технологическим инструментарием, необходимым
         .typical__block__video
-          video(controls='controls')
-            source(src='/assets/img/bg-video.mp4', type='video/mp4', controls='controls', poster='img_typical21.png')
-          .typical__block__video__wrap
-            .typical__block__video__text
-              p
-                | Заголовок видео если потребуется
+          iframe(src='https://www.youtube.com/embed/xFa2_PVMeDQ', frameborder='0', allowfullscreen='')
         .text
           h4 Текст на цветной подложке
           p
@@ -265,7 +260,7 @@ block content
         .typical__bottom__inner
           .typical__bottom__subtitle
             span Далее
-          h4 Как заработать на Fancentro — инструкция  для вебкам моделей
+          a.typical__bottom__title(href='#') Как заработать на Fancentro — инструкция  для вебкам моделей
           .typical__bottom__links
             .typical__bottom__link__left
               a(href='#') Подробнее

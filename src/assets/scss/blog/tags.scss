@@ -1,6 +1,10 @@
 @import '.././utils/vars.scss';
 @import '.././utils/mixins.scss';
 
+input[type="checkbox"] {
+  display: none;
+}
+
 .news__container {
   @media (max-width: $screen-xs-max) {
     padding: 0;
