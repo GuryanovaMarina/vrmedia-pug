@@ -68,8 +68,9 @@
     }
     &__img {
       position: relative;
+      margin: 0 auto;
       height: 154px;
-      width: 100%;
+      width: 154px;
       @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
         height: 110px;
         width: 110px;

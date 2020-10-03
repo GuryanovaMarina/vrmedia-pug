@@ -181,6 +181,13 @@
       display: none;
     }
     &__col {
+      @media (max-width: $screen-xs-max) {
+        position: absolute;
+        bottom: 60px;
+      }
+      @media (max-width: $screen-xxs-max) {
+        bottom: 100px;
+      }
     }
   }
   .title_link_js {
