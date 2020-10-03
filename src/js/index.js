@@ -21,6 +21,7 @@ $( document ).ready(function() {
   });
   enquire.register("screen and (max-width:575px)", {
     match: function () {
+      $('.hero-main__inner__wrap').css({"height": window.innerHeight})
       $('.hero-main__bottom__col.circle').appendTo('.hero-main__inner__wrap');
     },
     unmatch: function () {
