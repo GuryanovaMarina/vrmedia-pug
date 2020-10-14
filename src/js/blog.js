@@ -68,7 +68,6 @@ $window.on('resize', swiperFunc);
 
 function swiperFunc() {
   const initNeeded = $window.width() < 575;
-
   isActive = isActive !== undefined ? isActive : !initNeeded;
 
   if(initNeeded && !isActive) {

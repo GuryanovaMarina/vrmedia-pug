@@ -151,8 +151,10 @@
       }
     }
     &__link {
+      padding: 27px 0;
       @media (max-width: $screen-md-max) {
         display: block;
+        padding: 0;
       }
     }
     &.active-page {

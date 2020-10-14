@@ -13,10 +13,12 @@ $( document ).ready(function() {
   enquire.register("screen and (max-width:768px)", {
     match: function () {
       $('.hero-main__description').appendTo('.hero-main__inner__wrap');
+      $('.footer__tg').appendTo('.footer__top');
     },
     unmatch: function () {
       $('.hero-main__description').appendTo('.hero-main__inner');
       $('.hero-main__bottom').appendTo('.hero-main__inner');
+      $('.footer__tg').appendTo('.footer__col-tg');
     }
   });
   enquire.register("screen and (max-width:575px)", {
