@@ -1,0 +1,121 @@
+@import '.././utils/vars.scss';
+@import '.././utils/mixins.scss';
+
+.exchange {
+  margin-top: 110px;
+  background-image: url("../img/icon_text_exchange.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 10% 0;
+  @media (max-width: $screen-md-max) {
+    background-size: 80%;
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 0;
+    background-image: none;
+  }
+  &__inner {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @media (max-width: $screen-lg-max)  and (min-width: $screen-md-min) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media (max-width: $screen-md-max) {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 30px;
+    }
+    &__items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -20px;
+      @media (max-width: $screen-xxs-max) {
+        margin: 0;
+      }
+    }
+    &__item {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 20px;
+      @media (max-width: $screen-xs-max) {
+        flex-basis: 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+      @media (max-width: $screen-xxs-max) {
+        padding: 20px 10px;
+      }
+      &__title {
+        h2 {
+          font-family: 'SFProDisplay', sans-serif;
+          font-weight: 900;
+          font-size: 64px;
+          line-height: 76px;
+          text-transform: uppercase;
+          color: $dark-main;
+          @media (max-width: $screen-lg-max) and (min-width: $screen-md-min) {
+            font-size: 40px;
+            line-height: 60px;
+          }
+          @media (max-width: $screen-sm-max) {
+            font-size: 30px;
+            line-height: 45px;
+          }
+        }
+      }
+      &__description {
+        max-width: 590px;
+        font-size: 15px;
+        line-height: 29px;
+        font-weight: 700;
+        color: $dark-second;
+        padding: 40px 0;
+        @media (max-width: $screen-lg-max) {
+          font-size: 17px;
+          line-height: 28px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 16px;
+        }
+      }
+      &__img {
+        height: 681px;
+        text-align: center;
+        @media (max-width: $screen-xl-max) and (min-width: $screen-xl-min){
+          height: 540px;
+        }
+        @media (max-width: $screen-lg-max) and (min-width: $screen-md-min){
+          height: 384px;
+        }
+        @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min){
+          height: 320px;
+        }
+        @media (max-width: $screen-xs-max){
+          height: 320px;
+        }
+        img {
+          height: 100%;
+        }
+      }
+      &__link {
+        padding-top: 40px;
+        @media (max-width: $screen-md-max) {
+          padding-top: 0;
+        }
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+        a {
+          @include btn__custom__arrow-extend();
+          @media (max-width: $screen-xs-max) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
